@@ -1,5 +1,5 @@
 import React from 'react';
-import TabData, {TabIcon, TabImg} from '@/Data/tab.js';
+import TabData, {TabIcon, TabImg} from '@/data/tab.js';
 
 import useTabs from '@/hooks/useTabs.jsx';
 
