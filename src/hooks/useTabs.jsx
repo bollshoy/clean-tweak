@@ -1,5 +1,5 @@
 import { useState, useCallback, useMemo } from 'react';
-import TabData from '@/Data/tab.js';
+import TabData from '@/data/tab.js';
 
 const useTabs = () => {
     const [activeTab, setActiveTab] = useState(0);
