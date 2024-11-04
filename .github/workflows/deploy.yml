@@ -19,11 +19,26 @@ jobs:
         with:
           node-version: '18'
 
+      - name: Clean up
+        run: |
+          rm -rf node_modules
+          rm -f package-lock.json
+
+      - name: Update npm
+        run: npm install -g npm
+
       - name: Install dependencies
-        run: npm install
+        run: npm install --no-optional
+
+      - name: Check Node.js and npm versions
+        run: |
+          node -v
+          npm -v
+          npm list --depth=0
 
       - name: Build project
         run: npm run build
+
       - name: List files in dist
         run: ls -la ./dist
 
