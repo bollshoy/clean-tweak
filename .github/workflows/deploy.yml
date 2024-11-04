@@ -19,13 +19,8 @@ jobs:
         with:
           node-version: '18'
 
-      - name: Clean up
-        run: |
-          rm -rf node_modules
-          rm -f package-lock.json
-
-      - name: Update npm
-        run: npm install -g npm
+      - name: Clean npm cache
+        run: npm cache clean --force
 
       - name: Install dependencies
         run: npm install --no-optional
@@ -37,7 +32,7 @@ jobs:
           npm list --depth=0
 
       - name: Build project
-        run: npm run build
+        run: npm run build || (echo "Build failed" && exit 1)
 
       - name: List files in dist
         run: ls -la ./dist
