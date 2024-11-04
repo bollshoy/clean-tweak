@@ -66,9 +66,16 @@
   &.active {
     background: var(--first-color);
     color: var(--white);
-    box-shadow: 0px 0px 35px rgba(255, 0, 150, 0.5);
+    box-shadow: 0px 0px 35px rgba(0, 79, 255, 0.5);
+  }
+
+  &:hover .tabs__btn-img,
+  &.active .tabs__btn-img {
+    filter: invert(1);
   }
 }
+
+
 
 .tabs__content-item {
   display: flex;
@@ -161,9 +168,9 @@ input:checked + label {
 
   &:hover {
     transition: .3s ease;
-    -webkit-box-shadow: 0px 0px 15px 0px rgba(255, 0, 150, 0.5);
-    -moz-box-shadow: 0px 0px 15px 0px rgba(255, 0, 150, 0.5);
-    box-shadow: 0px 0px 15px 0px rgba(255, 0, 150, 0.5);
+    -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 79, 255, 0.5);
+    -moz-box-shadow: 0px 0px 15px 0px rgba(0, 79, 255, 0.5);
+    box-shadow: 0px 0px 15px 0px rgba(0, 79, 255, 0.5);
   }
 }
 

@@ -72,7 +72,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 :root {
-  --containerWidth: 1800px;
+  --containerWidth: 1680px;
   --containerPadding: 20px;
   --breakpoint1200: 1200px;
   --breakpoint992: 992px;
@@ -83,34 +83,34 @@ h1, h2, h3, h4, h5, h6 {
   --white: #ffffff;
   --black: #000000;
   --background-color: #171717;
-  --first-color: #ff0096;
+  --first-color: #004FE1;
   --second-color: #202020;
   --border-radius-small: 15px;
   --border-radius-large: 25px;
   --transition-speed: 0.3s ease-in-out;
-  --font: "Inter", sans-serif;
+  --font: "Nunito", sans-serif;
 }
 
 @font-face {
-  font-family: "Inter", sans-serif;
+  font-family: "Nunito", sans-serif;
   font-weight: 400;
   font-style: normal;
   font-display: swap;
-  src: url("../assets/fonts/Inter_24pt-Regular.woff2") format("woff2");
+  src: url("../assets/fonts/Nunito-Regular.woff2") format("woff2");
 }
 @font-face {
-  font-family: "Inter", sans-serif;
+  font-family: "Nunito", sans-serif;
   font-weight: 500;
   font-style: normal;
   font-display: swap;
-  src: url("../assets/fonts/Inter_24pt-Medium.woff2") format("woff2");
+  src: url("../assets/fonts/Nunito-Medium.woff2") format("woff2");
 }
 @font-face {
-  font-family: "Inter", sans-serif;
+  font-family: "Nunito", sans-serif;
   font-weight: 700;
   font-style: normal;
   font-display: swap;
-  src: url("../assets/fonts/Inter_28pt-Bold.woff2") format("woff2");
+  src: url("../assets/fonts/Nunito-Bold.woff2") format("woff2");
 }
 body {
   font-family: var(--font);

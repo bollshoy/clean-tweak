@@ -37,13 +37,13 @@
 .banner::before {
   content: "";
   position: absolute;
-  background-image: url("@/assets/images/textures.jpg");
+  background-image: url("@/assets/images/textures.png");
   background-size: cover;
   background-position: center;
   border-radius: var(--border-radius-small);
   z-index: -1;
   inset: 0;
-  opacity: 0.5;
+  opacity: 0.4;
 }
 .banner__marking {
   display: flex;

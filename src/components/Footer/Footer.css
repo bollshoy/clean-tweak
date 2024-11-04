@@ -8,8 +8,7 @@
   border: 1px solid var(--white);
   border-radius: var(--border-radius-large);
   display: flex;
-  justify-content: center;
-  gap: 200px;
+  justify-content: space-between;
   align-items: center;
 }
 .footer__logo .logo {

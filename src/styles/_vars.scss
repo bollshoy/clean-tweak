@@ -1,5 +1,5 @@
 :root {
-  --containerWidth: 1800px;
+  --containerWidth: 1680px;
   --containerPadding: 20px;
 
   --breakpoint1200: 1200px;
@@ -12,7 +12,7 @@
   --white: #ffffff;
   --black: #000000;
   --background-color: #171717;
-  --first-color: #ff0096;
+  --first-color: #004FE1;
   --second-color: #202020;
 
   --border-radius-small: 15px;
@@ -20,7 +20,7 @@
 
   --transition-speed: 0.3s ease-in-out;
 
-  --font: 'Inter', sans-serif;
+  --font: 'Nunito', sans-serif;
 }
 
 @mixin container {

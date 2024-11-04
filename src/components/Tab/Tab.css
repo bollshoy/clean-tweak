@@ -58,7 +58,10 @@
 .tabs__btn.active {
   background: var(--first-color);
   color: var(--white);
-  box-shadow: 0px 0px 35px rgba(255, 0, 150, 0.5);
+  box-shadow: 0px 0px 35px rgba(0, 79, 255, 0.5);
+}
+.tabs__btn:hover .tabs__btn-img, .tabs__btn.active .tabs__btn-img {
+  filter: invert(1);
 }
 
 .tabs__content-item {
@@ -149,9 +152,9 @@ input:checked + label {
 }
 input:checked + label:hover {
   transition: 0.3s ease;
-  -webkit-box-shadow: 0px 0px 15px 0px rgba(255, 0, 150, 0.5);
-  -moz-box-shadow: 0px 0px 15px 0px rgba(255, 0, 150, 0.5);
-  box-shadow: 0px 0px 15px 0px rgba(255, 0, 150, 0.5);
+  -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 79, 255, 0.5);
+  -moz-box-shadow: 0px 0px 15px 0px rgba(0, 79, 255, 0.5);
+  box-shadow: 0px 0px 15px 0px rgba(0, 79, 255, 0.5);
 }
 
 input:checked + label:after {
