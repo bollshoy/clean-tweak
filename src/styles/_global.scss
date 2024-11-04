@@ -1,0 +1,28 @@
+body {
+  font-family: var(--font);
+  background: var(--background-color);
+}
+
+h1, h2, h3, h4, h5, h6, span, a, p {
+  color: var(--white);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  font-size: clamp(48px, 5vw, 82px);
+}
+
+span {
+  font-weight: 500;
+  font-size: clamp(18px, 2vw, 28px);
+}
+
+a, p, li {
+  font-weight: 400;
+  font-size: clamp(16px, 1vw, 26px);
+}
+
+
+.container {
+  @include container;
+}

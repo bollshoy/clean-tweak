@@ -1,0 +1,254 @@
+.hero {
+  margin-top: 120px;
+  margin-bottom: 120px;
+
+  &__container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 50px;
+  }
+
+  &__content {
+    position: relative;
+    z-index: 2;
+    flex-grow: 1;
+    overflow-y: auto;
+    height: auto;
+  }
+
+  &__img {
+    max-width: 100%;
+    position: sticky;
+    overflow-y: auto;
+    z-index: -1;
+    top: 120px;
+
+    img {
+      width: 180vh;
+      max-width: 100%;
+      height: auto;
+      border-radius: var(--border-radius-large);
+    }
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    display: inline-block;
+  }
+
+  &__text {
+    font-size: 18px;
+    line-height: 28px;
+    //padding: 8px 0px;
+    white-space: normal;
+    font-weight: 400;
+    margin-bottom: 20px;
+  }
+
+  &__link {
+    background: var(--white);
+    color: var(--first-color);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    padding: 10px 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition-speed);
+    border-radius: var(--border-radius-large);
+    z-index: 3;
+    margin-bottom: 10px;
+
+    &:hover {
+      background: var(--first-color);
+      color: var(--white);
+    }
+  }
+
+  &__swiper {
+    margin-top: 80px;
+  }
+
+  .mySwiper {
+    .swiper-slide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .review {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 240px;
+    height: 270px;
+    background: var(--white);
+    padding: 10px;
+    border-radius: var(--border-radius-small);
+
+    &__title {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      max-width: 25px;
+      font-weight: 500;
+      font-size: 22px;
+      line-height: 26px;
+      color: var(--black);
+      margin-bottom: 10px;
+
+      span {
+        display: block;
+        margin-top: 10px;
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+
+    &__text {
+      color: var(--black);
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 20px;
+      margin-bottom: 30px;
+    }
+  }
+
+  .hero__nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+
+    .swiper-button-prev, .swiper-button-next {
+      color: var(--white);
+      border: 1px solid var(--white);
+      border-radius: 999px;
+      width: 30px;
+      height: 30px;
+      padding: 10px;
+      transition: all 0.3s ease;
+      position: relative;
+      margin-left: 20px;
+
+      &:hover {
+        background: var(--white);
+        color: var(--black);
+        transition: all 0.3s ease;
+      }
+
+      &::after {
+        font-size: 16px;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+//accordion
+.accordion {
+  margin-top: 80px;
+  margin-bottom: 80px;
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  &__title {
+    cursor: pointer;
+    display: flex;
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  &__img {
+    margin-right: 10px;
+  }
+
+  &__content {
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+}
+
+
+@media screen and (max-width: 992px) {
+  .hero__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px;
+  }
+
+  .hero__content {
+    width: 100%;
+    max-width: 100%;
+    position: static;
+    overflow-y: visible;
+    height: auto;
+  }
+
+  .hero__link {
+    width: auto;
+    padding: 10px 20px;
+  }
+
+  .accordion__container {
+    width: 100%;
+  }
+
+  .hero__nav {
+    display: none;
+  }
+
+  .hero__img {
+    display: none;
+  }
+
+  .mySwiper {
+    .swiper-slide {
+      width: 100%;
+      gap: 0;
+      padding: 0;
+    }
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none;
+  }
+
+  .review {
+    .review__text {
+      font-size: 16px;
+    }
+
+    .review__title {
+      font-size: 18px;
+      text-align: center;
+    }
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .hero__title {
+    font-size: 38px;
+  }
+
+  .hero__text {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}

@@ -1,0 +1,146 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+:before, :after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+:root {
+  --containerWidth: 1800px;
+  --containerPadding: 20px;
+  --breakpoint1200: 1200px;
+  --breakpoint992: 992px;
+  --breakpoint768: 768px;
+  --breakpoint586: 586px;
+  --breakpoint480: 480px;
+  --breakpoint320: 320px;
+  --white: #ffffff;
+  --black: #000000;
+  --background-color: #171717;
+  --first-color: #ff0096;
+  --second-color: #202020;
+  --border-radius-small: 15px;
+  --border-radius-large: 25px;
+  --transition-speed: 0.3s ease-in-out;
+  --font: "Inter", sans-serif;
+}
+
+@font-face {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url("../assets/fonts/Inter_24pt-Regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: url("../assets/fonts/Inter_24pt-Medium.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url("../assets/fonts/Inter_28pt-Bold.woff2") format("woff2");
+}
+body {
+  font-family: var(--font);
+  background: var(--background-color);
+}
+
+h1, h2, h3, h4, h5, h6, span, a, p {
+  color: var(--white);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  font-size: clamp(48px, 5vw, 82px);
+}
+
+span {
+  font-weight: 500;
+  font-size: clamp(18px, 2vw, 28px);
+}
+
+a, p, li {
+  font-weight: 400;
+  font-size: clamp(16px, 1vw, 26px);
+}
+
+.container {
+  max-width: var(--containerWidth);
+  padding: 0 var(--containerPadding);
+  align-items: center;
+  margin: 0 auto;
+}
+
+/*# sourceMappingURL=main.css.map */
