@@ -20,11 +20,6 @@ const Overview = () => {
             <div className="overview__container">
                 <div className="overview__content">
                     <h5 className="overview__title">Recleaner</h5>
-                    <p className="overview__text">
-                        Добро пожаловать в открытое BETA тестирование! <br/>
-                        Это многофункциональная программа для очистки мусора, <br/>
-                        выпиливание приложений, настройки системы и не только!
-                    </p>
                     <button className="overview__btn" onClick={handleDownload} ref={buttonRef}>
                         скачать
                     </button>

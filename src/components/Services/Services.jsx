@@ -1,6 +1,7 @@
 import React from 'react';
 import {servicesImg, servicesIcons} from "@/data/services.js";
-import './Services.scss';
+
+import './Services.css';
 
 const Services = () => {
     return (

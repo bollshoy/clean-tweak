@@ -27,7 +27,7 @@ const About = () => {
                     <div className="about__btn">
                         <div className="about__btn-title">
                             <img src={defender} alt="defender" className="about__btn-img"/>
-                            <span className="about__title">Windows DEFENDER</span>
+                            <span className="about__title">Windows Defender</span>
                         </div>
                         <input
                             className="about__switch"
@@ -49,7 +49,7 @@ const About = () => {
                     <div className="about__btn">
                         <div className="about__btn-title">
                             <img src={upd} alt="update" className="about__btn-img"/>
-                            <span className="about__title">Windows UPDATE</span>
+                            <span className="about__title">Windows Update</span>
                         </div>
                         <input
                             className="about__switch"

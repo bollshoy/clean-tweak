@@ -5,10 +5,10 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 100px;
 }
 .optimization__img {
   max-width: 100%;
+  margin-right: 100px;
 }
 .optimization__img img {
   width: 100%;
