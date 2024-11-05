@@ -1,0 +1,17 @@
+.contact {
+  margin-top: 50px;
+}
+.contact__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contact .about__text {
+  font-size: 42px;
+}
+.contact .about__img {
+  width: 70px;
+}
+
+/*# sourceMappingURL=Contact.css.map */

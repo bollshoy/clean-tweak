@@ -24,8 +24,7 @@
   &__line {
     border: 1px solid var(--white);
     background-color: var(--white);
-    height: 200px;
-    width: 2px;
+    height: 250px;
     border-radius: var(--border-radius-large);
   }
 
@@ -53,6 +52,8 @@
       font-size: 18px;
       line-height: 22px;
       margin-bottom: 5px;
+      text-decoration: underline;
+      cursor: pointer;
     }
   }
 
@@ -65,6 +66,7 @@
 
   &__social {
     display: flex;
+    align-items: center;
     flex-direction: column;
     gap: 10px;
 
