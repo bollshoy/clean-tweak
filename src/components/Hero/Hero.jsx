@@ -40,8 +40,10 @@ const Hero = () => {
                     <h1 className="hero__title">CleanTweaking</h1>
                     <p className="hero__text">
                         Получите профессиональную производительность компьютера с помощью CleanTweaking. Эксперты <br/>
-                        CleanTweaking помогут вам восстановить компьютер до состояния, в котором он еще никогда не был. <br/>
-                        Безопасность, конфиденциальность и доверие никогда не будут поставлены под угрозу. Больше FPS,<br/>
+                        CleanTweaking помогут вам восстановить компьютер до состояния, в котором он еще никогда не
+                        был. <br/>
+                        Безопасность, конфиденциальность и доверие никогда не будут поставлены под угрозу. Больше
+                        FPS,<br/>
                         меньше задержек и сбоев. Свяжитесь с нами сегодня, и мы быстро приведем ваш компьютер в рабочее
                         состояние!
                     </p>
@@ -91,7 +93,7 @@ const Hero = () => {
                             ref={swiperRef}
                             className={'mySwiper'}
                             modules={[Navigation]}
-                            navigation={{ prevEl: prevRef.current, nextEl: nextRef.current }}
+                            navigation={{prevEl: prevRef.current, nextEl: nextRef.current}}
                             loop={true}
                             spaceBetween={10}
                             breakpoints={{
@@ -111,13 +113,25 @@ const Hero = () => {
                                     slidesPerView: 4,
                                     spaceBetween: 40,
                                 },
+                                1440: {
+                                    slidesPerView: 5,
+                                    spaceBetween: 50,
+                                },
+                                2560: {
+                                    slidesPerView: 6,
+                                    spaceBetween: 80,
+                                },
+                                3840: {
+                                    slidesPerView: 8,
+                                    spaceBetween: 100,
+                                },
                             }}
                         >
                             {reviews.map((review, index) => (
                                 <SwiperSlide key={index}>
                                     <div className="review">
                                         <div className="review__title">
-                                            <img src={tick} alt="tick" className="review__img" />
+                                            <img src={tick} alt="tick" className="review__img"/>
                                             <span className={'review__title'}>{review.name}</span>
                                         </div>
                                         <p className={'review__text'}>{review.review}</p>

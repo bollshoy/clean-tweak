@@ -161,6 +161,11 @@ input:checked + label:after {
   left: calc(100% - 27px);
 }
 
+@media screen and (max-width: 2560px) {
+  .tabs__container {
+    padding: 30px;
+  }
+}
 @media screen and (max-width: 1200px) {
   .tabs__container {
     padding: 4vw;
