@@ -8,6 +8,12 @@
   gap: 50px;
   width: 100%;
 }
+.services__title {
+  margin-bottom: 20px;
+  font-weight: 500;
+  font-size: 38px;
+  line-height: 42px;
+}
 .services__icon {
   border-radius: var(--border-radius-small);
   width: 50%;

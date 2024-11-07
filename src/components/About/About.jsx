@@ -7,8 +7,8 @@ import upd from '@/assets/icons/update.svg';
 import './About.css';
 
 const About = () => {
-    const [isDefenderChecked, setIsDefenderChecked] = useState(false);
-    const [isUpdateChecked, setIsUpdateChecked] = useState(false);
+    const [isDefenderChecked, setIsDefenderChecked] = useState(true);
+    const [isUpdateChecked, setIsUpdateChecked] = useState(true);
 
     const handleDefenderToggle = useCallback(() => {
         setIsDefenderChecked(!isDefenderChecked);
@@ -19,6 +19,14 @@ const About = () => {
         setIsUpdateChecked(!isUpdateChecked);
         document.body.classList.toggle('is-active');
     }, [isUpdateChecked]);
+
+    const handleDefender = useCallback(() => {
+        window.location.href = "windowsdefender://threatsettings"
+    }, [])
+
+    const handleUpdate = useCallback(() => {
+    window.location.href = "ms-settings:windowsupdate"
+    })
 
     return (
         <section className="about">
@@ -36,7 +44,7 @@ const About = () => {
                             checked={isDefenderChecked}
                             onChange={handleDefenderToggle}
                         />
-                        <label htmlFor="switch__defender" className="switch__label">
+                        <label onClick={handleDefender} htmlFor="switch__defender" className="switch__label">
                             <span className="switch__circle"></span>
                         </label>
                     </div>
@@ -58,7 +66,7 @@ const About = () => {
                             checked={isUpdateChecked}
                             onChange={handleUpdateToggle}
                         />
-                        <label htmlFor="switch__update" className="switch__label">
+                        <label htmlFor="switch__update" onClick={handleUpdate} className="switch__label">
                             <span className="switch__circle"></span>
                         </label>
                     </div>

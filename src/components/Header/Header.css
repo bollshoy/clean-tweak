@@ -25,6 +25,11 @@
 }
 
 @media screen and (max-width: 992px) {
+  .header {
+    z-index: 999;
+    position: fixed;
+    inset: 0;
+  }
   .header__icons {
     display: none;
   }
