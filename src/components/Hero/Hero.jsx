@@ -22,13 +22,13 @@ const Hero = () => {
     };
 
     useEffect(() => {
-        if (swiperRef.current && swiperRef.current.swiper && prevRef.current && nextRef.current) {
-            swiperRef.current.swiper.params.navigation.prevEl = prevRef.current;
-            swiperRef.current.swiper.params.navigation.nextEl = nextRef.current;
-            swiperRef.current.swiper.navigation.init();
-            swiperRef.current.swiper.navigation.update();
+        if (swiperRef.current && swiperRef.current.navigation) {
+            swiperRef.current.navigation.destroy();
+            swiperRef.current.navigation.init();
+            swiperRef.current.navigation.update();
         }
-    }, [prevRef, nextRef]);
+    }, [nextRef, prevRef]);
+
 
     return (
         <section className="hero">
@@ -40,8 +40,10 @@ const Hero = () => {
                     <h1 className="hero__title">CleanTweaking</h1>
                     <p className="hero__text">
                         Получите абсолютную производительность компьютера с помощью CleanTweaking. Эксперты <br/>
-                        CleanTweaking помогут вам усовершенствовать компьютер до состояния, в котором он еще небыл. <br/>
-                        Безопасность, конфиденциальность и доверие никогда не будут поставлены под угрозу. Больше FPS,<br/>
+                        CleanTweaking помогут вам усовершенствовать компьютер до состояния, в котором он еще
+                        небыл. <br/>
+                        Безопасность, конфиденциальность и доверие никогда не будут поставлены под угрозу. Больше
+                        FPS,<br/>
                         меньше задержек и сбоев. Свяжитесь с нами сегодня, и мы быстро приведем ваш компьютер в рабочее
                         состояние!
                     </p>
@@ -52,9 +54,11 @@ const Hero = () => {
                         драйвера и настроят параметры для оптимальной производительности в играх.
                     </p>
                     <p className="hero__text">
-                        Если ваш компьютер лагает или работает медленно, оптимизация — это то, что вам нужно. Она не<br/>
-                        только улучшает производительность, но и продлевает срок службы, снижая нагрузку на компоненты.<br/>
-                        Присоединяйтесь к CleanTweaking и наслаждайтесь молниеносной  системой!
+                        Если ваш компьютер лагает или работает медленно, оптимизация — это то, что вам нужно. Она
+                        не<br/>
+                        только улучшает производительность, но и продлевает срок службы, снижая нагрузку на
+                        компоненты.<br/>
+                        Присоединяйтесь к CleanTweaking и наслаждайтесь молниеносной системой!
                     </p>
                     <a target="_blank" href="https://t.me/Clean_0K" className="hero__link">
                         Заказать оптимизацию
@@ -136,7 +140,6 @@ const Hero = () => {
                                 </SwiperSlide>
                             ))}
                         </Swiper>
-
                         <div ref={nextRef} className="swiper-button-next"></div>
                     </div>
                 </div>

@@ -31,7 +31,8 @@ const Navbar = () => {
                 <span></span>
             </div>
             <ul className={`header__list ${open ? 'open' : ''}`}>
-                <li><NavLink to={'/'} className={'header__link'}>Главная</NavLink></li>
+                <li><NavLink to={'/'} onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}
+                             className={'header__link'}>Главная</NavLink></li>
                 <li><NavLink to={''} onClick={handleClick} className={'header__link'}>Оптимизация</NavLink></li>
                 <li><NavLink to={'/recleaner'} className={'header__link'}>Recleaner</NavLink></li>
                 <li><NavLink to={''} onClick={handleContactClick} className={'header__link'}>Контакты</NavLink></li>

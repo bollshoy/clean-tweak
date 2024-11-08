@@ -112,6 +112,10 @@ h1, h2, h3, h4, h5, h6 {
   font-display: swap;
   src: url("../assets/fonts/Nunito-Bold.woff2") format("woff2");
 }
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: var(--font);
   background: var(--background-color);
