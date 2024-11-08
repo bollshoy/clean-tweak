@@ -98,7 +98,21 @@
 @media screen and (max-width: 520px){
   .banner__text {
     font-size: 26px;
-    font-weight: 500;
     line-height: 28px;
+  }
+}
+
+@media screen and (max-width: 420px){
+  .banner__text {
+    font-size: 22px;
+    line-height: 26px;
+  }
+}
+
+@media screen and (max-width: 380px){
+  .banner__text {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 22px;
   }
 }

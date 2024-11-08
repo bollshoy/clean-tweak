@@ -94,7 +94,7 @@ const Hero = () => {
                             className={'mySwiper'}
                             modules={[Navigation]}
                             navigation={{prevEl: prevRef.current, nextEl: nextRef.current}}
-                            loop={true}
+                            loop={false}
                             spaceBetween={10}
                             breakpoints={{
                                 640: {

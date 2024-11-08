@@ -106,6 +106,13 @@
     gap: 30px;
   }
 
+  .services__img{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
   .services__icon {
     width: 100%;
     max-width: none;
@@ -121,5 +128,12 @@
   .services__img {
     width: 100%;
     max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 420px){
+  .services__title {
+    font-size: 28px;
+    line-height: 32px;
   }
 }

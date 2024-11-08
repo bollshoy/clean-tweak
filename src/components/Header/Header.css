@@ -30,6 +30,11 @@
     position: fixed;
     inset: 0;
     height: 30px;
+    padding: 0;
+    margin: 0;
+  }
+  .header__container {
+    border-radius: 0;
   }
   .header__icons {
     display: none;

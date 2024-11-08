@@ -72,6 +72,7 @@
 
   .mySwiper {
     .swiper-slide {
+      width: auto !important;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -179,15 +180,6 @@
   &__content {
     overflow: hidden;
     transition: max-height 0.3s ease;
-  }
-}
-
-@media screen and (max-width: 2560px) {
-  .mySwiper {
-    .swiper-slide {
-      margin: 0;
-      width: auto !important;
-    }
   }
 }
 
