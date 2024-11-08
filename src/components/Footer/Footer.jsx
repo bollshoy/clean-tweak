@@ -33,13 +33,17 @@ const Footer = () => {
                 <div className="footer__contact">
                     <span className="contact__title">Позвоните или напишите нам.<br/> Мы всегда на связи в любое время!</span>
                     <div className="contact__item">
-                        <p className="footer__item">+79013364878</p>
+                        <p className="footer__item">
+                            <a href="tel:+79013364878">+79013364878</a>
+                        </p>
                         <div className="contact__img">
                             <img src={telegram} alt=""/>
                             <img src={whatsapp} alt=""/>
                         </div>
                     </div>
-                    <p className="footer__item">gamerboy131964@gmail.com</p>
+                    <p className="footer__item">
+                        <a href="mailto:test@gmail.com">gamerboy131964@gmail.com</a>
+                    </p>
                 </div>
                 <div className="footer__line"></div>
                 <div className="footer__social">
