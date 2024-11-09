@@ -1,12 +1,12 @@
 import React from 'react';
 import WidgetBotEmbed from "@widgetbot/react-embed";
 
-const serverId = import.meta.env.VITE_SERVER_ID;
-const serverChannel = import.meta.env.VITE_CHANNEL_ID;
-
 import './WidgetBot.css'
 
 const WidgetBot = () => {
+    const serverId = import.meta.env.VITE_SERVER_ID;
+    const serverChannel = import.meta.env.VITE_CHANNEL_ID;
+
     return (
         <div className="widgetBot">
             <h2 className="widgetBot__title">Отзывы с нашего Discord</h2>
