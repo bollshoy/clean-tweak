@@ -231,6 +231,12 @@ input:checked + label:after {
     margin-bottom: 10px;
   }
 }
+@media screen and (max-width: 360px) {
+  .tabs__title {
+    font-size: 52px;
+    line-height: 62px;
+  }
+}
 @media screen and (max-width: 340px) {
   .tabs__content-title {
     font-size: 18px;

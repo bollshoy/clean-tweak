@@ -1,0 +1,20 @@
+.widgetBot {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 200px;
+  margin-top: 100px;
+}
+.widgetBot__title {
+  margin-bottom: 50px;
+}
+
+.WidgetBotEmbed {
+  width: 100%;
+  max-width: 1200px;
+  height: 600px;
+  border-radius: var(--border-radius-large);
+}
+
+/*# sourceMappingURL=WidgetBot.css.map */

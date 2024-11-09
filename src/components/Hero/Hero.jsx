@@ -5,7 +5,6 @@ import accordionItems from "@/data/accordion.js";
 import rules from "@/assets/icons/rules.svg";
 
 import './Hero.css';
-import ReviewSlider from "@/components/ReviewSlider/ReviewSlider.jsx";
 
 const Hero = () => {
     const [openIndex, setOpenIndex] = useState(null);
@@ -71,7 +70,6 @@ const Hero = () => {
                             </div>
                         </div>
                     </div>
-                    <ReviewSlider/>
                 </div>
             </div>
         </section>
