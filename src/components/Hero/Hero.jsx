@@ -1,6 +1,7 @@
-import React, {useState} from 'react';
+import React, {useCallback, useState} from 'react';
+import Typewriter from "@/components/Typewriter/Typewriter.jsx";
 
-import heroImg from '@/assets/images/hero.jpg';
+import heroImg from '@/assets/images/logo.png';
 import accordionItems from "@/data/accordion.js";
 import rules from "@/assets/icons/rules.svg";
 
@@ -8,10 +9,23 @@ import './Hero.css';
 
 const Hero = () => {
     const [openIndex, setOpenIndex] = useState(null);
+    const [typedText, setTypedText] = useState('');
 
     const toggleAccordion = (index) => {
         setOpenIndex(openIndex === index ? null : index);
     };
+
+    const handleTextUpdate = (newText) => {
+        setTypedText(newText);
+    };
+
+    const scrollToFrom = useCallback(() => {
+        window.scrollBy({
+            top: 6300,
+            behavior: 'smooth',
+        });
+    });
+
 
     return (
         <section className="hero">
@@ -20,7 +34,10 @@ const Hero = () => {
                     <img src={heroImg} alt="heroImg"/>
                 </div>
                 <div className="hero__content">
-                    <h1 className="hero__title">CleanTweaking</h1>
+                    <div className="typing__effect">
+                        <Typewriter text="CleanTweaking" speed={100} onTextUpdate={handleTextUpdate}/>
+                        <h1 className="hero__title">{typedText}</h1>
+                    </div>
                     <p className="hero__text">
                         Получите абсолютную производительность компьютера с помощью CleanTweaking. Эксперты <br/>
                         CleanTweaking помогут вам усовершенствовать компьютер до состояния, в котором он еще
@@ -43,9 +60,9 @@ const Hero = () => {
                         компоненты.<br/>
                         Присоединяйтесь к CleanTweaking и наслаждайтесь молниеносной системой!
                     </p>
-                    <a target="_blank" href="https://t.me/Clean_0K" className="hero__link">
-                        Заказать оптимизацию
-                    </a>
+                    <button onClick={scrollToFrom} className="hero__btn">
+                        Купить оптимизацию
+                    </button>
                     <div className="accordion">
                         <div className="accordion__container">
                             <div className="accordion__accordion">

@@ -61,6 +61,7 @@
 
   &:hover {
     background: var(--first-color);
+    color: var(--white);
   }
 
   &.active {
@@ -126,7 +127,7 @@ label {
   text-indent: -9999px;
   width: 60px;
   height: 30px;
-  background: grey;
+  background: var(--second-color);
   display: block;
   border-radius: 15px;
   position: relative;
@@ -272,5 +273,9 @@ input:checked + label:after {
   .tabs__content-title {
     font-size: 18px;
     line-height: 24px;
+  }
+
+  .tabs__content-content {
+    padding: 10px;
   }
 }

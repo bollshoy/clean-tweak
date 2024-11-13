@@ -1,32 +1,52 @@
 import React from 'react';
-import {NavLink} from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import { gsap } from 'gsap';
+import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 
 import icons from "@/data/icons.js";
 import telegram from '@/assets/icons/telegram.svg';
 import whatsapp from '@/assets/icons/whatsapp.svg';
 
-import './Footer.css'
+import './Footer.css';
+
+gsap.registerPlugin(ScrollToPlugin);
 
 const Footer = () => {
+    const handleScrollToTop = () => {
+        gsap.to(window, { duration: 1, scrollTo: { y: 0, autoKill: false } });
+    };
+
+    const handleScrollToOptimization = () => {
+        gsap.to(window, { duration: 1, scrollTo: { y: 2200, autoKill: false } });
+    };
+
+    const handleScrollToContacts = () => {
+        gsap.to(window, { duration: 1, scrollTo: { y: document.getElementById('footer').offsetTop, autoKill: false } });
+    };
+
+    const handleRecleanerClick = () => {
+        gsap.to(window, { duration: 1, scrollTo: { y: 0, autoKill: false } });
+    };
+
     return (
-        <section className={'footer'}>
+        <section className={'footer'} id={'footer'}>
             <div className="footer__container container">
                 <div className="footer__logo">
-                    <span className="logo">CleanTweaking</span>
+                    <a href={'/'} className="logo">CleanTweaking</a>
                 </div>
                 <div className="footer__content">
                     <ul className="footer__list">
                         <li className="footer__item">
-                            <a href="" className="footer__link">Главная</a>
+                            <a href="#" onClick={handleScrollToTop} className="footer__link">Главная</a>
                         </li>
                         <li className="footer__item">
-                            <a href='/' className="footer__link">Настройка</a>
+                            <a href="#" onClick={handleScrollToOptimization} className="footer__link">Настройка</a>
                         </li>
                         <li className="footer__item">
-                            <NavLink to={'/recleaner'} className="footer__link">Recleaner</NavLink>
+                            <NavLink to={'/recleaner'} onClick={handleRecleanerClick} className="footer__link">Recleaner</NavLink>
                         </li>
                         <li className="footer__item">
-                            <a href='/' to={''} className="footer__link">Контакты</a>
+                            <a href="#" onClick={handleScrollToContacts} className="footer__link">Контакты</a>
                         </li>
                     </ul>
                 </div>

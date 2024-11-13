@@ -1,13 +1,14 @@
 import React from 'react';
 
 import Testimonial from "@/components/Testimonial/Testimonial.jsx";
-import Services from '@/components/Services/Services.jsx';
-import Security from "@/components/Security/Security.jsx";
-import Footer from "@/components/Footer/Footer.jsx";
-import Header from "@/components/Header/Header.jsx";
-import Hero from "@/components/Hero/Hero.jsx";
-import Tab from '@/components/Tab/Tab.jsx';
+import Advantages from "@/components/Advantages/Advantages.jsx";
 import WidgetBot from "@/components/WidgetBot/WidgetBot.jsx";
+import Security from "@/components/Security/Security.jsx";
+import Header from "@/components/Header/Header.jsx";
+import Footer from "@/components/Footer/Footer.jsx";
+import Hero from "@/components/Hero/Hero.jsx";
+import Form from '@/components/Form/Form.jsx'
+import Tab from '@/components/Tab/Tab.jsx';
 
 const Home = () => {
     return (
@@ -19,7 +20,8 @@ const Home = () => {
                 <WidgetBot/>
                 <Tab/>
                 <Security/>
-                <Services/>
+                <Advantages/>
+                <Form/>
             </main>
             <Footer/>
         </>

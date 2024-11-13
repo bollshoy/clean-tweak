@@ -7,6 +7,7 @@ import Recleaner from "@/pages/Recleaner.jsx";
 import './styles/main.css';
 
 const App = () => {
+
     return (
         <div className="App">
             <div className="App-header container">
