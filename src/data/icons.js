@@ -1,5 +1,6 @@
 import vk from '@/assets/icons/vk.svg';
 import discord from '@/assets/icons/discord.svg';
+import telegram from '@/assets/icons/telegram.svg';
 
 export const icons = [
     {
@@ -14,6 +15,12 @@ export const icons = [
         alt: vk,
         href: 'https://vk.com/clean_ok69'
     },
+    {
+        id: 3,
+        src: telegram,
+        alt: telegram,
+        href: 'https://t.me/Clean_0K',
+    }
 ];
 
 export default icons;

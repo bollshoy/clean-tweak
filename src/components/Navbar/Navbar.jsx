@@ -14,7 +14,7 @@ const Navbar = () => {
     }, []);
 
     const handleContactClick = useCallback(() => {
-        gsap.to(window, { duration: 1, scrollTo: { y: 10000, autoKill: false } });
+        gsap.to(window, { duration: 1, scrollTo: { y: 6300, autoKill: false } });
     }, []);
 
     const handleRecleanerClick = useCallback(() => {

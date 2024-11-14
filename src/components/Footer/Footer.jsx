@@ -1,7 +1,7 @@
 import React from 'react';
-import { NavLink } from "react-router-dom";
-import { gsap } from 'gsap';
-import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
+import {NavLink} from "react-router-dom";
+import {gsap} from 'gsap';
+import {ScrollToPlugin} from 'gsap/ScrollToPlugin';
 
 import icons from "@/data/icons.js";
 import telegram from '@/assets/icons/telegram.svg';
@@ -13,19 +13,19 @@ gsap.registerPlugin(ScrollToPlugin);
 
 const Footer = () => {
     const handleScrollToTop = () => {
-        gsap.to(window, { duration: 1, scrollTo: { y: 0, autoKill: false } });
+        gsap.to(window, {duration: 1, scrollTo: {y: 0, autoKill: false}});
     };
 
     const handleScrollToOptimization = () => {
-        gsap.to(window, { duration: 1, scrollTo: { y: 2200, autoKill: false } });
+        gsap.to(window, {duration: 1, scrollTo: {y: 2200, autoKill: false}});
     };
 
     const handleScrollToContacts = () => {
-        gsap.to(window, { duration: 1, scrollTo: { y: document.getElementById('footer').offsetTop, autoKill: false } });
+        gsap.to(window, {duration: 1, scrollTo: {y: document.getElementById('footer').offsetTop, autoKill: false}});
     };
 
     const handleRecleanerClick = () => {
-        gsap.to(window, { duration: 1, scrollTo: { y: 0, autoKill: false } });
+        gsap.to(window, {duration: 1, scrollTo: {y: 0, autoKill: false}});
     };
 
     return (
@@ -43,7 +43,8 @@ const Footer = () => {
                             <a href="#" onClick={handleScrollToOptimization} className="footer__link">Настройка</a>
                         </li>
                         <li className="footer__item">
-                            <NavLink to={'/recleaner'} onClick={handleRecleanerClick} className="footer__link">Recleaner</NavLink>
+                            <NavLink to={'/recleaner'} onClick={handleRecleanerClick}
+                                     className="footer__link">Recleaner</NavLink>
                         </li>
                         <li className="footer__item">
                             <a href="#" onClick={handleScrollToContacts} className="footer__link">Контакты</a>
@@ -52,15 +53,6 @@ const Footer = () => {
                 </div>
                 <div className="footer__contact">
                     <span className="contact__title">Позвоните или напишите нам.<br/> Мы всегда на связи в любое время!</span>
-                    <div className="contact__item">
-                        <p className="footer__item">
-                            <a href="tel:+79013364878">+79013364878</a>
-                        </p>
-                        <div className="contact__img">
-                            <img src={telegram} alt=""/>
-                            <img src={whatsapp} alt=""/>
-                        </div>
-                    </div>
                     <p className="footer__item">
                         <a href="mailto:test@gmail.com">gamerboy131964@gmail.com</a>
                     </p>

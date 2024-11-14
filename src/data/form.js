@@ -12,7 +12,7 @@ export const form = [
     {
         id: 2,
         src: phone,
-        title: '+79013364878',
+        title: 'Звонок по телефону',
         href: 'tel:+79013364878'
     },
     {

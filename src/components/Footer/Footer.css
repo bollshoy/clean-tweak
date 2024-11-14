@@ -47,23 +47,6 @@
   text-decoration: underline;
   cursor: pointer;
 }
-.footer .contact__item {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.footer .contact__img {
-  margin-top: -10px;
-}
-.footer .contact__img img {
-  filter: invert(1);
-}
-.footer .contact__title {
-  font-weight: 500;
-  font-size: 22px;
-  line-height: 28px;
-  margin-bottom: 30px;
-}
 .footer__social {
   display: flex;
   align-items: center;

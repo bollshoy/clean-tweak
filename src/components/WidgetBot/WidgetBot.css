@@ -18,4 +18,10 @@
   border-radius: var(--border-radius-large);
 }
 
+@media screen and (max-width: 992px) {
+  .widgetBot {
+    margin-left: 0;
+  }
+}
+
 /*# sourceMappingURL=WidgetBot.css.map */
