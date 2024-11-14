@@ -3,9 +3,6 @@
 
   .footer__container {
     padding: 20px;
-  }
-
-  &__container {
     border: 1px solid var(--white);
     border-radius: var(--border-radius-large);
     display: flex;
@@ -19,13 +16,6 @@
       font-size: 42px;
       line-height: 52px;
     }
-  }
-
-  &__line {
-    border: 1px solid var(--white);
-    background-color: var(--white);
-    height: 250px;
-    border-radius: var(--border-radius-large);
   }
 
   &__list {
@@ -56,11 +46,10 @@
       cursor: pointer;
     }
   }
-  
+
   &__social {
     display: flex;
     align-items: center;
-    flex-direction: column;
     gap: 10px;
 
     img {

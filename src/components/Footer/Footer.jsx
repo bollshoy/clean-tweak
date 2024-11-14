@@ -1,11 +1,9 @@
 import React from 'react';
+import {ScrollToPlugin} from 'gsap/ScrollToPlugin';
 import {NavLink} from "react-router-dom";
 import {gsap} from 'gsap';
-import {ScrollToPlugin} from 'gsap/ScrollToPlugin';
 
 import icons from "@/data/icons.js";
-import telegram from '@/assets/icons/telegram.svg';
-import whatsapp from '@/assets/icons/whatsapp.svg';
 
 import './Footer.css';
 
@@ -57,7 +55,6 @@ const Footer = () => {
                         <a href="mailto:test@gmail.com">gamerboy131964@gmail.com</a>
                     </p>
                 </div>
-                <div className="footer__line"></div>
                 <div className="footer__social">
                     {icons.map((item) => (
                         <div key={item.id} className="footer__icons">

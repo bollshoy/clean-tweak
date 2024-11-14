@@ -3,8 +3,6 @@
 }
 .footer .footer__container {
   padding: 20px;
-}
-.footer__container {
   border: 1px solid var(--white);
   border-radius: var(--border-radius-large);
   display: flex;
@@ -15,12 +13,6 @@
   font-weight: 700;
   font-size: 42px;
   line-height: 52px;
-}
-.footer__line {
-  border: 1px solid var(--white);
-  background-color: var(--white);
-  height: 250px;
-  border-radius: var(--border-radius-large);
 }
 .footer__list {
   display: flex;
@@ -50,7 +42,6 @@
 .footer__social {
   display: flex;
   align-items: center;
-  flex-direction: column;
   gap: 10px;
 }
 .footer__social img {
