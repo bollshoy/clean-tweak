@@ -3,6 +3,7 @@ import {ScrollToPlugin} from 'gsap/ScrollToPlugin';
 import {NavLink} from "react-router-dom";
 import {gsap} from 'gsap';
 
+import logo from '/logo.png'
 import icons from "@/data/icons.js";
 
 import './Footer.css';
@@ -30,6 +31,7 @@ const Footer = () => {
         <section className={'footer'} id={'footer'}>
             <div className="footer__container container">
                 <div className="footer__logo">
+                    <img src={logo} alt="" className="logo__img"/>
                     <a href={'/'} className="logo">CleanTweaking</a>
                 </div>
                 <div className="footer__content">
@@ -50,7 +52,7 @@ const Footer = () => {
                     </ul>
                 </div>
                 <div className="footer__contact">
-                    <span className="contact__title">Позвоните или напишите нам.<br/> Мы всегда на связи в любое время!</span>
+                    <span className="contact__title">Мы всегда на связи в любое время!</span>
                     <p className="footer__item">
                         <a href="mailto:test@gmail.com">gamerboy131964@gmail.com</a>
                     </p>

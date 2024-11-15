@@ -6,7 +6,7 @@ export const form = [
     {
         id: 1,
         src: email,
-        title: 'gamerboy131964@gmail.com',
+        title: 'Електронная почта',
         href: 'mailto:gamerboy131964@gmail.com',
     },
     {
