@@ -1,5 +1,4 @@
 import email from '@/assets/icons/contactEmail.svg';
-import phone from '@/assets/icons/contactPhone.svg';
 import massage from '@/assets/icons/contactMassege.svg';
 
 export const form = [
@@ -11,12 +10,6 @@ export const form = [
     },
     {
         id: 2,
-        src: phone,
-        title: 'Звонок по телефону',
-        href: 'tel:+79013364878'
-    },
-    {
-        id: 3,
         title: 'Мессенджеры',
         src: massage,
     },

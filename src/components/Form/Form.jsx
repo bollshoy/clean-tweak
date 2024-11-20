@@ -1,10 +1,15 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 import form from "@/data/form.js";
 
 import './Form.css';
+import Modal from "@/components/Modal/Modal.jsx";
 
 const Form = () => {
+    const [modalActive, setModalActive] = useState(true);
+    const handleMessengerClick = () => {
+        setModalActive(true); // Открываем модалку
+    };
     return (
         <section className="form">
             <div className="form__container container">
@@ -21,13 +26,21 @@ const Form = () => {
                 <div className="form__icon">
                     {form.map((item) => (
                         <div key={item.id} className="icon__item">
-                            <a href={item.href} target="_blank" rel="noopener noreferrer" className="icon__link">
-                                <img src={item.src} alt="" className="icon__icon"/>
-                                <a href={item.href} className="item__link">{item.title}</a>
-                            </a>
+                            {item.id === 2 ? (
+                                <div onClick={handleMessengerClick} className="icon__link" style={{cursor: 'pointer'}}>
+                                    <img src={item.src} alt="" className="icon__icon"/>
+                                    <span className="item__link">{item.title}</span>
+                                </div>
+                            ) : (
+                                <a href={item.href} target="_blank" rel="noopener noreferrer" className="icon__link">
+                                    <img src={item.src} alt="" className="icon__icon"/>
+                                    <span className="item__link">{item.title}</span>
+                                </a>
+                            )}
                         </div>
                     ))}
                 </div>
+                <Modal active={modalActive} setActive={setModalActive}/>
             </div>
         </section>
     );
