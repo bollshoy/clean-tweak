@@ -9,6 +9,7 @@ import Footer from "@/components/Footer/Footer.jsx";
 import Hero from "@/components/Hero/Hero.jsx";
 import Form from '@/components/Form/Form.jsx'
 import Tab from '@/components/Tab/Tab.jsx';
+import Recleaner from "@/components/Recleaner/Recleaner.jsx";
 
 const Home = () => {
     return (
@@ -21,6 +22,7 @@ const Home = () => {
                 <Tab/>
                 <Security/>
                 <Advantages/>
+                <Recleaner/>
                 <Form/>
             </main>
             <Footer/>

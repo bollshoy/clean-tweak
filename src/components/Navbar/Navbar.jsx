@@ -17,10 +17,6 @@ const Navbar = () => {
         gsap.to(window, { duration: 1, scrollTo: { y: 6300, autoKill: false } });
     }, []);
 
-    const handleRecleanerClick = useCallback(() => {
-        gsap.to(window, { duration: 1, scrollTo: { y: 0, autoKill: false } });
-    }, []);
-
     const handleBurgerClick = useCallback(() => {
         setOpen(!open);
     });
@@ -42,11 +38,6 @@ const Navbar = () => {
                     <li>
                         <NavLink to={''} onClick={handleClick} className={'header__link'}>
                             Оптимизация
-                        </NavLink>
-                    </li>
-                    <li>
-                        <NavLink to={'/recleaner'} onClick={handleRecleanerClick} className={'header__link'}>
-                            Recleaner
                         </NavLink>
                     </li>
                     <li>

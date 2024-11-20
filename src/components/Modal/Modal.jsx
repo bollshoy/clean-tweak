@@ -13,7 +13,6 @@ const Modal = ({ active, setActive }) => {
                             <a href={item.href} className="modal__link">
                                 <img src={item.src} alt={item.title} className="modal__icon"/>
                             </a>
-                            <span>{item.title}</span>
                         </div>
                     ))}
                 </div>

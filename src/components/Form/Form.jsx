@@ -6,9 +6,9 @@ import './Form.css';
 import Modal from "@/components/Modal/Modal.jsx";
 
 const Form = () => {
-    const [modalActive, setModalActive] = useState(true);
+    const [modalActive, setModalActive] = useState(false);
     const handleMessengerClick = () => {
-        setModalActive(true); // Открываем модалку
+        setModalActive(!modalActive); // Открываем модалку
     };
     return (
         <section className="form">

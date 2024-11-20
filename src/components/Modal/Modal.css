@@ -29,6 +29,13 @@
   justify-content: center;
   gap: 10px;
   margin-bottom: 30px;
+  margin-top: 20px;
+}
+.modal__title {
+  color: var(--black);
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 32px;
 }
 
 /*# sourceMappingURL=Modal.css.map */
