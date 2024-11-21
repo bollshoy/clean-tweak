@@ -12,7 +12,7 @@ const Recleaner = () => {
         const fileUrl = import.meta.env.VITE_DOWNLOAD_LINK;
         const link = document.createElement('a');
         link.href = fileUrl;
-        link.setAttribute('download', 'RECLEANER.exe');
+        link.setAttribute("target", "_blank")
         document.body.appendChild(link);
         link.click();
         link.remove();
