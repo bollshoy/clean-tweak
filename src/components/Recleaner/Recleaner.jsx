@@ -12,11 +12,17 @@ const Recleaner = () => {
         const fileUrl = import.meta.env.VITE_DOWNLOAD_LINK;
         const link = document.createElement('a');
         link.href = fileUrl;
-        link.setAttribute("target", "_blank")
+
+        const isMobile = /Mobi|Android/i.test(navigator.userAgent);
+
+        const fileName = isMobile ? 'RECLEANER.exe' : 'RECLEANER.exe';
+        link.setAttribute('download', fileName);
+
         document.body.appendChild(link);
         link.click();
         link.remove();
     };
+
     return (
         <section className="recleaner">
             <div className="recleaner__container container">
