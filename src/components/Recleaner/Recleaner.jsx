@@ -1,4 +1,5 @@
 import React, {useRef} from 'react';
+import recleaner from "@/data/recleaner.js";
 
 import logo from '@/assets/images/recleanerLogo.jpg'
 
@@ -11,7 +12,9 @@ const Recleaner = () => {
         const fileUrl = import.meta.env.VITE_DOWNLOAD_LINK;
         const link = document.createElement('a');
         link.href = fileUrl;
-        link.setAttribute('download', 'RECLEANER.exe');
+        // Замена на таргет_бланк для проверки
+        // link.setAttribute('download', 'RECLEANER.exe');
+        link.setAttribute('target', '_blank');
         document.body.appendChild(link);
         link.click();
         link.remove();
@@ -20,7 +23,7 @@ const Recleaner = () => {
         <section className="recleaner">
             <div className="recleaner__container container">
                 <h6 className="recleaner__title">
-                   Наши проекты.
+                    Наши проекты - <span>OPEN BETA!</span>
                 </h6>
                 <div className="recleaner__content">
                     <div className="recleaner__content-content">
@@ -37,6 +40,15 @@ const Recleaner = () => {
                     <div className="recleaner__content-img">
                         <img src={logo} alt="logo"/>
                     </div>
+                </div>
+                <div className="recleaner__social">
+                    {recleaner.map((item) => (
+                        <div className="recleaner__item" key={item.id}>
+                            <a href={item.href} target={'_blank'} className="recleaner__item--link">
+                                <img src={item.src} alt="" className="recleaner__item--img"/>
+                            </a>
+                        </div>
+                    ))}
                 </div>
             </div>
         </section>
