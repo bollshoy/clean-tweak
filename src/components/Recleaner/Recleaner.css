@@ -52,7 +52,11 @@
   font-size: 22px;
 }
 .recleaner__content--btn {
+  background: none;
+}
+.recleaner__content--btn a {
   background: var(--white);
+  color: var(--black);
   padding: 15px 120px;
   font-weight: 500;
   font-size: 22px;
@@ -60,7 +64,7 @@
   border-radius: var(--border-radius-large);
   transition: var(--transition-speed);
 }
-.recleaner__content--btn:hover {
+.recleaner__content--btn a:hover {
   transition: var(--transition-speed);
   background: var(--first-color);
   color: var(--white);

@@ -6,17 +6,17 @@ import logo from '@/assets/images/recleanerLogo.jpg'
 import './Recleaner.css'
 
 const Recleaner = () => {
-    const buttonRef = useRef(null);
-
-    const handleDownload = () => {
-        const fileUrl = import.meta.env.VITE_DOWNLOAD_LINK;
-        const link = document.createElement('a');
-        link.href = fileUrl;
-        link.setAttribute('download', 'RECLEANER.exe');
-        document.body.appendChild(link);
-        link.click();
-        link.remove();
-    };
+    // const buttonRef = useRef(null);
+    //
+    // const handleDownload = () => {
+    //     const fileUrl = import.meta.env.VITE_DOWNLOAD_LINK;
+    //     const link = document.createElement('a');
+    //     link.href = fileUrl;
+    //     link.setAttribute('download', 'RECLEANER.exe');
+    //     document.body.appendChild(link);
+    //     link.click();
+    //     link.remove();
+    // };
 
     return (
         <section className="recleaner">
@@ -32,8 +32,10 @@ const Recleaner = () => {
                             С обширным функционалом, при этом не ломая систему.<br/>
                             Программа обсолютно бесплатная, скачать может любой желающий.
                         </p>
-                        <button className="recleaner__content--btn" onClick={handleDownload} ref={buttonRef}>
-                            скачать
+                        <button className="recleaner__content--btn">
+                            <a href={import.meta.env.VITE_DOWNLOAD_LINK}>
+                               Скачать
+                            </a>
                         </button>
                     </div>
                     <div className="recleaner__content-img">
