@@ -42,6 +42,8 @@ jobs:
 
       - name: Build project
         run: npm run build || (echo "Build failed" && exit 1)
+        env:
+          VITE_DOWNLOAD_LINK: ${{ secrets.VITE_DOWNLOAD_LINK }}
 
       - name: List files in dist
         run: ls -la ./dist
