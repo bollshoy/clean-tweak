@@ -1,21 +1,14 @@
 import React, {useRef} from 'react';
 import recleaner from "@/data/recleaner.js";
-
-import logo from '@/assets/images/recleanerLogo.jpg'
-
-import './Recleaner.css'
+import logo from '@/assets/images/recleanerLogo.jpg';
+import './Recleaner.css';
 
 const Recleaner = () => {
-    const buttonRef = useRef(null);
+    const downloadUrl = import.meta.env.VITE_DOWNLOAD_LINK;
+    const hiddenLinkRef = useRef(null);
 
     const handleDownload = () => {
-        const fileUrl = import.meta.env.VITE_DOWNLOAD_LINK;
-        const link = document.createElement('a');
-        link.href = fileUrl;
-        link.setAttribute('download', 'RECLEANER.exe');
-        document.body.appendChild(link);
-        link.click();
-        link.remove();
+        hiddenLinkRef.current.click();
     };
 
     return (
@@ -30,11 +23,19 @@ const Recleaner = () => {
                         <p className="recleaner__content--text">
                             Попробуйте нашу утилиту, для настройки системы.<br/>
                             С обширным функционалом, при этом не ломая систему.<br/>
-                            Программа обсолютно бесплатная, скачать может любой желающий.
+                            Программа абсолютно бесплатная, скачать может любой желающий.
                         </p>
-                        <button className="recleaner__content--btn" onClick={handleDownload} ref={buttonRef}>
+                        <button className="recleaner__content--btn" onClick={handleDownload}>
                             скачать
                         </button>
+                        <a
+                            href={downloadUrl}
+                            download
+                            ref={hiddenLinkRef}
+                            style={{display: 'none'}}
+                        >
+                            Скрытая ссылка
+                        </a>
                     </div>
                     <div className="recleaner__content-img">
                         <img src={logo} alt="logo"/>
