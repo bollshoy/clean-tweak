@@ -1,4 +1,4 @@
-import React, {useRef} from 'react';
+import React, { useRef } from 'react';
 import recleaner from "@/data/recleaner.js";
 import logo from '@/assets/images/recleanerLogo.jpg';
 import './Recleaner.css';
@@ -30,11 +30,9 @@ const Recleaner = () => {
                         </button>
                         <a
                             href={downloadUrl}
-                            download
+                            download="RECLEANER.exe"
                             ref={hiddenLinkRef}
-                            style={{display: 'none'}}
-                        >
-                            Скрытая ссылка
+                            style={{ display: 'none' }}>
                         </a>
                     </div>
                     <div className="recleaner__content-img">
