@@ -1,21 +1,15 @@
 import React, {useRef} from 'react';
 import recleaner from "@/data/recleaner.js";
+import useDownload from '@/hooks/useDownload.jsx';
+
 import logo from '@/assets/images/recleanerLogo.jpg';
+
 import './Recleaner.css';
 
 const Recleaner = () => {
     const buttonRef = useRef(null);
-
-    const handleDownload = () => {
-        const fileUrl = import.meta.env.VITE_DOWNLOAD_LINK;
-        const timestamp = new Date().getTime();
-        const link = document.createElement('a');
-        link.href = fileUrl;
-        link.setAttribute('download', `RECLEANER_${timestamp}.exe`);
-        document.body.appendChild(link);
-        link.click();
-        link.remove();
-    };
+    const fileUrl = import.meta.env.VITE_DOWNLOAD_LINK;
+    const downloadFile = useDownload(fileUrl, 'Recleaner');
 
     return (
         <section className="recleaner">
@@ -31,7 +25,7 @@ const Recleaner = () => {
                             С обширным функционалом, при этом не ломая систему.<br/>
                             Программа абсолютно бесплатная, скачать может любой желающий.
                         </p>
-                        <button className={'recleaner__content--btn'} onClick={handleDownload} ref={buttonRef}>
+                        <button className={'recleaner__content--btn'} onClick={downloadFile} ref={buttonRef}>
                             Скачать
                         </button>
                     </div>

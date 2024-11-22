@@ -10,11 +10,11 @@ const Navbar = () => {
     const [open, setOpen] = useState(false);
 
     const handleClick = useCallback(() => {
-        gsap.to(window, { duration: 1, scrollTo: { y: 2200, autoKill: false } });
+        gsap.to(window, { duration: 1, scrollTo: { y: 3300, autoKill: false } });
     }, []);
 
     const handleContactClick = useCallback(() => {
-        gsap.to(window, { duration: 1, scrollTo: { y: 6300, autoKill: false } });
+        gsap.to(window, { duration: 1, scrollTo: { y: 7200, autoKill: false } });
     }, []);
 
     const handleBurgerClick = useCallback(() => {

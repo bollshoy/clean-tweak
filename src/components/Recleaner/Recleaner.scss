@@ -62,7 +62,9 @@
 
   &__content--btn {
     background: var(--white);
-    padding: 15px 120px;
+    max-width: 100%;
+    width: 100%;
+    padding: 15px 30px;
     font-weight: 500;
     font-size: 22px;
     line-height: 28px;
@@ -123,6 +125,10 @@
     margin-left: 0;
     margin-top: 30px;
   }
+
+  .recleaner__content-img{
+    display: none;
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -157,7 +163,7 @@
 }
 
 @media screen and (max-width: 370px) {
-  .recleaner__title{
+  .recleaner__title {
     font-size: 42px;
     line-height: 48px;
   }
