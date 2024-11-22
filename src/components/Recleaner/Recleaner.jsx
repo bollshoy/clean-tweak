@@ -8,13 +8,15 @@ const Recleaner = () => {
 
     const handleDownload = () => {
         const fileUrl = import.meta.env.VITE_DOWNLOAD_LINK;
+        const timestamp = new Date().getTime();
         const link = document.createElement('a');
         link.href = fileUrl;
-        link.setAttribute('download', 'Recleaner.exe');
+        link.setAttribute('download', `RECLEANER_${timestamp}.exe`);
         document.body.appendChild(link);
         link.click();
         link.remove();
     };
+
     return (
         <section className="recleaner">
             <div className="recleaner__container container">
