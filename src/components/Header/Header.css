@@ -20,6 +20,11 @@
   align-items: center;
   gap: 5px;
 }
+.header__icons img {
+  filter: invert(1);
+  width: 60px;
+  height: auto;
+}
 .header__icons .icons__item {
   cursor: pointer;
 }

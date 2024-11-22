@@ -1,7 +1,7 @@
-import discord from '@/assets/icons/discord.svg';
-import telegram from '@/assets/icons/telegram.svg';
-import github from '@/assets/icons/github.svg';
-import vk from '@/assets/icons/vk.svg';
+import discord from '@/assets/icons/discord.png';
+import telegram from '@/assets/icons/telegram.png';
+import github from '@/assets/icons/github.png';
+import vk from '@/assets/icons/vk.png';
 
 export const recleaner = [
     {

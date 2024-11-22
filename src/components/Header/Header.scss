@@ -24,6 +24,12 @@
     align-items: center;
     gap: 5px;
 
+    img {
+      filter: invert(1);
+      width: 60px;
+      height: auto;
+    }
+
     .icons__item {
       cursor: pointer;
     }

@@ -41,7 +41,8 @@
   gap: 20px;
 }
 .footer__list img {
-  filter: invert(1);
+  width: 60px;
+  height: auto;
 }
 
 @media screen and (max-width: 992px) {
