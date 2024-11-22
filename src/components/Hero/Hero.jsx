@@ -21,7 +21,7 @@ const Hero = () => {
 
     const scrollToFrom = useCallback(() => {
         window.scrollBy({
-            top: 6300,
+            top: 7200,
             behavior: 'smooth',
         });
     });

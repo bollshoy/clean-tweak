@@ -51,8 +51,9 @@
     font-weight: 400;
     font-size: 20px;
     line-height: 28px;
-    padding: 10px 120px;
-    display: flex;
+    max-width: 300px;
+    width: 100%;
+    padding: 15px 30px;    display: flex;
     align-items: center;
     justify-content: center;
     transition: var(--transition-speed);
