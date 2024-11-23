@@ -7,16 +7,16 @@ const Navbar = ({ scrollToSection }) => {
     const toggleMenu = () => {
         setIsOpen(!isOpen);
         if (!isOpen) {
-            document.body.classList.add('menu-open'); // Останавливаем прокрутку
+            document.body.classList.add('menu-open');
         } else {
-            document.body.classList.remove('menu-open'); // Разрешаем прокрутку
+            document.body.classList.remove('menu-open');
         }
     };
 
     const handleLinkClick = (section) => {
-        setIsOpen(false); // Закрываем меню после перехода
-        document.body.classList.remove('menu-open'); // Разрешаем прокрутку
-        scrollToSection(section); // Прокрутка к секции
+        setIsOpen(false);
+        document.body.classList.remove('menu-open');
+        scrollToSection(section); 
     };
 
     return (
