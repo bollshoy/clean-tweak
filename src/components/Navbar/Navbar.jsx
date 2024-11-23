@@ -1,55 +1,49 @@
-import React, { useCallback, useState } from 'react';
+import React, { useState } from 'react';
 import './Navbar.css';
 
 const Navbar = ({ scrollToSection }) => {
-    const [open, setOpen] = useState(false);
+    const [isOpen, setIsOpen] = useState(false);
 
-    const handleClick = useCallback(() => {
-        setOpen((prev) => !prev);
-    }, []);
+    const toggleMenu = () => {
+        setIsOpen(!isOpen);
+        if (!isOpen) {
+            document.body.classList.add('menu-open'); // Останавливаем прокрутку
+        } else {
+            document.body.classList.remove('menu-open'); // Разрешаем прокрутку
+        }
+    };
 
-    const handleScrollAndCloseMenu = (section) => {
-        scrollToSection(section);
-        setOpen(false);
+    const handleLinkClick = (section) => {
+        setIsOpen(false); // Закрываем меню после перехода
+        document.body.classList.remove('menu-open'); // Разрешаем прокрутку
+        scrollToSection(section); // Прокрутка к секции
     };
 
     return (
-        <nav className={`header__menu ${open ? 'menu-open' : ''}`}>
-            <div className={`burger ${open ? 'open' : ''}`} onClick={handleClick}>
+        <nav className="header__menu">
+            <div className={`burger ${isOpen ? 'menu-open' : ''}`} onClick={toggleMenu}>
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
-            <ul className={`header__list ${open ? 'open' : ''}`}>
+            <ul className={`header__list ${isOpen ? 'open' : ''}`}>
                 <li>
-                    <button
-                        className="header__link"
-                        onClick={() => handleScrollAndCloseMenu('hero')}
-                    >
+                    <button className="header__link" onClick={() => handleLinkClick('hero')}>
                         Главная
                     </button>
                 </li>
                 <li>
-                    <button
-                        className="header__link"
-                        onClick={() => handleScrollAndCloseMenu('tabs')}
-                    >
+                    <button className="header__link" onClick={() => handleLinkClick('tabs')}>
                         Оптимизация
                     </button>
                 </li>
                 <li>
-                    <button
-                        className="header__link"
-                        onClick={() => handleScrollAndCloseMenu('recleaner')}
-                    >
+                    <button className="header__link" onClick={() => handleLinkClick('recleaner')}>
                         Recleaner
                     </button>
                 </li>
                 <li>
-                    <button
-                        className="header__link"
-                        onClick={() => handleScrollAndCloseMenu('form')}
-                    >
+                    <button className="header__link" onClick={() => handleLinkClick('form')}>
                         Контакты
                     </button>
                 </li>

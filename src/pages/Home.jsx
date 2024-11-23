@@ -30,13 +30,13 @@ const Home = () => {
         }[section];
 
         if (targetRef?.current) {
-            const topPosition = targetRef.current.getBoundingClientRect().top + window.scrollY;
             gsap.to(window, {
-                scrollTo: { y: topPosition - 50, autoKill: true },
+                scrollTo: { y: targetRef.current.offsetTop, autoKill: true },
                 duration: 1,
             });
         }
     };
+
 
     return (
         <>
