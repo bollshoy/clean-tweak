@@ -33,12 +33,17 @@ const Home = () => {
             const offset = 80;
             const targetPosition = targetRef.current.getBoundingClientRect().top + window.scrollY - offset;
 
-            gsap.to(window, {
-                scrollTo: { y: targetPosition, autoKill: true },
-                duration: 1,
-            });
+            if (window.innerWidth <= 992) {
+                targetRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            } else {
+                gsap.to(window, {
+                    scrollTo: { y: targetPosition, autoKill: true },
+                    duration: 1,
+                });
+            }
         }
     };
+
 
 
     return (
