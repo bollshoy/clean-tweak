@@ -47,11 +47,11 @@ const Home = () => {
                 </section>
                 <Testimonial />
                 <WidgetBot />
-                <Tab />
-                <Security/>
                 <section ref={tabsRef}>
-                    <Advantages />
+                    <Tab />
                 </section>
+                <Security/>
+                <Advantages />
                 <section ref={recleanerRef}>
                     <Recleaner />
                 </section>
