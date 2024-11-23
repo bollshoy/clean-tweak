@@ -15,7 +15,7 @@ const Recleaner = () => {
         <section className="recleaner">
             <div className="recleaner__container container">
                 <h6 className="recleaner__title">
-                    Наш проекты - <span>OPEN BETA!</span>
+                    Наш проект - <span>OPEN BETA!</span>
                 </h6>
                 <div className="recleaner__content">
                     <div className="recleaner__content-content">
