@@ -1,6 +1,4 @@
-import React, {useRef} from 'react';
-import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
-import { gsap } from 'gsap';
+import React, { useRef } from 'react';
 
 import Testimonial from "@/components/Testimonial/Testimonial.jsx";
 import Advantages from "@/components/Advantages/Advantages.jsx";
@@ -13,11 +11,9 @@ import Hero from "@/components/Hero/Hero.jsx";
 import Form from '@/components/Form/Form.jsx';
 import Tab from '@/components/Tab/Tab.jsx';
 
-gsap.registerPlugin(ScrollToPlugin);
-
 import './styles/main.css';
-const App = () => {
 
+const App = () => {
     const heroRef = useRef(null);
     const tabsRef = useRef(null);
     const recleanerRef = useRef(null);
@@ -32,20 +28,16 @@ const App = () => {
         }[section];
 
         if (targetRef?.current) {
-            const offset = 80;
-            const targetPosition = targetRef.current.getBoundingClientRect().top + window.scrollY - offset;
+            const offset = 70;
+            const targetPosition = targetRef.current.offsetTop - offset;
 
-            if (window.innerWidth <= 992) {
-                targetRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            } else {
-                gsap.to(window, {
-                    scrollTo: { y: targetPosition, autoKill: true },
-                    duration: 1,
-                });
-            }
+            window.scrollTo({
+                top: targetPosition,
+                behavior: 'smooth',
+            });
         }
     };
-    
+
     return (
         <div className="App">
             <div className="App-header container">

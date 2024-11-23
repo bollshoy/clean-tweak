@@ -10,7 +10,7 @@ const Form = () => {
         setModalActive(!modalActive); // Открываем модалку
     };
     return (
-        <section className={"form"}>
+        <section className={"form"} id={'form'}>
             <div className="form__container container">
                 <div className="form__content">
                     <h6 className="form__title">
