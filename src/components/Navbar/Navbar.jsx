@@ -16,7 +16,7 @@ const Navbar = ({ scrollToSection }) => {
     const handleLinkClick = (section) => {
         setIsOpen(false);
         document.body.classList.remove('menu-open');
-        scrollToSection(section); 
+        scrollToSection(section);
     };
 
     return (

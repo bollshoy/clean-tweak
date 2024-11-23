@@ -30,13 +30,10 @@ const Home = () => {
         }[section];
 
         if (targetRef?.current) {
-            gsap.to(window, {
-                scrollTo: { y: targetRef.current.offsetTop, autoKill: true },
-                duration: 1,
-            });
+            // Используем scrollIntoView для плавной прокрутки
+            targetRef.current.scrollIntoView({ behavior: 'smooth' });
         }
     };
-
 
     return (
         <>
@@ -50,7 +47,7 @@ const Home = () => {
                 <section ref={tabsRef}>
                     <Tab />
                 </section>
-                <Security/>
+                <Security />
                 <Advantages />
                 <section ref={recleanerRef}>
                     <Recleaner />
