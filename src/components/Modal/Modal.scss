@@ -10,6 +10,16 @@
   align-items: center;
   transform: scale(0);
 
+  &__item {
+    max-width: 60px;
+
+    img {
+      filter: invert(1);
+      width: 100%;
+      height: auto;
+    }
+  }
+
   &__wrapper {
     padding: 20px;
     background: var(--white);

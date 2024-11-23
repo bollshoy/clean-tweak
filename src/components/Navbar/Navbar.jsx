@@ -1,50 +1,34 @@
-import React, {useCallback, useState} from 'react';
-import {NavLink} from "react-router-dom";
-import {ScrollToPlugin} from 'gsap/ScrollToPlugin';
-import {gsap} from 'gsap';
-
+import React from 'react';
 import './Navbar.css';
 
-gsap.registerPlugin(ScrollToPlugin);
-
-const Navbar = () => {
-    const [open, setOpen] = useState(false);
-
-    const handleClick = useCallback(() => {
-        gsap.to(window, {duration: 1, scrollTo: {y: 3300, autoKill: false}});
-    }, []);
-
-    const handleContactClick = useCallback(() => {
-        gsap.to(window, {duration: 1, scrollTo: {y: 7200, autoKill: false}});
-    }, []);
-
-    const handleBurgerClick = useCallback(() => {
-        setOpen(!open);
-    });
-
+const Navbar = ({ scrollToSection }) => {
     return (
         <nav className="header__menu">
-            <div className={`burger ${open ? 'open' : ''}`} onClick={handleBurgerClick}>
+            <div className="burger">
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
-            <ul className={`header__list ${open ? 'open' : ''}`}>
+            <ul className="header__list">
                 <li>
-                    <NavLink to={'/'} onClick={() => gsap.to(window, {duration: 1, scrollTo: {y: 0, autoKill: false}})}
-                             className={'header__link'}>
+                    <button className="header__link" onClick={() => scrollToSection('hero')}>
                         Главная
-                    </NavLink>
+                    </button>
                 </li>
                 <li>
-                    <NavLink to={''} onClick={handleClick} className={'header__link'}>
+                    <button className="header__link" onClick={() => scrollToSection('tabs')}>
                         Оптимизация
-                    </NavLink>
+                    </button>
                 </li>
                 <li>
-                    <NavLink to={''} onClick={handleContactClick} className={'header__link'}>
+                    <button className="header__link" onClick={() => scrollToSection('recleaner')}>
+                        Recleaner
+                    </button>
+                </li>
+                <li>
+                    <button className="header__link" onClick={() => scrollToSection('form')}>
                         Контакты
-                    </NavLink>
+                    </button>
                 </li>
             </ul>
         </nav>

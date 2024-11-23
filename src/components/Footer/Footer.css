@@ -1,5 +1,5 @@
 .footer {
-  margin-top: 220px;
+  margin-top: 80px;
 }
 .footer .footer__container {
   display: flex;
@@ -12,7 +12,7 @@
 .footer__logo {
   display: flex;
   align-items: center;
-  max-width: 80px;
+  max-width: 60px;
   gap: 10px;
 }
 .footer__logo .logo {
@@ -38,10 +38,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 0px;
 }
 .footer__list img {
-  width: 60px;
+  width: 50px;
   height: auto;
 }
 

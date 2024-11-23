@@ -1,9 +1,8 @@
 import React, {useState} from 'react';
-
+import Modal from "@/components/Modal/Modal.jsx";
 import form from "@/data/form.js";
 
 import './Form.css';
-import Modal from "@/components/Modal/Modal.jsx";
 
 const Form = () => {
     const [modalActive, setModalActive] = useState(false);
@@ -11,7 +10,7 @@ const Form = () => {
         setModalActive(!modalActive); // Открываем модалку
     };
     return (
-        <section className="form">
+        <section className={"form"}>
             <div className="form__container container">
                 <div className="form__content">
                     <h6 className="form__title">

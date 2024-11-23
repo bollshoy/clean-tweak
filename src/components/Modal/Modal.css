@@ -10,6 +10,14 @@
   align-items: center;
   transform: scale(0);
 }
+.modal__item {
+  max-width: 60px;
+}
+.modal__item img {
+  filter: invert(1);
+  width: 100%;
+  height: auto;
+}
 .modal__wrapper {
   padding: 20px;
   background: var(--white);

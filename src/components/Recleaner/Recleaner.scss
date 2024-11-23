@@ -86,7 +86,7 @@
     gap: 30px;
     width: 100%;
     border-radius: var(--border-radius-large);
-    margin-left: 60px;
+    margin-left: 72px;
 
     .recleaner__item {
       display: flex;
@@ -101,7 +101,7 @@
 
       img {
         width: 62px;
-        height:auto;
+        height: auto;
         object-fit: contain;
       }
 
@@ -138,7 +138,20 @@
   }
 }
 
+@media screen and (max-width: 768px) {
+  .recleaner {
+    .recleaner__container {
+      padding: 50px;
+    }
+  }
+}
+
 @media screen and (max-width: 480px) {
+  .recleaner {
+    .recleaner__container {
+      padding: 30px;
+    }
+  }
   .recleaner__social {
     display: flex;
     flex-direction: column;
@@ -152,6 +165,11 @@
 }
 
 @media screen and (max-width: 420px) {
+  .recleaner {
+    .recleaner__container {
+      padding: 20px;
+    }
+  }
   .recleaner__title {
     font-size: 58px;
     line-height: 62px;
