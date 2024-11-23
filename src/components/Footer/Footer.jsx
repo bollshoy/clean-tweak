@@ -11,7 +11,7 @@ const Footer = () => {
         <footer className="footer" id="footer">
             <div className="footer__container container">
                 <div className="footer__logo">
-                    <img src={logo} alt="logo" className="logo__img"/>
+                    <img src={logo} alt='logo' className="logo__img"/>
                     <a href="#" className="logo">CleanTweaking</a>
                 </div>
                 <div className="footer__contact">

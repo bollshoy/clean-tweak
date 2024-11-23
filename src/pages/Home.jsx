@@ -30,10 +30,16 @@ const Home = () => {
         }[section];
 
         if (targetRef?.current) {
-            // Используем scrollIntoView для плавной прокрутки
-            targetRef.current.scrollIntoView({ behavior: 'smooth' });
+            const offset = 80;
+            const targetPosition = targetRef.current.getBoundingClientRect().top + window.scrollY - offset;
+
+            gsap.to(window, {
+                scrollTo: { y: targetPosition, autoKill: true },
+                duration: 1,
+            });
         }
     };
+
 
     return (
         <>

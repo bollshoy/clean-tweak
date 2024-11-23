@@ -13,7 +13,6 @@
   &__logo {
     display: flex;
     align-items: center;
-    max-width: 60px;
     gap: 10px;
 
     .logo {
@@ -23,7 +22,9 @@
     }
 
     img {
+      max-width: 90px;
       width: 100%;
+      height: auto;
     }
   }
 
