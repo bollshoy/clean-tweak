@@ -61,6 +61,9 @@
 }
 
 @media screen and (max-width: 992px) {
+  .deviceManager img {
+    display: none;
+  }
   .deviceManager__list {
     display: flex;
     flex-direction: column;

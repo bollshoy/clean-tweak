@@ -9,7 +9,6 @@ import Debloat from "@/components/Debloat/Debloat.jsx";
 import Conclusion from "@/components/Conclusion/Conclusion.jsx";
 import Footer from "@/components/Footer/Footer.jsx";
 
-import './Tips.css'
 const Tips = () => {
     return (
         <section className={'tips'}>

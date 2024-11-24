@@ -70,6 +70,11 @@
 }
 
 @media screen and (max-width: 992px) {
+  .deviceManager {
+    img {
+      display: none;
+    }
+  }
   .deviceManager__list {
     display: flex;
     flex-direction: column;
@@ -78,21 +83,21 @@
   }
 }
 
-@media screen and (max-width: 650px){
+@media screen and (max-width: 650px) {
   .deviceManager__item {
     font-size: 18px;
     line-height: 20px;
   }
 }
 
-@media screen and (max-width: 480px){
+@media screen and (max-width: 480px) {
   .deviceManager__item {
     font-size: 14px;
     line-height: 18px;
   }
 }
 
-@media screen and (max-width: 380px){
+@media screen and (max-width: 380px) {
   .deviceManager__item {
     padding: 30px;
   }

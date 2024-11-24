@@ -122,4 +122,10 @@
   color: var(--first-color);
 }
 
+@media screen and (max-width: 992px) {
+  .windows img {
+    display: none;
+  }
+}
+
 /*# sourceMappingURL=Windows.css.map */
