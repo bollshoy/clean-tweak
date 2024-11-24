@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Navbar.css';
+import {NavLink} from "react-router-dom";
 
 const Navbar = ({ scrollToSection }) => {
     const [isOpen, setIsOpen] = useState(false);
@@ -28,9 +29,7 @@ const Navbar = ({ scrollToSection }) => {
             </div>
             <ul className={`header__list ${isOpen ? 'open' : ''}`}>
                 <li>
-                    <button className="header__link" onClick={() => handleLinkClick('hero')}>
-                        Главная
-                    </button>
+                    <NavLink to={'/'} className={'header__link'}>Главная</NavLink>
                 </li>
                 <li>
                     <button className="header__link" onClick={() => handleLinkClick('tabs')}>
@@ -41,6 +40,9 @@ const Navbar = ({ scrollToSection }) => {
                     <button className="header__link" onClick={() => handleLinkClick('recleaner')}>
                         Recleaner
                     </button>
+                </li>
+                <li>
+                    <NavLink to={'/tips'} className={'header__link'}>Советы оптимизации</NavLink>
                 </li>
                 <li>
                     <button className="header__link" onClick={() => handleLinkClick('form')}>

@@ -1,0 +1,77 @@
+.drivers {
+  margin-top: 120px;
+}
+.drivers__container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.drivers__title {
+  font-size: 48px;
+  line-height: 52px;
+  margin-bottom: 30px;
+}
+.drivers__text {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  margin-bottom: 20px;
+}
+.drivers__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.drivers__content--title {
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 38px;
+  line-height: 46px;
+}
+.drivers__list {
+  list-style: none;
+  counter-reset: line;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.drivers__list > li {
+  position: relative;
+  margin-bottom: 1.5em;
+  padding-left: 2.5em;
+  font-size: 18px;
+  line-height: 26px;
+  color: var(--white);
+  transition: color 0.3s ease;
+}
+.drivers__list > li span {
+  font-weight: 500;
+  font-size: 22px;
+  line-height: inherit;
+}
+.drivers__list > li span:nth-child(1) {
+  color: #91C733;
+}
+.drivers__list > li span:nth-child(2) {
+  color: #8A0E26;
+}
+.drivers__list > li:before {
+  position: absolute;
+  left: 0;
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  background-color: var(--first-color);
+  border-radius: 50%;
+  color: #fff;
+  text-align: center;
+  line-height: 32px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  counter-increment: line;
+  content: counter(line);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+/*# sourceMappingURL=Drivers.css.map */

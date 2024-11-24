@@ -1,0 +1,78 @@
+.debloat {
+  margin-top: 120px;
+}
+.debloat__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.debloat__title {
+  font-size: 48px;
+  line-height: 52px;
+  margin-bottom: 30px;
+}
+.debloat__text {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 26px;
+  margin-bottom: 10px;
+}
+.debloat__docs {
+  margin-top: 30px;
+}
+.debloat__btn {
+  padding: 10px 20px;
+  border-radius: var(--border-radius-large);
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  transition: var(--transition-speed);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.debloat__btn:hover {
+  transition: var(--transition-speed);
+  background: var(--first-color);
+  color: var(--white);
+}
+.debloat__docs--list {
+  list-style: none;
+  counter-reset: line;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.debloat__docs--list > li {
+  position: relative;
+  margin-bottom: 1.5em;
+  padding-left: 2.5em;
+  font-size: 18px;
+  line-height: 26px;
+  color: var(--white);
+  transition: color 0.3s ease;
+}
+.debloat__docs--list > li span {
+  font-weight: 500;
+  font-size: 22px;
+  line-height: inherit;
+  color: var(--first-color);
+}
+.debloat__docs--list > li:before {
+  position: absolute;
+  left: 0;
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  background-color: var(--first-color);
+  border-radius: 50%;
+  color: #fff;
+  text-align: center;
+  line-height: 32px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  counter-increment: line;
+  content: counter(line);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+/*# sourceMappingURL=Debloat.css.map */
