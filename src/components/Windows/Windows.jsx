@@ -1,6 +1,7 @@
 import React from 'react';
 import update from '@/assets/images/updateWindows.jpg'
 import winLogo from '@/assets/images/winLogo.png';
+import updLogo from '@/assets/icons/updateLogo.svg';
 import './Windows.css';
 
 const Windows = () => {
@@ -22,9 +23,10 @@ const Windows = () => {
                     </a>
                 </div>
                 <div className="content__update">
-                        <span className="content__title">
-                            🌀Обновление
-                        </span>
+                    <div className="content__title--content">
+                        <img src={updLogo} alt="logo" className="content__title--img"/>
+                        <span className="content__title">Обновление</span>
+                    </div>
                     <p className="content__text">
                         Мы рекомендуем после установки Windows первым делом установить все обновления.
                     </p>

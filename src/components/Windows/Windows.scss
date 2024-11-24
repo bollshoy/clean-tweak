@@ -46,11 +46,18 @@
     margin-top: 80px;
   }
 
+  .content__title--content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
   .content__title {
     margin-bottom: 30px;
     font-weight: 500;
     font-size: 32px;
     line-height: 48px;
+    margin-top: 30px;
   }
 
   .content__text {
