@@ -1,6 +1,6 @@
 import React from 'react';
 import update from '@/assets/images/updateWindows.jpg'
-
+import winLogo from '@/assets/images/winLogo.png';
 import './Windows.css';
 
 const Windows = () => {
@@ -15,11 +15,10 @@ const Windows = () => {
                     Рекомендуется ставить Windows 11.
                 </p>
                 <div className="windows__download">
+                    <img src={winLogo} alt="logo" className="windows__download--img"/>
                     <a href="https://disk.yandex.ru/d/rtsL2vWzsjsCKw" target={'_blank'}
                        className="windows__download--link">
-                       <span>
-                            Windows 11
-                       </span>
+                        Windows 11
                     </a>
                 </div>
                 <div className="content__update">
@@ -38,10 +37,10 @@ const Windows = () => {
                                 Параметры
                             </li>
                             <li className="content__item">
-                               Центр обновления Windows
+                                Центр обновления Windows
                             </li>
                             <li className="content__item">
-                               Скачайте и установите все обновление, а после перезагрузитесь
+                                Скачайте и установите все обновление, а после перезагрузитесь
                             </li>
                         </ol>
                     </div>

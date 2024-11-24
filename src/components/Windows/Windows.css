@@ -17,42 +17,19 @@
   line-height: 28px;
   margin-bottom: 30px;
 }
+.windows__download {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
 .windows__download--link {
-  position: relative;
-  display: inline-block;
-  padding: 10px 20px;
-  text-transform: uppercase;
-  color: #fff;
-  background: transparent;
-  border: 2px solid #fff;
-  text-decoration: none;
-  overflow: hidden;
-  transition: color 0.4s ease;
-  border-radius: var(--border-radius-large);
   font-weight: 500;
-  font-size: 18px;
-  line-height: 22px;
+  font-size: 32px;
+  line-height: 42px;
 }
-.windows__download--link::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 100%;
+.windows__download img {
   width: 100%;
-  height: 100%;
-  background: #fff;
-  z-index: 0;
-  transition: right 0.4s ease;
-}
-.windows__download--link:hover::before {
-  right: 0;
-}
-.windows__download--link:hover span {
-  color: var(--black);
-}
-.windows__download--link span {
-  position: relative;
-  z-index: 1;
+  max-width: 60px;
 }
 .windows .content__update {
   display: flex;
