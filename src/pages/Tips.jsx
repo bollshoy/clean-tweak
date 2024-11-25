@@ -9,6 +9,7 @@ import Footer from "@/components/Footer/Footer.jsx";
 import Libraries from "@/components/Libraries/Libraries.jsx";
 
 const Tips = () => {
+
     return (
         <section className={'tips'}>
             <Header/>

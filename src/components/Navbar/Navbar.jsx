@@ -42,7 +42,7 @@ const Navbar = ({ scrollToSection }) => {
                     </button>
                 </li>
                 <li>
-                    <NavLink to={'/tips'} className={'header__link'}>Советы по оптимизации</NavLink>
+                    <NavLink to={'/tips'} className={'header__link'}>Полезные гайды</NavLink>
                 </li>
                 <li>
                     <button className="header__link" onClick={() => handleLinkClick('form')}>

@@ -1,5 +1,6 @@
-import React, {useRef} from 'react';
+import React from 'react';
 
+import useScrollToSection from "@/hooks/useScrollToSection.jsx";
 import Testimonial from "@/components/Testimonial/Testimonial.jsx";
 import Advantages from "@/components/Advantages/Advantages.jsx";
 import WidgetBot from "@/components/WidgetBot/WidgetBot.jsx";
@@ -12,27 +13,7 @@ import Form from '@/components/Form/Form.jsx';
 import Tab from '@/components/Tab/Tab.jsx';
 
 const Home = () => {
-    const tabsRef = useRef(null);
-    const recleanerRef = useRef(null);
-    const formRef = useRef(null);
-
-    const scrollToSection = (section) => {
-        const targetRef = {
-            tabs: tabsRef,
-            recleaner: recleanerRef,
-            form: formRef,
-        }[section];
-
-        if (targetRef?.current) {
-            const offset = 70;
-            const targetPosition = targetRef.current.offsetTop - offset;
-
-            window.scrollTo({
-                top: targetPosition,
-                behavior: 'smooth',
-            });
-        }
-    };
+    const {refs, scrollToSection} = useScrollToSection();
 
     return (
         <>
@@ -41,15 +22,15 @@ const Home = () => {
                 <Hero/>
                 <Testimonial/>
                 <WidgetBot/>
-                <section ref={tabsRef}>
+                <section ref={refs.tabs}>
                     <Tab/>
                 </section>
                 <Security/>
                 <Advantages/>
-                <section ref={recleanerRef}>
+                <section ref={refs.recleaner}>
                     <Recleaner/>
                 </section>
-                <section ref={formRef}>
+                <section ref={refs.form}>
                     <Form/>
                 </section>
             </main>
