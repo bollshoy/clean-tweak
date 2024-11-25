@@ -1,9 +1,9 @@
 import React from 'react';
 import {HashRouter as Router, Route, Routes} from 'react-router-dom';
-
-import './styles/main.css';
 import Home from "@/pages/Home.jsx";
 import Tips from "@/pages/Tips.jsx";
+
+import './styles/main.css';
 
 const App = () => {
     return (

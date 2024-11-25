@@ -11,7 +11,7 @@ const About = () => {
                     <span className="about__emoji">basic tips</span>
                     <h2 className="about__title">
                         👋Привет, тут ты найдешь базовые <br/>
-                        советы оптимизации.
+                        советы по оптимизации.
                     </h2>
                     <div className="about__item-contact">
                         {icons.map((item) => (

@@ -44,17 +44,6 @@
   color: var(--white);
   transition: color 0.3s ease;
 }
-.drivers__list > li span {
-  font-weight: 500;
-  font-size: 22px;
-  line-height: inherit;
-}
-.drivers__list > li span:nth-child(1) {
-  color: #91C733;
-}
-.drivers__list > li span:nth-child(2) {
-  color: #8A0E26;
-}
 .drivers__list > li:before {
   position: absolute;
   left: 0;

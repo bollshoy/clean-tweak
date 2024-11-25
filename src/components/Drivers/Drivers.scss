@@ -48,21 +48,7 @@
       line-height: 26px;
       color: var(--white);
       transition: color 0.3s ease;
-
-      span {
-        font-weight: 500;
-        font-size: 22px;
-        line-height: inherit;
-
-        &:nth-child(1) {
-          color: #91C733;
-        }
-
-        &:nth-child(2) {
-          color: #8A0E26;
-        }
-      }
-
+      
       &:before {
         position: absolute;
         left: 0;

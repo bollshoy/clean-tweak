@@ -7,11 +7,10 @@ const Libraries = () => {
     return (
         <section className="libraries">
             <div className="libraries__container">
-                <h6 className="libraries__title">📚Библиотеки</h6>
+                <h6 className="libraries__title">📚 Библиотеки</h6>
                 <p className="libraries__text">
-                    Установка важных библиотек - это так же часть <br/>
-                    успеха, от которого зависит производительность вашей
-                    Windows.
+                    Это неотъемлемая часть, от которой зависит производительность и <br/>
+                    совместимость Windows с играми и приложениями
                 </p>
                 <div className="libraries__content">
                     {libraries.map((item) => (

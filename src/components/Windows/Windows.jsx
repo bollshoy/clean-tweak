@@ -28,7 +28,8 @@ const Windows = () => {
                         <span className="content__title">Обновление</span>
                     </div>
                     <p className="content__text">
-                        Мы рекомендуем после установки Windows первым делом установить все обновления.
+                        После установки Windows мы рекомендуем установить последние Обновления <br/>
+                        Windows, чтобы избежать проблем с компонентами.
                     </p>
                     <div className="windows__list">
                         <ol className={'content__list'}>
@@ -42,7 +43,7 @@ const Windows = () => {
                                 Центр обновления Windows
                             </li>
                             <li className="content__item">
-                                Скачайте и установите все обновление, а после перезагрузитесь
+                                Скачайте и установите все обновления, а после перезагрузитесь
                             </li>
                         </ol>
                     </div>

@@ -34,7 +34,6 @@ const Home = () => {
         }
     };
 
-
     return (
         <>
             <Header scrollToSection={scrollToSection}/>
