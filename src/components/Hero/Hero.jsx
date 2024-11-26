@@ -3,7 +3,6 @@ import Typewriter from "@/components/Typewriter/Typewriter.jsx";
 
 import heroImg from '@/assets/images/logo.png';
 import accordionItems from "@/data/accordion.js";
-import rules from "@/assets/icons/rules.svg";
 
 import './Hero.css';
 
@@ -53,7 +52,11 @@ const Hero = () => {
                                 {accordionItems.map((item, index) => (
                                     <div key={item.id} className="accordion__item">
                                         <div className="accordion__title" onClick={() => toggleAccordion(index)}>
-                                            <img src={rules} alt="rules" className="accordion__img"/>
+                                            <div className="accordion__cross">
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                            </div>
                                             <span>{item.title}</span>
                                         </div>
                                         <div

@@ -99,6 +99,7 @@
     line-height: 26px;
   }
 
+
   &__img {
     margin-right: 10px;
   }
@@ -106,6 +107,55 @@
   &__content {
     overflow: hidden;
     transition: max-height 0.3s ease;
+  }
+
+  &__cross {
+    width: 20px;
+    height: 14px;
+    cursor: pointer;
+    position: relative;
+    top: 6px;
+    margin: 0 10px;
+
+    span {
+      background-color: var(--white);
+      height: 2px;
+      position: absolute;
+      width: 100%;
+      left: 0;
+      transition: all 0.3s ease;
+      border-radius: 10px;
+
+      &:first-child {
+        top: 0;
+      }
+
+      &:nth-child(2) {
+        top: 6px;
+      }
+
+      &:last-child {
+        top: 12px;
+      }
+    }
+
+    &:hover span:nth-child(2) {
+      opacity: 0;
+    }
+
+    &:hover span:first-child,
+    &:hover span:last-child {
+      top: 6px;
+      background: var(--first-color);
+    }
+
+    &:hover span:first-child {
+      transform: rotate(45deg);
+    }
+
+    &:hover span:last-child {
+      transform: rotate(-45deg);
+    }
   }
 }
 

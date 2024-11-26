@@ -92,6 +92,45 @@
   overflow: hidden;
   transition: max-height 0.3s ease;
 }
+.accordion__cross {
+  width: 20px;
+  height: 14px;
+  cursor: pointer;
+  position: relative;
+  top: 6px;
+  margin: 0 10px;
+}
+.accordion__cross span {
+  background-color: var(--white);
+  height: 2px;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  transition: all 0.3s ease;
+  border-radius: 10px;
+}
+.accordion__cross span:first-child {
+  top: 0;
+}
+.accordion__cross span:nth-child(2) {
+  top: 6px;
+}
+.accordion__cross span:last-child {
+  top: 12px;
+}
+.accordion__cross:hover span:nth-child(2) {
+  opacity: 0;
+}
+.accordion__cross:hover span:first-child, .accordion__cross:hover span:last-child {
+  top: 6px;
+  background: var(--first-color);
+}
+.accordion__cross:hover span:first-child {
+  transform: rotate(45deg);
+}
+.accordion__cross:hover span:last-child {
+  transform: rotate(-45deg);
+}
 
 @media screen and (max-width: 992px) {
   .hero__container {
