@@ -9,7 +9,7 @@ const Conclusion = () => {
         <section className="conclusion">
             <div className="conclusion__container">
                 <h6 className="conclusion__title">
-                    Конец.
+                    🔖Завершение
                 </h6>
                 <p className="conclusion__text">
                     Это были одни из самых базовых вещей, которые стоит делать, чтобы ваш ПК работал шустрее.
@@ -28,8 +28,7 @@ const Conclusion = () => {
                     ))}
                 </div>
                 <div className="conclusion__software">
-                    <span
-                        className="conclusion__software--title">Или вы можете воспользоватся нашим БЕСПЛАТНЫМ софтом:</span>
+                    <span className="conclusion__software--title">Или вы можете воспользоватся нашим БЕСПЛАТНЫМ софтом:</span>
                     <Recleaner/>
                 </div>
             </div>

@@ -39,6 +39,10 @@
   font-weight: 400;
   margin-bottom: 20px;
 }
+.hero__text span {
+  color: var(--first-color);
+  font-size: 22px;
+}
 .hero__btn {
   background: var(--white);
   color: var(--black);
@@ -47,7 +51,7 @@
   line-height: 28px;
   max-width: 300px;
   width: 100%;
-  padding: 15px 30px;
+  padding: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
