@@ -12,7 +12,7 @@ const useScrollToSection = () => {
 
         if (targetRef?.current) {
             const offset = 70;
-            const targetPosition = targetRef.current.offsetTop - offset;
+            const targetPosition = Math.max(0, targetRef.current.offsetTop - offset);
 
             window.scrollTo({
                 top: targetPosition,
