@@ -13,7 +13,7 @@ export const icons = [
         id: 2,
         src: vk,
         alt: vk,
-        href: 'https://vk.com/clean_ok69'
+        href: 'https://vk.com/cleantweaking'
     },
     {
         id: 3,
