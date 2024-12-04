@@ -4,7 +4,6 @@ import { icons } from '@/data/icons.js';
 import './Header.css';
 
 const Header = ({ scrollToSection }) => {
-
     return (
         <header className="header">
             <div className="header__container">

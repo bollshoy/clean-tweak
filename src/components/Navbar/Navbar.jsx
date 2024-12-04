@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
+import { NavLink } from "react-router-dom";
+
 import './Navbar.css';
-import {NavLink} from "react-router-dom";
 
 const Navbar = ({ scrollToSection }) => {
     const [isOpen, setIsOpen] = useState(false);
@@ -14,10 +15,21 @@ const Navbar = ({ scrollToSection }) => {
         }
     };
 
-    const handleLinkClick = (section) => {
+    const handleLinkClick = (sectionId) => {
         setIsOpen(false);
         document.body.classList.remove('menu-open');
-        scrollToSection(section);
+
+        const section = document.getElementById(sectionId);
+        if (section) {
+            const offset = 100; // Задайте смещение в пикселях
+            const elementPosition = section.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+            });
+        }
     };
 
     return (
