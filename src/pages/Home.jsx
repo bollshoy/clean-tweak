@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import Testimonial from "@/components/Testimonial/Testimonial.jsx";
 import Advantages from "@/components/Advantages/Advantages.jsx";
@@ -12,6 +12,11 @@ import Form from '@/components/Form/Form.jsx';
 import Tab from '@/components/Tab/Tab.jsx';
 
 const Home = () => {
+    useEffect(() => {
+        // Прокрутка к верху страницы при монтировании компонента
+        window.scrollTo(0, 0);
+    }, []);
+
     return (
         <>
             <Header />
