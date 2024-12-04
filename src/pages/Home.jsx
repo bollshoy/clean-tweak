@@ -13,7 +13,6 @@ import Tab from '@/components/Tab/Tab.jsx';
 
 const Home = () => {
     useEffect(() => {
-        // Прокрутка к верху страницы при монтировании компонента
         window.scrollTo(0, 0);
     }, []);
 
