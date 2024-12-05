@@ -8,7 +8,6 @@ import Drivers from "@/components/Drivers/Drivers.jsx";
 import Footer from "@/components/Footer/Footer.jsx";
 import Header from "@/components/Header/Header.jsx";
 import About from "@/components/About/About.jsx";
-import SoftWare from "@/components/SoftWare/SoftWare.jsx";
 
 const Tips = () => {
     useEffect(() => {
@@ -22,7 +21,6 @@ const Tips = () => {
             <Windows/>
             <Drivers/>
             <Libraries/>
-            <SoftWare/>
             <Conclusion/>
             <Footer/>
         </section>
