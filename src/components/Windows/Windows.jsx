@@ -15,13 +15,10 @@ const Windows = () => {
                     Установка чистой ОС - это самый главный шаг в нашей настройке. <br/>
                     Рекомендуется ставить Windows 11.
                 </p>
-                <div className="windows__download">
+                <a className="windows__download windows__download--link" href="https://disk.yandex.ru/d/rtsL2vWzsjsCKw" target={'_blank'}>
                     <img src={winLogo} alt="logo" className="windows__download--img"/>
-                    <a href="https://disk.yandex.ru/d/rtsL2vWzsjsCKw" target={'_blank'}
-                       className="windows__download--link">
-                        Windows 11
-                    </a>
-                </div>
+                    <span>Windows 11</span>
+                </a>
                 <div className="content__update">
                     <div className="content__title--content">
                         <img src={updLogo} alt="logo" className="content__title--img"/>

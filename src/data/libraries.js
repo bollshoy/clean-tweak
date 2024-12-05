@@ -1,9 +1,9 @@
 export const libraries = [
     {
         id: 1,
-        title: 'Visual C++',
-        href: 'https://learn.microsoft.com/ru-ru/cpp/windows/latest-supported-vc-redist?view=msvc-170',
-        description: 'Библиотеки С++ нужны для стабильной работы некоторых програм',
+        title: 'FFmpeg ',
+        href: 'https://www.ffmpeg.org/download.html',
+        description: 'Мощная библиотека для обработки аудио и видео, поддерживающая множество форматов.',
     },
     {
         id: 2,
@@ -13,9 +13,9 @@ export const libraries = [
     },
     {
         id: 3,
-        title: 'FFmpeg ',
-        href: 'https://www.ffmpeg.org/download.html',
-        description: 'Мощная библиотека для обработки аудио и видео, поддерживающая множество форматов.',
+        title: 'Visual C++',
+        href: 'https://learn.microsoft.com/ru-ru/cpp/windows/latest-supported-vc-redist?view=msvc-170',
+        description: 'Библиотеки С++ нужны для стабильной работы некоторых програм',
     },
     {
         id: 4,
@@ -25,15 +25,15 @@ export const libraries = [
     },
     {
         id: 5,
-        title: 'WinRar',
-        href: 'https://www.win-rar.com/start.html?&L=4',
-        description: 'Архиватор с очень высокой скоростью работы',
-    },
-    {
-        id: 6,
         title: 'NET6',
         href: 'https://dotnet.microsoft.com/en-us/download/dotnet/6.0',
         description: 'Рекомендуется к установки Desktop Runtime x64',
+    },
+    {
+        id: 6,
+        title: 'WinRar',
+        href: 'https://www.win-rar.com/start.html?&L=4',
+        description: 'Архиватор с очень высокой скоростью работы',
     },
 ];
 
