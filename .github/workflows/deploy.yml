@@ -9,64 +9,64 @@ jobs:
   build:
     name: Build
     runs-on: ubuntu-latest
-
+    
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
-
+      
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
           node-version: '18'
-
+      
       - name: Clean up
         run: |
           rm -rf node_modules
           rm -f package-lock.json
           npm cache clean --force
-
+      
       - name: Update npm
         run: npm install -g npm
-
+      
       - name: Install dependencies
         run: npm install --no-optional
-
+      
       - name: Install Rollup
         run: npm install rollup --save-dev
-
+      
       - name: Check Node.js and npm versions
         run: |
           node -v
           npm -v
           npm list --depth=0
-
+      
       - name: Build project
         run: npm run build || (echo "Build failed" && exit 1)
         env:
           VITE_DOWNLOAD_LINK: ${{ secrets.VITE_DOWNLOAD_LINK }}
-
+      
       - name: List files in dist
         run: ls -la ./dist
-
+      
       - name: Upload production-ready build files
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v3.1.0  # Обновлено до последней версии
         with:
           name: production-files
           path: ./dist
-
+  
   deploy:
     name: Deploy
     needs: build
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
-
+    
     steps:
       - name: Download artifact
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v3.1.0  # Обновлено до последней версии
         with:
           name: production-files
           path: ./dist
-
+      
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
