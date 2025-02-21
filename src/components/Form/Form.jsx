@@ -1,7 +1,6 @@
 import React, {useEffect, useRef, useState} from "react";
 import Modal from "@/components/Modal/Modal.jsx";
 import form from "@/data/form.js";
-import gsap from "gsap";
 
 import "./Form.css";
 
