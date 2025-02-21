@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { reviews } from '@/data/reviews.js';
-import gsap from 'gsap';
 
 import './Testimonial.css';
 
