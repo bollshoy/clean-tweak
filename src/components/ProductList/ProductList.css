@@ -193,6 +193,9 @@
   .product__modal-text {
     margin: 0;
   }
+  .product__item {
+    max-width: 80%;
+  }
 }
 
 /*# sourceMappingURL=ProductList.css.map */

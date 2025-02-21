@@ -9,7 +9,6 @@ import Header from "@/components/Header/Header.jsx";
 import Footer from "@/components/Footer/Footer.jsx";
 import Hero from "@/components/Hero/Hero.jsx";
 import Form from '@/components/Form/Form.jsx';
-import Tab from '@/components/Tab/Tab.jsx';
 
 const Home = () => {
     useEffect(() => {
@@ -23,9 +22,6 @@ const Home = () => {
                 <Hero id="hero" />
                 <Testimonial id="testimonial" />
                 <WidgetBot id="widgetbot" />
-                {/*<section id="tabs">*/}
-                {/*    <Tab />*/}
-                {/*</section>*/}
                 <Security id="security" />
                 <Advantages id="advantages" />
                 <section id="recleaner">
