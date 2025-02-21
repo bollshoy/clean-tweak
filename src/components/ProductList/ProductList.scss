@@ -1,0 +1,225 @@
+.product {
+  margin-top: 150px;
+
+  &__container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    margin-bottom: 20px;
+    letter-spacing: .6px;
+    font-weight: 400;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 80px;
+  }
+
+  &__item {
+    max-width: 320px;
+    width: 100%;
+    height: 480px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: var(--border-radius-large);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.8);
+      transition: background 0.3s ease;
+    }
+  }
+
+  &__overlay {
+    position: absolute;
+    width: 100%;
+    padding: 10px;
+    z-index: 2;
+    top: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  &__item-title {
+    font-size: 38px;
+    line-height: 30px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    display: block;
+  }
+
+  &__item-line {
+    border: 1px solid var(--white);
+    width: 80%;
+    background: var(--white);
+    margin-bottom: 50px;
+  }
+
+  &__item-text {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 20px;
+    letter-spacing: .8px;
+    margin-bottom: 15px;
+    display: block;
+  }
+
+  &__item-time {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 20px;
+    text-wrap: balance;
+
+    span {
+      font-weight: 700;
+      text-decoration: underline;
+      font-size: inherit;
+    }
+  }
+
+  &__item-link {
+    margin-top: 20px;
+    border: 1px solid var(--white);
+    padding: 10px 20px;
+    border-radius: var(--border-radius-large);
+    transition: var(--transition-speed);
+
+    &:hover {
+      color: var(--black);
+      background: var(--white);
+    }
+  }
+
+  &__btn {
+    padding: 20px 40px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 26px;
+    border-radius: var(--border-radius-large);
+  }
+
+  // Модалальное окно соглашение
+  &__modal {
+    height: auto;
+    max-width: 100vw;
+    width: 100%;
+    position: fixed;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0);
+    opacity: 0;
+    visibility: hidden;
+    transition: transform 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(15px);
+
+    &.active {
+      transform: scale(1);
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &__modal-text {
+    color: var(--black);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: .8px;
+    margin-left: 100px;
+    width: 100%;
+  }
+
+  &__modal-close {
+    padding: 10px 20px;
+    background-color: var(--first-color);
+    color: var(--white);
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    border-radius: var(--border-radius-large);
+    margin-top: 20px;
+  }
+
+  &__modal-content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    max-width: 650px;
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    border-radius: var(--border-radius-large);
+
+    span {
+      color: var(--black);
+      font-weight: 700;
+      font-size: 22px;
+      line-height: 26px;
+    }
+
+    &-title {
+      color: var(--black);
+      margin-top: 30px;
+      font-weight: 700;
+      font-size: 34px;
+      line-height: 38px;
+    }
+
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .product {
+    &__list,
+    &__item,
+    .categories__list {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &__overlay {
+      position: relative;
+    }
+
+    &__modal-text {
+      margin: 0;
+    }
+  }
+}

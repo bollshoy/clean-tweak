@@ -1,37 +1,43 @@
-import React, { useState } from 'react';
-import { NavLink } from "react-router-dom";
+import React, {useEffect, useRef, useState} from 'react';
+import {NavLink, useLocation} from "react-router-dom";
 
 import './Navbar.css';
+import gsap from "gsap";
 
-const Navbar = ({ scrollToSection }) => {
+const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
-
+    
     const toggleMenu = () => {
-        setIsOpen(!isOpen);
-        if (!isOpen) {
-            document.body.classList.add('menu-open');
-        } else {
-            document.body.classList.remove('menu-open');
-        }
+        setIsOpen(prevState => {
+            const newState = !prevState;
+            document.body.classList.toggle('menu-open', newState);
+            return newState;
+        });
     };
-
-    const handleLinkClick = (sectionId) => {
-        setIsOpen(false);
-        document.body.classList.remove('menu-open');
-
+    
+    const handleScrollToSection = (sectionId) => {
         const section = document.getElementById(sectionId);
         if (section) {
-            const offset = 100; // Задайте смещение в пикселях
+            const offset = 100;
             const elementPosition = section.getBoundingClientRect().top;
             const offsetPosition = elementPosition + window.pageYOffset - offset;
-
+            
             window.scrollTo({
                 top: offsetPosition,
                 behavior: 'smooth'
             });
         }
     };
-
+    
+    const handleNavLinkClick = (event, sectionId) => {
+        if (location.pathname === '/') {
+            event.preventDefault();
+            setIsOpen(false);
+            document.body.classList.remove('menu-open');
+            handleScrollToSection(sectionId);
+        }
+    };
+    
     return (
         <nav className="header__menu">
             <div className={`burger ${isOpen ? 'menu-open' : ''}`} onClick={toggleMenu}>
@@ -44,22 +50,20 @@ const Navbar = ({ scrollToSection }) => {
                     <NavLink to={'/'} className={'header__link'}>Главная</NavLink>
                 </li>
                 <li>
-                    <button className="header__link" onClick={() => handleLinkClick('tabs')}>
-                        Оптимизация
-                    </button>
-                </li>
-                <li>
-                    <button className="header__link" onClick={() => handleLinkClick('recleaner')}>
+                    <NavLink to={'/'} className={'header__link'} onClick={(e) => handleNavLinkClick(e, 'recleaner')}>
                         Recleaner
-                    </button>
+                    </NavLink>
                 </li>
                 <li>
                     <NavLink to={'/tips'} className={'header__link'}>Полезные гайды</NavLink>
                 </li>
                 <li>
-                    <button className="header__link" onClick={() => handleLinkClick('form')}>
+                    <NavLink to={'/shop'} className={'header__link'}>Услуги</NavLink>
+                </li>
+                <li>
+                    <NavLink to={'/'} className={'header__link'} onClick={(e) => handleNavLinkClick(e, 'form')}>
                         Контакты
-                    </button>
+                    </NavLink>
                 </li>
             </ul>
         </nav>

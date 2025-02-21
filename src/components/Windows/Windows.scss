@@ -25,15 +25,13 @@
     align-items: center;
     gap: 5px;
 
-    &--link {
-      font-weight: 500;
-      font-size: 32px;
-      line-height: 42px;
-    }
-
     img {
       width: 100%;
-      max-width: 60px;
+      max-width: 50px;
+    }
+
+    span {
+      margin-top: 10px;
     }
   }
 
@@ -121,14 +119,6 @@
       font-weight: inherit;
       line-height: inherit;
       color: var(--first-color);
-    }
-  }
-}
-
-@media screen and (max-width: 992px) {
-  .windows {
-    img {
-      display: none;
     }
   }
 }

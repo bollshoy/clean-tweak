@@ -22,14 +22,12 @@
   align-items: center;
   gap: 5px;
 }
-.windows__download--link {
-  font-weight: 500;
-  font-size: 32px;
-  line-height: 42px;
-}
 .windows__download img {
   width: 100%;
-  max-width: 60px;
+  max-width: 50px;
+}
+.windows__download span {
+  margin-top: 10px;
 }
 .windows .content__update {
   display: flex;
@@ -104,12 +102,6 @@
   font-weight: inherit;
   line-height: inherit;
   color: var(--first-color);
-}
-
-@media screen and (max-width: 992px) {
-  .windows img {
-    display: none;
-  }
 }
 
 /*# sourceMappingURL=Windows.css.map */

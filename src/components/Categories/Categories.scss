@@ -1,0 +1,109 @@
+.categories {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: var(--second-color);
+    margin-top: 80px;
+    padding: 30px;
+    border-radius: var(--border-radius-large);
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+
+  }
+
+  &__category {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 32px;
+    margin-bottom: 20px;
+    margin-top: 30px;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .category__icon {
+    max-width: 40px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .category__btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 28px;
+    border-radius: var(--border-radius-large);
+    transition: var(--transition-speed);
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, 1);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, 1);
+    box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, 1);
+
+    &:hover {
+      transition: var(--transition-speed);
+      background-color: var(--first-color);
+      color: var(--white);
+
+      img {
+        filter: invert(1);
+      }
+    }
+  }
+
+  .category__item.active .category__btn {
+    background-color: var(--first-color);
+    color: white;
+
+    img {
+      filter: invert(1);
+    }
+  }
+
+  &__link {
+    margin-top: 130px;
+    margin-left: 10px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    text-decoration: underline;
+  }
+}
+
+@media screen and (max-width: 992px){
+  .categories__category,
+  .categories__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+}

@@ -9,6 +9,7 @@
   background-color: var(--white);
   border-radius: var(--border-radius-large);
   padding: 15px 35px;
+  overflow: hidden;
 }
 .header__logo .logo {
   font-weight: 400;

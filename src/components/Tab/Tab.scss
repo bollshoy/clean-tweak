@@ -89,7 +89,7 @@
 
   img {
     width: 100%;
-    border-radius: var(--border-radius);
+    border-radius: 10px;
   }
 }
 
@@ -186,7 +186,7 @@ input:checked + label:after {
 
 @media screen and (max-width: 1200px) {
   .tabs__content-btn {
-   gap: 1vw;
+    gap: 1vw;
   }
   .tabs__container {
     padding: 5vw;

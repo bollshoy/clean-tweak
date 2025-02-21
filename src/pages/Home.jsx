@@ -23,9 +23,9 @@ const Home = () => {
                 <Hero id="hero" />
                 <Testimonial id="testimonial" />
                 <WidgetBot id="widgetbot" />
-                <section id="tabs">
-                    <Tab />
-                </section>
+                {/*<section id="tabs">*/}
+                {/*    <Tab />*/}
+                {/*</section>*/}
                 <Security id="security" />
                 <Advantages id="advantages" />
                 <section id="recleaner">
