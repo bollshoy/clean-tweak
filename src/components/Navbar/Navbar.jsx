@@ -2,7 +2,6 @@ import React, {useEffect, useRef, useState} from 'react';
 import {NavLink, useLocation} from "react-router-dom";
 
 import './Navbar.css';
-import gsap from "gsap";
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
