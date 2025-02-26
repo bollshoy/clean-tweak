@@ -1,11 +1,12 @@
+@charset "UTF-8";
 .recleaner {
   margin-top: 120px;
   color: var(--white);
 }
 .recleaner__container {
-  margin-top: 100px;
   position: relative;
-  width: 100%;
+  width: 85%;
+  max-width: 980px;
   height: 90vh;
   overflow: hidden;
   border-radius: var(--border-radius-large);
@@ -15,9 +16,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  max-width: 980px;
-  left: 50%;
-  transform: translateX(-50%);
+  margin: 0 auto; /* Центрируем */
   padding: 20px;
 }
 .recleaner__video {
@@ -63,7 +62,7 @@
   align-items: center;
   justify-content: center;
   gap: 30px;
-  border-radius: var(border-radius-large);
+  border-radius: var(--border-radius-large);
 }
 .recleaner .recleaner__open {
   display: flex;
@@ -93,7 +92,7 @@
 }
 .recleaner__content {
   position: relative;
-  z-index: 10;
+  z-index: 1;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -253,11 +252,10 @@
   cursor: pointer;
 }
 
+/* Адаптив */
 @media screen and (max-width: 992px) {
   .recleaner__container {
-    width: 90%;
     height: auto;
-    max-width: 90%;
     padding: 15px;
   }
   .recleaner__content--text {
@@ -270,17 +268,15 @@
   }
   .recleaner__social {
     display: flex;
+    align-items: center;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 10px;
-  }
-  .recleaner__item {
-    width: auto;
   }
 }
 @media screen and (max-width: 768px) {
   .recleaner__container {
-    width: 95%;
+    max-width: 95%;
+    height: auto;
     padding: 10px;
   }
   .recleaner__title {
