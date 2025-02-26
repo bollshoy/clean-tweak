@@ -19,10 +19,12 @@ const Clients = () => {
 											className={`clients__img ${item.title === 'REDraGEN' ? 'clients__img-redragen' : ''}`}
 											style={item.title === 'REDraGEN' ? { filter: 'invert(1)' } : {}}
 									/>
-									<div className="clients__title-content">
-										<img src={item.icon} alt={item.title} className="clients__item-icon" />
-										<span className="clients__item-title">{item.title}</span>
-									</div>
+									<a href={item.href} target={'blank'} className="clients__link">
+										<div className="clients__title-content">
+											<img src={item.icon} alt={item.title} className="clients__item-icon" />
+											<span className="clients__item-title">{item.title}</span>
+										</div>
+									</a>
 								</div>
 						))}
 					</div>

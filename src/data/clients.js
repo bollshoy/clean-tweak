@@ -1,5 +1,7 @@
 import twitch from '@/assets/icons/twitch.png';
-import game from '@/assets/icons/game.png';
+import faceit from '@/assets/icons/faceit.png';
+import design from '@/assets/icons/design.png';
+import hltv from '@/assets/icons/hltv.png';
 
 import jmqa from '@/assets/images/users/jmqa.jpg';
 import gridge from '@/assets/images/users/gridge.jpg';
@@ -15,49 +17,57 @@ export const clients = [
 		id: 1,
 		title: 'jmqa',
 		src: jmqa,
-		icon: game
+		icon: hltv,
+		href: 'https://www.hltv.org/player/8368/jmqa'
 	},
 	{
 		id: 2,
 		title: 'gridge',
 		src: gridge,
 		icon: twitch,
+		href: 'https://www.twitch.tv/gridgexd'
 	},
 	{
 		id: 3,
 		title: 'k1yotakaaaa',
 		src: k1yootka,
 		icon: twitch,
+		href: 'https://www.twitch.tv/k1yotakaaaaa'
 	},
 	{
 		id: 4,
 		title: 'whisper',
 		src: whisper,
-		icon: game,
+		icon: hltv,
+		href: 'https://www.hltv.org/player/24316/whisper'
 	},
 	{
 		id: 5,
 		title: 'gleb86rus',
 		src: gleb86rus,
-		icon: twitch,
+		icon: faceit,
+		href: 'https://www.faceit.com/ru/players/gleb86rus'
 	},
 	{
 		id: 6,
 		title: 'reNIK',
 		src: renik,
-		icon: game,
+		icon: hltv,
+		href: 'https://www.hltv.org/player/22800/renik'
 	},
 	{
 		id: 7,
 		title: 'quzzeN',
 		src: quzzen,
-		icon: game,
+		icon: design,
+		href: 'https://t.me/quzzzen'
 	},
 	{
 		id: 8,
 		title: 'Scoffy_',
 		src: scoffy,
 		icon: twitch,
+		href: 'https://www.twitch.tv/Scoffy_'
 	},
 ]
 
