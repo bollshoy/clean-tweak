@@ -4,7 +4,6 @@ import useDownload from '@/hooks/useDownload.jsx';
 import video from '@/assets/video/recleanerVideo.mp4';
 import open from '@/assets/icons/open.png';
 import download from '@/assets/icons/download.png';
-
 import './Recleaner.css';
 
 const Recleaner = () => {
@@ -79,7 +78,7 @@ const Recleaner = () => {
 						     onClick={closeModalOnBackdropClick}>
 							<div className="recleaner__modal-content">
 								<button className="recleaner__modal-close"
-								        onClick={toggleModal}>×
+								        onClick={toggleModal}>✖
 								</button>
 								<span className='recleaner__modal-title'>
                   О проекте <span>Recleaner</span> и пользовательское соглашение
@@ -115,14 +114,14 @@ const Recleaner = () => {
 									Мы разработчики <span>не несём ответственности</span> за ваши
 									действия.
 									Перед тем как что-либо сделать, пожалуйста, <span>ЧИТАЙТЕ ТЕКСТ</span> и
-									<span>включайте МОЗГ</span>. Мы лишь предоставляем готовый функционал,
+									<span> включайте МОЗГ</span>. Мы лишь предоставляем готовый функционал,
 									применять что-либо или нет — выбор
 									всегда <span>только за вами</span>.
 								</p>
 								<p className="recleaner__modal-text">
 									Мы тестируем данную программу на
 									дефолт <span>Windows 10 22h2</span> и
-									<span>Windows 11 23h2/24h2</span> и добиваемся того, чтобы на
+									<span> Windows 11 23h2/24h2</span> и добиваемся того, чтобы на
 									дефолтной
 									системе она работала стабильно. Но у всех разные системы, и не
 									факт,
