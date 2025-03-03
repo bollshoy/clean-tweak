@@ -1,47 +1,95 @@
-import React, { useState } from "react";
+import React, {useState, useEffect, useRef} from "react";
 import Modal from "@/components/Modal/Modal.jsx";
 import form from "@/data/form.js";
-import { motion } from "framer-motion";
+import {motion} from "framer-motion";
 import "./Form.css";
 
 const Form = () => {
 	const [formModalActive, setFormModalActive] = useState(false);
+	const [isVisible, setIsVisible] = useState(false);
+	const sectionRef = useRef(null);
 	
 	const handleFormModalOpen = () => {
 		setFormModalActive(true);
 	};
 	
+	useEffect(() => {
+		const observer = new IntersectionObserver(
+				(entries) => {
+					if (entries[0].isIntersecting) {
+						setIsVisible(true);
+						observer.disconnect();
+					}
+				},
+				{threshold: 0.3}
+		);
+		
+		if (sectionRef.current) observer.observe(sectionRef.current);
+		return () => observer.disconnect();
+	}, []);
+	
+	const titleVariants = {
+		hidden: {opacity: 0, y: -50},
+		visible: {opacity: 1, y: 0, transition: {duration: 0.8, ease: "easeOut"}}
+	};
+	
+	const textVariants = {
+		hidden: {opacity: 0, x: 50},
+		visible: {
+			opacity: 1,
+			x: 0,
+			transition: {duration: 0.8, ease: "easeOut", delay: 0.3}
+		}
+	};
+	
 	const iconVariants = {
-		hidden: { opacity: 0, scale: 0.5, rotate: -10, y: 50 },
+		hidden: (i) => ({
+			opacity: 0,
+			scale: 0.5,
+			x: i % 2 === 0 ? -100 : 100,
+			y: i % 3 === 0 ? -50 : 50
+		}),
 		visible: (i) => ({
 			opacity: 1,
 			scale: 1,
-			rotate: 0,
+			x: 0,
 			y: 0,
 			transition: {
-				delay: i * 0.15,
-				duration: 0.4,
+				delay: i * 0.2,
+				duration: 0.5,
 				ease: "backOut"
 			}
 		}),
 		hover: {
 			scale: 1.2,
 			boxShadow: "0px 7px 15px rgba(255, 255, 255, 0.8)",
-			transition: { duration: 0.3, ease: "easeOut" }
+			transition: {duration: 0.3, ease: "easeOut"}
 		}
 	};
 	
 	return (
-			<section className="form" id="form">
+			<section className="form" id="form" ref={sectionRef}>
 				<div className="form__container container">
-					<div className="form__content">
-						<h6 className="form__title">
-							Свяжитесь с нами удобным для вас способом
-						</h6>
-						<p className="form__text">
-							У компании CleanTweaking есть множество способов связи. Мы готовы помочь вам с любыми запросами.
-						</p>
-					</div>
+					<motion.div
+							className="form__content"
+							initial="hidden"
+							animate={isVisible ? "visible" : "hidden"}
+							variants={titleVariants}
+					>
+						<h6 className="form__title">Свяжитесь с нами удобным для вас
+							способом</h6>
+					</motion.div>
+					
+					<motion.p
+							className="form__text"
+							initial="hidden"
+							animate={isVisible ? "visible" : "hidden"}
+							variants={textVariants}
+					>
+						У компании CleanTweaking есть множество способов связи. Мы готовы
+						помочь вам с любыми запросами.
+					</motion.p>
+					
 					<div className="form__icon">
 						{form.map((item, index) => (
 								<motion.div
@@ -49,7 +97,7 @@ const Form = () => {
 										className="icon__item"
 										variants={iconVariants}
 										initial="hidden"
-										animate="visible"
+										animate={isVisible ? "visible" : "hidden"}
 										whileHover="hover"
 										custom={index}
 								>
@@ -57,7 +105,7 @@ const Form = () => {
 											<div
 													onClick={handleFormModalOpen}
 													className="icon__link"
-													style={{ cursor: "pointer" }}
+													style={{cursor: "pointer"}}
 											>
 												<img src={item.src} alt="" className="icon__icon"/>
 												<span className="item__link">{item.title}</span>
@@ -76,6 +124,7 @@ const Form = () => {
 								</motion.div>
 						))}
 					</div>
+					
 					<Modal active={formModalActive} setActive={setFormModalActive}/>
 				</div>
 			</section>
