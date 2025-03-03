@@ -26,8 +26,7 @@ const Form = () => {
 		}),
 		hover: {
 			scale: 1.2,
-			rotate: 5,
-			boxShadow: "0px 0px 15px rgba(255, 215, 0, 0.8)",
+			boxShadow: "0px 7px 15px rgba(255, 255, 255, 0.8)",
 			transition: { duration: 0.3, ease: "easeOut" }
 		}
 	};

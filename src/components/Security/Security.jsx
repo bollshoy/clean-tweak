@@ -4,9 +4,10 @@ import gsap from "gsap";
 import './Security.css';
 
 const Security = () => {
-	const itemsRef = useRef([]);
 	const [isVisible, setIsVisible] = useState(false);
 	const sectionRef = useRef(null);
+	const itemsRef = useRef([]);
+	
 	
 	useEffect(() => {
 		const observer = new IntersectionObserver(

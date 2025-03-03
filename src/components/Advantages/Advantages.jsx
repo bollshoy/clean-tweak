@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, {useEffect, useRef, useState} from "react";
 import advantages from "@/data/advantages.js";
 import gsap from "gsap";
 import "./Advantages.css";
