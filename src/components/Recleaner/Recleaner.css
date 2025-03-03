@@ -58,11 +58,40 @@
   color: var(--first-color);
 }
 .recleaner__btn-content {
+  position: relative;
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 30px;
+  gap: 50px;
+  color: var(--black);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  padding: 12px;
   border-radius: var(--border-radius-large);
+  cursor: pointer;
+  transition: background 0.3s ease;
+  overflow: hidden;
+}
+.recleaner__btn-content.loading {
+  background: var(--first-color);
+  color: var(--white);
+}
+.recleaner .progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 5px;
+  background: #D32F2F;
+  width: 0%;
+  transition: width 3s ease;
+}
+@keyframes progress-anim {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
 }
 .recleaner .recleaner__open {
   display: flex;

@@ -147,4 +147,8 @@ a, p, li {
   margin: 0 auto;
 }
 
+section {
+  overflow-x: hidden;
+}
+
 /*# sourceMappingURL=main.css.map */
