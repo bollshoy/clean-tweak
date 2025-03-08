@@ -1,14 +1,24 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="./logo.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CleanTweaking</title>
-    <script type="module" crossorigin src="./assets/index-rQlFl1zz.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-o8h4vAye.css">
+    <script type="module" crossorigin src="./assets/index-fZIXxLtv.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-BjLWLq5Q.css">
   </head>
   <body>
     <div id="root"></div>
   </body>
+  <script>
+    window.addEventListener("load", () => {
+      const images = document.querySelectorAll("img");
+      images.forEach((img) => {
+        if (!img.hasAttribute("loading")) {
+          img.setAttribute("loading", "lazy");
+        }
+      });
+    });
+  </script>
 </html>
