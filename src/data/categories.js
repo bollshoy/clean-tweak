@@ -2,19 +2,19 @@ import optimization from "@/assets/icons/optimization.png";
 import coding from "@/assets/icons/coding.png";
 import support from "@/assets/icons/support.png";
 
-import basic from "@/assets/images/basic.jpg";
-import ultimate from "@/assets/images/ultimate.png";
-import systemSettings from "@/assets/images/categoriesSystemSettings.jpg";
-import overclocking from "@/assets/images/overclocking.jpg";
-import installWindows from "@/assets/images/installWindows.jpg";
+import basic from "@/assets/images/basic.webp";
+import ultimate from "@/assets/images/ultimate.webp";
+import systemSettings from "@/assets/images/categoriesSystemSettings.webp";
+import overclocking from "@/assets/images/overclocking.webp";
+import installWindows from "@/assets/images/installWindows.webp";
 
-import discordBot from "@/assets/images/discordBot.png";
-import telegramBot from "@/assets/images/telegramBot.png";
-import website from "@/assets/images/website.jpg";
-import otherPrograming from "@/assets/images/otherPrograming.jpg";
+import discordBot from "@/assets/images/discordBot.webp";
+import telegramBot from "@/assets/images/telegramBot.webp";
+import website from "@/assets/images/website.webp";
+import otherPrograming from "@/assets/images/otherPrograming.webp";
 
-import boostMM from "@/assets/images/boostMM.jpeg";
-import boostFaceIT from "@/assets/images/boostFaceIT.jpeg";
+import boostMM from "@/assets/images/boostMM.webp";
+import boostFaceIT from "@/assets/images/boostFaceIT.webp";
 
 export const categories = [
   {

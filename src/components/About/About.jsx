@@ -1,7 +1,7 @@
 import React from "react";
+import icons from "@/data/icons.js";
 
 import "./About.css";
-import icons from "@/data/icons.js";
 
 const About = () => {
   return (

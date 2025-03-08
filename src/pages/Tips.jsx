@@ -1,5 +1,4 @@
-import React, {useEffect} from 'react';
-
+import React, { useEffect } from "react";
 
 import Conclusion from "@/components/Conclusion/Conclusion.jsx";
 import Libraries from "@/components/Libraries/Libraries.jsx";
@@ -10,20 +9,22 @@ import Header from "@/components/Header/Header.jsx";
 import About from "@/components/About/About.jsx";
 
 const Tips = () => {
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, []);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
-    return (
-        <section className={'tips'}>
-            <Header/>
-            <About/>
-            <Windows/>
-            <Drivers/>
-            <Libraries/>
-            <Conclusion/>
-        </section>
-    );
+  return (
+    <>
+      <Header />
+      <section className={"tips"}>
+        <About />
+        <Windows />
+        <Drivers />
+        <Libraries />
+        <Conclusion />
+      </section>
+    </>
+  );
 };
 
 export default Tips;

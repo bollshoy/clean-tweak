@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import clients from "@/data/clients.js";
 import gsap from "gsap";
-import "./Clients.scss";
+import "./Clients.css";
 
 const Clients = () => {
   const itemsRef = useRef([]);

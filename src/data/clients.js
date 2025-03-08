@@ -3,14 +3,14 @@ import faceit from '@/assets/icons/faceit.png';
 import design from '@/assets/icons/design.png';
 import hltv from '@/assets/icons/hltv.png';
 
-import jmqa from '@/assets/images/users/jmqa.jpg';
-import gridge from '@/assets/images/users/gridge.jpg';
-import k1yootka from '@/assets/images/users/k1yotkaaaaa.jpg';
-import quzzen from '@/assets/images/users/quzzeN.jpg';
-import gleb86rus from '@/assets/images/users/gleb86rus.jpg';
-import renik from '@/assets/images/users/reNIK.jpg';
-import scoffy from '@/assets/images/users/Scoffy.jpg';
-import whisper from '@/assets/images/users/whisper.jpg';
+import jmqa from '@/assets/images/users/jmqa.webp';
+import gridge from '@/assets/images/users/gridge.webp';
+import k1yootka from '@/assets/images/users/k1yotkaaaaa.webp';
+import quzzen from '@/assets/images/users/quzzeN.webp';
+import gleb86rus from '@/assets/images/users/gleb86rus.webp';
+import renik from '@/assets/images/users/reNIK.webp';
+import scoffy from '@/assets/images/users/Scoffy.webp';
+import whisper from '@/assets/images/users/whisper.webp';
 
 export const clients = [
 	{

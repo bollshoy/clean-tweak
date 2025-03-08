@@ -1,12 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, lazy, Suspense } from "react";
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import LoadingWindows from "@/components/LoadingWindow/LoadingWindows.jsx";
-import Home from "@/pages/Home.jsx";
-import Tips from "@/pages/Tips.jsx";
-import Shop from "@/pages/Shop.jsx";
 import Header from "@/components/Header/Header.jsx";
 import Footer from "@/components/Footer/Footer.jsx";
 import "./styles/main.css";
+
+const Home = lazy(() => import("@/pages/Home.jsx"));
+const Tips = lazy(() => import("@/pages/Tips.jsx"));
+const Shop = lazy(() => import("@/pages/Shop.jsx"));
 
 const App = () => {
   const [loading, setLoading] = useState(true);
@@ -23,11 +24,13 @@ const App = () => {
       <div className={`app-content ${loading ? "hidden" : "fade-in"}`}>
         <Router>
           <Header />
-          <Routes>
-            <Route path="/" element={<Home loading={loading} />} />
-            <Route path="/tips" element={<Tips />} />
-            <Route path="/shop" element={<Shop />} />
-          </Routes>
+          <Suspense fallback={<div>Loading...</div>}>
+            <Routes>
+              <Route path="/" element={<Home loading={loading} />} />
+              <Route path="/tips" element={<Tips />} />
+              <Route path="/shop" element={<Shop />} />
+            </Routes>
+          </Suspense>
           <Footer />
         </Router>
       </div>

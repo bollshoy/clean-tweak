@@ -55,7 +55,7 @@ const Advantages = () => {
     <section className="advantages" ref={sectionRef}>
       <h6 className="advantages__title">
         <BlurText
-          text="Лучшие нас - только мы сами"
+          text="Конфиденциальность и Безопасность"
           delay={150}
           animateBy="words"
           direction="top"

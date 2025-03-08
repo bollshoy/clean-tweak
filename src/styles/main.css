@@ -1,4 +1,3 @@
-@charset "UTF-8";
 * {
   padding: 0;
   margin: 0;
@@ -169,19 +168,16 @@ li {
   margin: 0 auto;
 }
 
-/* Анимация исчезновения загрузочного экрана */
 .fade-out {
   opacity: 0;
   transition: opacity 0.5s ease-out;
   pointer-events: none;
 }
 
-/* Скрываем основной контент, пока идет загрузка */
 .hidden {
   opacity: 0;
 }
 
-/* Плавное появление основного контента (без сдвига!) */
 .fade-in {
   animation: fadeIn 0.8s ease-in-out forwards;
 }

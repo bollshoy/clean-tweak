@@ -25,7 +25,7 @@ const Recleaner = () => {
   return (
     <>
       <section className="recleaner">
-        <div className="recleaner__container container">
+        <div className="recleaner__container">
           <video className="recleaner__video" autoPlay loop muted playsInline>
             <source src={video} type="video/mp4" />
           </video>
