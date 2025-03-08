@@ -1,18 +1,25 @@
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react-swc";
-import path from "path";
-import autoprefixer from "autoprefixer";
-import cssnano from "cssnano";
-const ViteCompression = require("vite-plugin-compress");
-import viteImagemin from "vite-plugin-imagemin";
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react-swc';
+import path from 'path';
+import autoprefixer from 'autoprefixer';
+import cssnano from 'cssnano';
+import ViteCompression from 'vite-plugin-compress';
+import viteImagemin from 'vite-plugin-imagemin';
 
 export default defineConfig({
   optimizeDeps: {
-    include: ["ogl"],
+    include: ['ogl'],
   },
   plugins: [
     react(),
-    ViteCompression(),
+    ViteCompression({
+      verbose: true,
+      disable: false,
+      threshold: 10240,
+      algorithm: 'gzip',
+      ext: '.gz',
+      filter: /\.(js|css|html)$/i,
+    }),
     viteImagemin({
       gifsicle: {
         optimizationLevel: 7,
@@ -36,10 +43,10 @@ export default defineConfig({
       },
     }),
   ],
-  base: "./",
+  base: './',
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "src"),
+      '@': path.resolve(__dirname, 'src'),
     },
   },
   css: {
