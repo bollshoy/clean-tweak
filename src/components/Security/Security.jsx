@@ -3,7 +3,7 @@ import security from "@/data/security.js";
 import gsap from "gsap";
 import "./Security.css";
 
-const Security = () => {
+const Security = ({ disableAnimations }) => {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef(null);
   const itemsRef = useRef([]);
@@ -13,6 +13,8 @@ const Security = () => {
   const hasAnimated = useRef(false);
 
   useEffect(() => {
+    if (disableAnimations) return;
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -81,7 +83,7 @@ const Security = () => {
         }
       );
     }
-  }, [isVisible]);
+  }, [isVisible, disableAnimations]);
 
   return (
     <section className="security" ref={sectionRef}>
@@ -92,7 +94,7 @@ const Security = () => {
             ref={subtitleFirst}
             style={{ visibility: "hidden" }}
           >
-           Низкий FPS?
+            Низкий FPS?
           </span>
           <span
             className="security__subtitle"

@@ -3,13 +3,14 @@ import clients from "@/data/clients.js";
 import gsap from "gsap";
 import "./Clients.css";
 
-const Clients = () => {
+const Clients = ({ disableAnimations }) => {
   const itemsRef = useRef([]);
   const sectionRef = useRef(null);
   const titleRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
+    if (disableAnimations) return;
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -50,7 +51,7 @@ const Clients = () => {
         );
       });
     }
-  }, [isVisible]);
+  }, [isVisible, disableAnimations]);
 
   return (
     <section className="clients" ref={sectionRef}>

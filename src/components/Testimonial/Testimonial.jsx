@@ -2,10 +2,9 @@ import React, { useEffect, useRef, useState } from "react";
 import GlitchText from "@/Animations/GlitchText/GlitchText.jsx";
 import { reviews } from "@/data/reviews.js";
 import gsap from "gsap";
-
 import "./Testimonial.css";
 
-const Testimonial = () => {
+const Testimonial = ({ disableAnimations }) => {
   const [currentReviewIndex, setCurrentReviewIndex] = useState(0);
   const [hasAnimated, setHasAnimated] = useState(false);
 
@@ -14,6 +13,7 @@ const Testimonial = () => {
   const contentRef = useRef(null);
   const progressRef = useRef(null);
 
+  // Initial state for animations
   useEffect(() => {
     if (titleRef.current) {
       gsap.set(titleRef.current, { opacity: 0, x: 300 });
@@ -23,7 +23,10 @@ const Testimonial = () => {
     }
   }, []);
 
+  // IntersectionObserver for triggering animations
   useEffect(() => {
+    if (disableAnimations) return;
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -64,8 +67,9 @@ const Testimonial = () => {
     }
 
     return () => observer.disconnect();
-  }, [hasAnimated]);
+  }, [hasAnimated, disableAnimations]);
 
+  // Progress bar animation and review cycle
   useEffect(() => {
     const animateProgress = () => {
       gsap.to(progressRef.current, {

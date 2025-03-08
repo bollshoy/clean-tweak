@@ -5,19 +5,17 @@ import './Header.css';
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
-  const [isVisible, setIsVisible] = useState(false); // Состояние для видимости хедера
+  const [isVisible, setIsVisible] = useState(false);
   
   useEffect(() => {
     const handleScroll = () => {
       const heroSection = document.getElementById('hero');
-      const startSection = document.getElementById('start'); // ID секции Start
+      const startSection = document.getElementById('start');
 
       if (!heroSection || !startSection) return;
 
-      // Получаем положение секции Hero относительно верхней границы экрана
       const heroTop = heroSection.getBoundingClientRect().top;
 
-      // Показываем хедер, если мы прокрутили ниже Start (то есть в пределах Hero)
       if (heroTop <= window.innerHeight && window.scrollY > startSection.offsetTop) {
         setIsVisible(true);
       } else {

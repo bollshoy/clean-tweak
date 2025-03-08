@@ -4,12 +4,13 @@ import advantages from "@/data/advantages.js";
 import gsap from "gsap";
 import "./Advantages.css";
 
-const Advantages = () => {
+const Advantages = ({ disableAnimations }) => {
   const itemsRef = useRef([]);
   const sectionRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
+    if(disableAnimations) return;
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -49,7 +50,7 @@ const Advantages = () => {
         );
       });
     }
-  }, [isVisible]);
+  }, [isVisible, disableAnimations]);
 
   return (
     <section className="advantages" ref={sectionRef}>
