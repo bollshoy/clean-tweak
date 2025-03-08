@@ -7,15 +7,20 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "sass-watch": "sass --watch ."
   },
   "dependencies": {
     "@gsap/react": "^2.1.2",
-    "@widgetbot/react-embed": "^1.9.0",
+    "@react-spring/web": "^9.7.5",
+    "@react-three/drei": "^10.0.4",
+    "@react-three/fiber": "^9.0.4",
     "axios": "^1.7.9",
     "dotenv": "^16.4.5",
     "framer-motion": "^12.4.7",
-    "gsap": "^3.12.7",
+    "gsap": "^3.9.1",
+    "ogl": "^1.0.11",
+    "postprocessing": "^6.37.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-helmet": "^6.1.0",

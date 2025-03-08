@@ -60,11 +60,6 @@ const Form = () => {
 				ease: "backOut"
 			}
 		}),
-		hover: {
-			scale: 1.2,
-			boxShadow: "0px 7px 15px rgba(255, 255, 255, 0.8)",
-			transition: {duration: 0.3, ease: "easeOut"}
-		}
 	};
 	
 	return (
@@ -89,7 +84,6 @@ const Form = () => {
 						У компании CleanTweaking есть множество способов связи. Мы готовы
 						помочь вам с любыми запросами.
 					</motion.p>
-					
 					<div className="form__icon">
 						{form.map((item, index) => (
 								<motion.div

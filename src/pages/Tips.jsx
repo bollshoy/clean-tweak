@@ -22,7 +22,6 @@ const Tips = () => {
             <Drivers/>
             <Libraries/>
             <Conclusion/>
-            <Footer/>
         </section>
     );
 };

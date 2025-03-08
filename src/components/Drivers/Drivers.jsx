@@ -5,7 +5,7 @@ import './Drivers.css'
 const Drivers = () => {
     return (
         <section className="drivers">
-            <div className="drivers__container">
+            <div className="drivers__container container">
                 <h3 className="drivers__title">💾 Драйвера</h3>
                 <p className="drivers__text">
                     Драйверы играют ключевую роль в стабильной работе <br/>

@@ -5,6 +5,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+  text-align: center;
   }
 
   &__title {
@@ -63,7 +64,6 @@
     font-size: 20px;
     margin-bottom: 30px;
     line-height: 28px;
-    text-align: center;
   }
 
   .content__img {
@@ -101,7 +101,6 @@
         background-color: var(--first-color);
         border-radius: 50%;
         color: #fff;
-        text-align: center;
         line-height: 32px;
         font-size: 0.9rem;
         font-weight: bold;

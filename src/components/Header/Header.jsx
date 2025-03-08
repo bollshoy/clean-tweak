@@ -1,67 +1,61 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Navbar from "@/components/Navbar/Navbar.jsx";
-import { icons } from '@/data/icons.js';
-import { motion } from "framer-motion";
+import icons from "@/data/icons.js";
 import './Header.css';
 
-const Header = ({ scrollToSection }) => {
-	const [isScrolled, setIsScrolled] = useState(false);
-	
-	useEffect(() => {
-		const handleScroll = () => {
-			setIsScrolled(window.scrollY > 50);
-		};
-		window.addEventListener("scroll", handleScroll);
-		return () => window.removeEventListener("scroll", handleScroll);
-	}, []);
-	
-	return (
-			<motion.header
-					className={`header ${isScrolled ? "scrolled" : ""}`}
-					initial={{ y: -50, opacity: 0 }}
-					animate={{ y: 0, opacity: 1 }}
-					transition={{ duration: 0.6, ease: "easeOut" }}
-			>
-				<div className="header__container">
-					<motion.div
-							className="header__logo"
-							initial={{ opacity: 0, scale: 0.8, y: -20 }}
-							animate={{ opacity: 1, scale: 1, y: 0 }}
-							transition={{ duration: 0.5, ease: "backOut", delay: 0.2 }}
-					>
-						<span className="logo">CleanTweaking</span>
-					</motion.div>
-					<motion.div
-							initial={{ opacity: 0, y: -20 }}
-							animate={{ opacity: 1, y: 0 }}
-							transition={{ duration: 0.5, ease: "easeOut", delay: 0.4 }}
-					>
-						<Navbar scrollToSection={scrollToSection} />
-					</motion.div>
-					<motion.div
-							className="header__icons"
-							initial={{ opacity: 0 }}
-							animate={{ opacity: 1 }}
-							transition={{ staggerChildren: 0.2, delayChildren: 0.6 }}
-					>
-						{icons.map((item, index) => (
-								<motion.div
-										key={item.id}
-										className="icons__item"
-										initial={{ opacity: 0, scale: 0.5, rotate: -10 }}
-										animate={{ opacity: 1, scale: 1, rotate: 0 }}
-										transition={{ duration: 0.4, ease: "easeOut", delay: 0.6 + index * 0.1 }}
-										whileHover={{ scale: 1.2, rotate: 5 }}
-								>
-									<a target="_blank" rel="noopener noreferrer" href={item.href}>
-										<img src={item.src} alt={item.alt} className="icons__icon" />
-									</a>
-								</motion.div>
-						))}
-					</motion.div>
-				</div>
-			</motion.header>
-	);
+const Header = () => {
+  const [scrolled, setScrolled] = useState(false);
+  const [isVisible, setIsVisible] = useState(false); // Состояние для видимости хедера
+  
+  useEffect(() => {
+    const handleScroll = () => {
+      const heroSection = document.getElementById('hero');
+      const startSection = document.getElementById('start'); // ID секции Start
+
+      if (!heroSection || !startSection) return;
+
+      // Получаем положение секции Hero относительно верхней границы экрана
+      const heroTop = heroSection.getBoundingClientRect().top;
+
+      // Показываем хедер, если мы прокрутили ниже Start (то есть в пределах Hero)
+      if (heroTop <= window.innerHeight && window.scrollY > startSection.offsetTop) {
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
+      }
+
+      if (window.scrollY > 50) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+    
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+  
+  return (
+    <header className={`header ${scrolled ? 'scrolled' : ''} ${isVisible ? 'visible' : 'hidden'}`}>
+      <div className="header__container container">
+        <div className="header__logo">
+          <a href="#">
+            <span className="logo">CleanTweaking</span>
+          </a>
+        </div>
+        <Navbar />
+        <div className="header__icons">
+          {icons.map(item => (
+            <div className="icons__item" key={item.id}>
+              <a href={item.href} className="header__link">
+                <img src={item.src} alt="" className="header__icon" />
+              </a>
+            </div>
+          ))}
+        </div>
+      </div>
+    </header>
+  );
 };
 
 export default Header;

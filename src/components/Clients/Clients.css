@@ -22,11 +22,11 @@
 }
 .clients__item {
   flex: 1 0 24rem;
-  margin: 1rem;
   overflow: hidden;
   background: var(--black);
   border-radius: var(--border-radius-large);
   max-width: 350px;
+  width: 100%;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -85,6 +85,7 @@
   .clients__content {
     flex-direction: column;
     align-items: center;
+    margin-top: 0;
   }
   .clients__item img:hover {
     opacity: 1;

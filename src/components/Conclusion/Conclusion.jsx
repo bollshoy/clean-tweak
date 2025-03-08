@@ -1,13 +1,12 @@
 import React from 'react';
 import icons from "@/data/icons.js";
-import Recleaner from "@/components/Recleaner/Recleaner.jsx";
 
 import './Conclusion.css'
 
 const Conclusion = () => {
     return (
         <section className="conclusion">
-            <div className="conclusion__container">
+            <div className="conclusion__container container">
                 <h6 className="conclusion__title">
                     🔖Завершение
                 </h6>
@@ -26,10 +25,6 @@ const Conclusion = () => {
                             </a>
                         </div>
                     ))}
-                </div>
-                <div className="conclusion__software">
-                    <span className="conclusion__software--title">Или вы можете воспользоватся нашим БЕСПЛАТНЫМ софтом:</span>
-                    <Recleaner/>
                 </div>
             </div>
         </section>

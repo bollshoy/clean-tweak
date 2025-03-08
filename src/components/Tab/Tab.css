@@ -153,8 +153,6 @@ input:checked + label {
 }
 input:checked + label:hover {
   transition: 0.3s ease;
-  -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 79, 255, 0.5);
-  -moz-box-shadow: 0px 0px 15px 0px rgba(0, 79, 255, 0.5);
   box-shadow: 0px 0px 15px 0px rgba(0, 79, 255, 0.5);
 }
 
@@ -246,6 +244,4 @@ input:checked + label:after {
   .tabs__content-content {
     padding: 10px;
   }
-}
-
-/*# sourceMappingURL=Tab.css.map */
+}/*# sourceMappingURL=Tab.css.map */

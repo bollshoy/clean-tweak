@@ -7,7 +7,7 @@ import './Windows.css';
 const Windows = () => {
     return (
         <section className="windows">
-            <div className="windows__container">
+            <div className="windows__container container">
                 <h3 className="windows__title">
                     Установите чистую Windows
                 </h3>

@@ -20,6 +20,7 @@
 .libraries__content {
   display: flex;
   flex-wrap: wrap;
+  text-align: center;
 }
 .libraries__item {
   display: flex;
@@ -83,3 +84,5 @@
     align-items: center;
   }
 }
+
+/*# sourceMappingURL=Libraries.css.map */

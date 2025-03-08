@@ -28,12 +28,14 @@
   }
 
   .icon__item {
-    background: var(--second-color);
     width: 350px;
     height: auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
     padding: 30px;
     border-radius: var(--border-radius-large);
-    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+    border: 1px solid var(--second-color);
   }
 
   .icon__link {
@@ -50,6 +52,9 @@
 }
 
 @media screen and (max-width: 1340px) and (min-width: 0px) {
+  .form__content {
+    margin-bottom: 50px;
+  }
   .form__container,
   .form__icon {
     display: flex;

@@ -24,7 +24,6 @@
     box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 
-
     &:hover {
       transform: translateY(-10px);
       box-shadow: 0 4px 10px rgba(255, 255, 255, 0.7);
@@ -95,13 +94,13 @@
   }
 }
 
-@media screen and (max-width: 340px){
-  .advantages__title{
+@media screen and (max-width: 340px) {
+  .advantages__title {
     font-size: 26px;
     line-height: 28px;
   }
 
-  .advantages__content-title{
+  .advantages__content-title {
     font-size: 22px;
     line-height: 26px;
   }

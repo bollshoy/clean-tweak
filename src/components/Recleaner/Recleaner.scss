@@ -66,8 +66,8 @@
     position: relative;
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 50px;
-    //background: var(--white);
     color: var(--black);
     font-weight: 400;
     font-size: 20px;
@@ -76,30 +76,10 @@
     border-radius: var(--border-radius-large);
     cursor: pointer;
     transition: background 0.3s ease;
-    overflow: hidden;
 
     &.loading {
       background: var(--first-color);
       color: var(--white);
-    }
-  }
-
-  .progress {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    height: 5px;
-    background: #D32F2F;
-    width: 0%;
-    transition: width 3s ease;
-  }
-
-  @keyframes progress-anim {
-    0% {
-      width: 0%;
-    }
-    100% {
-      width: 100%;
     }
   }
 

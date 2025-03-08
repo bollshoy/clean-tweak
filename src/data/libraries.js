@@ -35,6 +35,42 @@ export const libraries = [
         href: 'https://www.win-rar.com/start.html?&L=4',
         description: 'Архиватор с очень высокой скоростью работы',
     },
+    {
+        id: 7,
+        title: 'OCCT',
+        href: 'https://www.ocbase.com/download',
+        description: 'Тестирование стабильности и производительности системы.'
+    },
+    {
+        id: 8,
+        title: 'AIDA 64',
+        href: 'https://www.aida64.com/downloads',
+        description: 'Системная информация и диагностика оборудования.'
+    },
+    {
+        id: 9,
+        title: 'HWiNFO',
+        href: 'https://www.hwinfo.com/',
+        description: 'Подробная информация о системе и мониторинг.'
+    },
+    {
+        id: 10,
+        title: 'CPU-Z',
+        href: 'https://www.cpuid.com/softwares/cpu-z.html',
+        description: 'Информация о процессоре и системной плате.'
+    },
+    {
+        id: 11,
+        title: 'Victoria',
+        href: 'https://hdd.by/victoria/',
+        description: 'Тестирование и диагностика жестких дисков.'
+    },
+    {
+        id: 12,
+        title: 'MSI Afterburner',
+        href: 'https://ru.msi.com/Landing/afterburner/graphics-cards',
+        description: 'Разгон видеокарт и мониторинг их состояния.'
+    }
 ];
 
 export default libraries;

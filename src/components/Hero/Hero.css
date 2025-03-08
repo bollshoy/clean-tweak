@@ -1,7 +1,43 @@
 .hero {
-  margin-top: 120px;
-  margin-bottom: 120px;
-  overflow-x: hidden;
+  margin-bottom: 150px;
+  overflow: hidden;
+  padding-top: calc(10vh + 5vw + 20px);
+}
+@media (max-width: 1920px) {
+  .hero {
+    padding-top: calc(12vh + 4vw + 20px);
+  }
+}
+@media (max-width: 2560px) {
+  .hero {
+    padding-top: calc(15vh + 3vw + 30px);
+  }
+}
+@media (max-width: 3840px) {
+  .hero {
+    padding-top: calc(20vh + 2vw + 40px);
+  }
+}
+@media (max-width: 7680px) {
+  .hero {
+    padding-top: calc(25vh + 1vw + 50px);
+  }
+}
+@media (max-width: 768px) {
+  .hero {
+    padding-top: calc(15vh + 10px);
+  }
+}
+@media (max-width: 480px) {
+  .hero {
+    padding-top: 20px;
+  }
+}
+.hero__line {
+  border: 1px solid var(--second-color);
+  background: var(--second-color);
+  width: 100%;
+  margin-bottom: 90px;
 }
 .hero__container {
   display: flex;
@@ -13,7 +49,6 @@
   position: relative;
   z-index: 2;
   flex-grow: 1;
-  overflow-y: auto;
   height: auto;
 }
 .hero__img {
@@ -21,41 +56,33 @@
   position: sticky;
   overflow-y: auto;
   z-index: -1;
-  top: 120px;
 }
 .hero__img img {
   width: 100%;
   height: 100%;
   object-fit: contain;
   border-radius: var(--border-radius-large);
+  filter: drop-shadow(5px 5px 9px #9419b3);
 }
 .hero__title {
   margin-bottom: 20px;
   display: inline-block;
 }
 .hero__text {
-  font-size: 22px;
+  font-size: 19px;
   line-height: 32px;
   white-space: normal;
-  font-weight: 400;
-  margin-bottom: 20px;
-  letter-spacing: 0.5px;
-}
-.hero__text span {
-  color: var(--first-color);
-  font-size: 26px;
-  font-weight: 700;
-  letter-spacing: 0.6px;
+  margin-bottom: 30px;
 }
 .hero__btn {
   background: var(--white);
   color: var(--black);
-  font-weight: 400;
+  font-weight: 700;
   font-size: 20px;
   line-height: 28px;
-  max-width: 300px;
+  max-width: 70%;
   width: 100%;
-  padding: 12px;
+  padding: 20px 30px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -63,6 +90,13 @@
   border-radius: var(--border-radius-large);
   z-index: 3;
   cursor: pointer;
+  margin-bottom: 50px;
+}
+@media (hover: hover) {
+  .hero__btn:hover {
+    background: var(--first-color);
+    color: var(--white);
+  }
 }
 .hero__btn:hover {
   background: var(--first-color);
@@ -70,38 +104,51 @@
 }
 
 .accordion {
-  margin-top: 30px;
-  margin-bottom: 80px;
-}
-.accordion__item {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-bottom: 18px;
-  border: 1px solid var(--white);
-  padding: 20px;
-  border-radius: var(--border-radius-large);
-  border-bottom: 15px solid var(--white);
-  width: 60%;
+  overflow: hidden;
 }
 .accordion__title {
-  cursor: pointer;
   display: flex;
+  align-items: center;
+  user-select: none;
+  justify-content: space-between;
 }
-.accordion__text {
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 26px;
+.accordion__title img {
+  filter: invert(1);
+  width: 40px;
+  height: 40px;
 }
-.accordion__img {
-  margin-right: 10px;
+.accordion__title-content {
+  display: flex;
+  align-items: center;
+  user-select: none;
+  gap: 5px;
 }
-.accordion__content {
-  overflow: hidden;
-  transition: max-height 0.3s ease;
+.accordion__title-content span {
+  font-weight: 700;
+}
+.accordion__accordion {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+}
+.accordion__item {
+  cursor: pointer;
+  border-top: 1px solid var(--second-color);
+  border-bottom: 1px solid var(--second-color);
+  padding: 10px;
+}
+.accordion__icon-close {
+  transition: transform 0.3s ease;
+}
+.accordion__icon-close.rotate {
+  transform: rotate(120deg);
 }
 
 @media screen and (max-width: 992px) {
+  .hero {
+    margin-bottom: 80px;
+  }
   .hero__container {
     display: flex;
     flex-direction: column;
@@ -126,22 +173,6 @@
   }
   .hero__img {
     display: none;
-  }
-  .mySwiper .swiper-slide {
-    width: 100%;
-    gap: 0;
-    padding: 0;
-  }
-  .swiper-button-prev,
-  .swiper-button-next {
-    display: none;
-  }
-  .review .review__text {
-    font-size: 16px;
-  }
-  .review .review__title {
-    font-size: 18px;
-    text-align: center;
   }
 }
 @media screen and (max-width: 420px) {

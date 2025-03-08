@@ -4,6 +4,9 @@ import path from 'path';
 
 // https://vite.dev/config/
 export default defineConfig({
+    optimizeDeps: {
+        include: ['ogl'] // Добавьте сюда библиотеки, которые требуют предкомпиляции
+    },
     plugins: [react()],
     base: './',
     resolve: {
