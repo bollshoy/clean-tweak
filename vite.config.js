@@ -12,11 +12,7 @@ export default defineConfig({
   },
   plugins: [
     react(),
-    ViteCompression({
-      algorithm: "gzip",
-      threshold: 10240,
-      deleteOriginFile: false,
-    }),
+    ViteCompression(),
     viteImagemin({
       gifsicle: {
         optimizationLevel: 7,
@@ -33,7 +29,10 @@ export default defineConfig({
         speed: 4,
       },
       svgo: {
-        plugins: [{ removeViewBox: false }, { cleanupIDs: false }],
+        plugins: [
+          { removeViewBox: false },
+          { cleanupIDs: false },
+        ],
       },
     }),
   ],
@@ -45,7 +44,10 @@ export default defineConfig({
   },
   css: {
     postcss: {
-      plugins: [autoprefixer(), cssnano({ preset: "default" })],
+      plugins: [
+        autoprefixer(),
+        cssnano({ preset: 'default' }),
+      ],
     },
     preprocessorOptions: {
       scss: {
