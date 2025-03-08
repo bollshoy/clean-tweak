@@ -3,7 +3,7 @@ import react from "@vitejs/plugin-react-swc";
 import path from "path";
 import autoprefixer from "autoprefixer";
 import cssnano from "cssnano";
-import ViteCompression from "vite-plugin-compress";
+const ViteCompression = require("vite-plugin-compress");
 import viteImagemin from "vite-plugin-imagemin";
 
 export default defineConfig({
