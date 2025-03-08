@@ -12,8 +12,6 @@
   },
   "dependencies": {
     "@gsap/react": "^2.1.2",
-    "@react-three/drei": "^10.0.4",
-    "@react-three/fiber": "^9.0.4",
     "axios": "^1.7.9",
     "dotenv": "^16.4.5",
     "framer-motion": "^12.4.7",
@@ -24,7 +22,6 @@
     "react-dom": "^19.0.0",
     "react-helmet": "^6.1.0",
     "react-router-dom": "^6.27.0",
-    "react-scroll": "^1.9.3",
     "react-transition-group": "^4.4.5",
     "sass": "^1.85.0"
   },
