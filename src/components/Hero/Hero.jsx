@@ -8,7 +8,7 @@ import gsap from "gsap";
 
 import "./Hero.css";
 
-const Hero = ({ disableAnimations }) => {
+const Hero = () => {
   const [openIndex, setOpenIndex] = useState(null);
   const [hasAnimated, setHasAnimated] = useState(false);
 
@@ -23,8 +23,6 @@ const Hero = ({ disableAnimations }) => {
   }, []);
 
   useEffect(() => {
-    if (disableAnimations) return;
-
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -73,11 +71,11 @@ const Hero = ({ disableAnimations }) => {
     observer.observe(imgRef.current);
 
     return () => observer.disconnect();
-  }, [hasAnimated, disableAnimations]);
+  }, [hasAnimated]);
+
   const toggleAccordion = (index) => {
     setOpenIndex(openIndex === index ? null : index);
   };
-
   return (
     <section className="hero" id="hero">
       <div className="hero__container container">

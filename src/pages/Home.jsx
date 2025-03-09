@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import Testimonial from "@/components/Testimonial/Testimonial.jsx";
 import Advantages from "@/components/Advantages/Advantages.jsx";
 import Recleaner from "@/components/Recleaner/Recleaner.jsx";
@@ -9,34 +10,42 @@ import Hero from "@/components/Hero/Hero.jsx";
 import Form from "@/components/Form/Form.jsx";
 
 const Home = ({ loading }) => {
-  const [disableAnimations, setDisableAnimations] = useState(false);
-
+  const location = useLocation();
+  
   useEffect(() => {
-    const checkScreenSize = () => {
-      setDisableAnimations(window.innerWidth <= 992);
-    };
-
-    checkScreenSize();
-    window.addEventListener("resize", checkScreenSize);
-
-    return () => window.removeEventListener("resize", checkScreenSize);
-  }, []);
-
+    const params = new URLSearchParams(location.search);
+    const scrollTo = params.get("scrollTo");
+    
+    if (scrollTo) {
+      const section = document.getElementById(scrollTo);
+      if (section) {
+        const offset = 100; // Отступ, если нужно
+        const elementPosition = section.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - offset;
+        
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth",
+        });
+      }
+    }
+  }, [location]);
+  
   return (
-    <main>
-      <Start loading={loading} id="start" />
-      <Hero disableAnimations={disableAnimations} />
-      <Testimonial disableAnimations={disableAnimations} id="testimonial" />
-      <Security disableAnimations={disableAnimations} id="security" />
-      <Clients disableAnimations={disableAnimations} />
-      <Advantages disableAnimations={disableAnimations} id="advantages" />
-      <section id="recleaner">
-        <Recleaner />
-      </section>
-      <section id="form">
-        <Form disableAnimations={disableAnimations} />
-      </section>
-    </main>
+      <main>
+        <Start loading={loading} id="start" />
+        <Hero />
+        <Testimonial id="testimonial" />
+        <Security id="security" />
+        <Clients />
+        <Advantages id="advantages" />
+        <section id="recleaner">
+          <Recleaner />
+        </section>
+        <section id="form">
+          <Form />
+        </section>
+      </main>
   );
 };
 
