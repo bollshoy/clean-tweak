@@ -7,35 +7,24 @@ const Navbar = () => {
 	const [isOpen, setIsOpen] = useState(false);
 	const navigate = useNavigate();
 	
-	const toggleMenu = () => {
-		setIsOpen((prevState) => {
-			const newState = !prevState;
-			document.body.classList.toggle("menu-open", newState);
-			return newState;
-		});
-	};
-	
-	const handleScrollToSection = (sectionId) => {
-		const section = document.getElementById(sectionId);
-		if (section) {
-			const offset = 100;
-			const elementPosition = section.getBoundingClientRect().top;
-			const offsetPosition = elementPosition + window.pageYOffset - offset;
-			
-			window.scrollTo({
-				top: offsetPosition, behavior: "smooth",
-			});
-		}
-	};
-	
 	const handleNavLinkClick = (event, sectionId) => {
 		event.preventDefault();
 		navigate(`/?scrollTo=${sectionId}`);
 	};
 	
+	const handleClick = () => {
+		setIsOpen(!isOpen);
+	}
 	
-	return (<nav className="header__menu">
-				<ul className={`header__list`}>
+	return (
+			<nav className="header__menu">
+				<div className={`burger ${isOpen ? 'open' : ''}`} onClick={handleClick}>
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+				<ul className={`header__list ${isOpen ? 'open' : ''}`}>
+					<li><a href="#" className="header__link">Главная</a></li>
 					<li>
 						<a
 								href="#"

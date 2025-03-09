@@ -3,8 +3,6 @@ import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import LoadingWindows from "@/components/LoadingWindow/LoadingWindows.jsx";
 import Header from "@/components/Header/Header.jsx";
 import Footer from "@/components/Footer/Footer.jsx";
-import Recleaner from "@/components/Recleaner/Recleaner.jsx";
-import Form from "@/components/Form/Form.jsx";
 import "./styles/main.css";
 
 const Home = lazy(() => import("@/pages/Home.jsx"));

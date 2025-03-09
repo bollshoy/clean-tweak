@@ -30,7 +30,7 @@ const Hero = () => {
             gsap.fromTo(
               imgRef.current,
               { y: -200, opacity: 0 },
-              { y: 0, opacity: 1, duration: 2, delay: 1, ease: "power2.out" }
+              { y: 0, opacity: 1, duration: 1, delay: .8, ease: "power2.out" }
             );
 
             gsap.fromTo(
@@ -40,7 +40,7 @@ const Hero = () => {
                 x: 0,
                 opacity: 1,
                 duration: 1.5,
-                delay: 0.7,
+                delay: .7,
                 ease: "power2.out",
               }
             );

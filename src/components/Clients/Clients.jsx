@@ -12,13 +12,13 @@ const Clients = () => {
 		const observer = new IntersectionObserver(
 				(entries) => {
 					entries.forEach((entry) => {
-						if (entry.isIntersecting) {
+						if (entry.isIntersecting && !hasAnimated.current) {
 							setIsVisible(true);
 							hasAnimated.current = true;
 						}
 					});
 				},
-				{threshold: 0.2}
+				{ threshold: 0.2 }
 		);
 		
 		if (sectionRef.current) {
@@ -26,21 +26,12 @@ const Clients = () => {
 		}
 		
 		return () => observer.disconnect();
-	}, [isVisible]);
+	}, []);
 	
 	useLayoutEffect(() => {
-		if (window.innerWidth > 992) {
-			if (isVisible) {
+		if (isVisible) {
+			if (window.innerWidth > 992) {
 				const tl = gsap.timeline();
-				tl.set(
-						[
-							itemsRef.current,
-							sectionRef.current,
-						],
-						{
-							visibility: "hidden",
-						}
-				);
 				itemsRef.current.forEach((el, index) => {
 					if (!el) return;
 					
@@ -49,7 +40,7 @@ const Clients = () => {
 					
 					gsap.fromTo(
 							el,
-							{opacity: 0, x: direction, scale: 0.8},
+							{ opacity: 0, x: direction, scale: 0.8 },
 							{
 								opacity: 1,
 								x: 0,
@@ -60,13 +51,8 @@ const Clients = () => {
 							}
 					);
 				});
-			}
-		} else {
-			setIsVisible(true);
-			hasAnimated.current = true;
-			
-			if (itemsRef.current) {
-				itemsRef.current.forEach((el, index) => {
+			} else {
+				itemsRef.current.forEach((el) => {
 					if (el) {
 						el.style.opacity = 1;
 						el.style.transform = "translateX(0) scale(1)";

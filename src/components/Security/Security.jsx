@@ -19,7 +19,6 @@ const Security = () => {
 						if (entry.isIntersecting && !hasAnimated.current) {
 							setIsVisible(true);
 							hasAnimated.current = true;
-							console.log("isVisible:", isVisible, "hasAnimated:", hasAnimated.current);
 						}
 					});
 				},

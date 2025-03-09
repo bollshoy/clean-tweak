@@ -44,9 +44,9 @@ const Testimonial = () => {
                     {
                       opacity: 1,
                       x: 0,
-                      duration: 2.3,
+                      duration: 1.8,
                       ease: "power2.out",
-                      delay: 1.5,
+                      delay: 1.2,
                     }
                 );
                 

@@ -19,7 +19,7 @@ const Home = ({ loading }) => {
     if (scrollTo) {
       const section = document.getElementById(scrollTo);
       if (section) {
-        const offset = 100; // Отступ, если нужно
+        const offset = 100;
         const elementPosition = section.getBoundingClientRect().top;
         const offsetPosition = elementPosition + window.pageYOffset - offset;
         

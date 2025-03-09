@@ -44,17 +44,17 @@
   top: 12px;
   width: 30px;
 }
-.header__menu .burger.menu-open span {
+.header__menu .burger.open span {
   background-color: var(--white);
 }
-.header__menu .burger.menu-open span:first-child {
+.header__menu .burger.open span:first-child {
   top: 6px;
   transform: rotate(45deg);
 }
-.header__menu .burger.menu-open span:nth-child(2) {
+.header__menu .burger.open span:nth-child(2) {
   opacity: 0;
 }
-.header__menu .burger.menu-open span:last-child {
+.header__menu .burger.open span:last-child {
   top: 6px;
   transform: rotate(-45deg);
 }
