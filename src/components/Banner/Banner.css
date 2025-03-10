@@ -56,9 +56,11 @@
   margin-bottom: 10px;
   cursor: pointer;
 }
-.banner__link:hover {
-  background: var(--first-color);
-  color: var(--white);
+@media (hover: hover) {
+  .banner__link:hover {
+    background: var(--first-color);
+    color: var(--white);
+  }
 }
 
 @media screen and (max-width: 992px) {

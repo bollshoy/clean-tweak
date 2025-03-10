@@ -81,9 +81,11 @@
   width: 100%;
   transition: var(--transition-speed);
 }
-.about__item--link img:hover {
-  transition: var(--transition-speed);
-  transform: scale(1.1);
+@media (hover: hover) {
+  .about__item--link img:hover {
+    transition: var(--transition-speed);
+    transform: scale(1.1);
+  }
 }
 
 @media screen and (max-width: 992px) {

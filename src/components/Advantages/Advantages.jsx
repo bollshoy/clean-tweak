@@ -1,5 +1,4 @@
 import React, {useEffect, useLayoutEffect, useRef, useState} from "react";
-import BlurText from "@/Animations/BlurText/BlurText";
 import {LazyLoadImage} from "react-lazy-load-image-component";
 import advantages from "@/data/advantages.js";
 import gsap from "gsap";
@@ -68,15 +67,8 @@ const Advantages = () => {
 	return (
 			<section className="advantages" ref={sectionRef}>
 				<h6 className="advantages__title">
-					<BlurText
-							text="Конфиденциальность и Безопасность"
-							delay={150}
-							animateBy="words"
-							direction="top"
-							className="blur-text"
-					/>
+					Конфиденциальность и Безопасность
 				</h6>
-				
 				<div className="advantages__container container">
 					{advantages.map((item, index) => (
 							<div

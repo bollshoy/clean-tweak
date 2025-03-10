@@ -37,17 +37,19 @@
     transition: var(--transition-speed);
     padding: 10px;
     gap: 5px;
+    
+    @media (hover: hover) {
+      &:hover {
+        background: var(--white);
+        transition: var(--transition-speed);
 
-    &:hover {
-      background: var(--white);
-      transition: var(--transition-speed);
+        span {
+          color: var(--black);
+        }
 
-      span {
-        color: var(--black);
-      }
-
-      img {
-        filter: invert(1);
+        img {
+          filter: invert(1);
+        }
       }
     }
 

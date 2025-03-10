@@ -24,7 +24,7 @@
   }
 
   @media (max-width: 480px) {
-    padding-top: 20px;
+    padding-top: 0px;
   }
 
   &__line {
@@ -93,16 +93,11 @@
     cursor: pointer;
     margin-bottom: 50px;
 
-    @media (hover: hover) {
+    @media (min-width: 992px) {
       &:hover {
         background: var(--first-color);
         color: var(--white);
       }
-    }
-
-    &:hover {
-      background: var(--first-color);
-      color: var(--white);
     }
   }
 }
@@ -128,6 +123,7 @@
     align-items: center;
     user-select: none;
     gap: 5px;
+
     span {
       font-weight: 700;
     }

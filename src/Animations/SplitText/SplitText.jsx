@@ -27,23 +27,29 @@ const SplitText = ({
 	const animatedCount = useRef(0);
 	
 	useEffect(() => {
-		const observer = new IntersectionObserver(
-				([entry]) => {
-					if (entry.isIntersecting) {
-						setInView(true);
-						observer.unobserve(ref.current);
-					}
-				},
-				{threshold, rootMargin}
-		);
+		const hasAnimatedBefore = localStorage.getItem("splitTextAnimated");
+		
+		if (hasAnimatedBefore) {
+			setInView(true);
+			return;
+		}
+		
+		const observer = new IntersectionObserver(([entry]) => {
+			if (entry.isIntersecting) {
+				setInView(true);
+				localStorage.setItem("splitTextAnimated", "true");
+				observer.unobserve(ref.current);
+			}
+		}, {threshold, rootMargin});
 		
 		observer.observe(ref.current);
 		
 		return () => observer.disconnect();
 	}, [threshold, rootMargin]);
 	
+	
 	const springs = useSprings(
-			letters.length,
+			words.length,
 			letters.map((_, i) => ({
 				from: animationFrom,
 				to: inView
@@ -55,53 +61,25 @@ const SplitText = ({
 							}
 						}
 						: animationFrom,
-				delay: i * delay,
+				delay: i * delay * 4,
 				config: {easing},
 			}))
 	);
 	
 	return (
-			<p
-					ref={ref}
-					className={`split-parent ${className}`}
-					style={{
-						textAlign,
-						overflow: 'hidden',
-						display: 'inline',
-						whiteSpace: 'normal',
-						wordWrap: 'break-word'
-					}}
-			>
+			<p ref={ref} className={`split-parent ${className}`}>
 				{words.map((word, wordIndex) => (
-						<span key={wordIndex} style={{
-							display: 'inline-block',
-							whiteSpace: 'nowrap',
-							fontWeight: 'bold',
-							fontSize: '82px'
-						}}>
-          {word.map((letter, letterIndex) => {
-	          const index = words
-			          .slice(0, wordIndex)
-			          .reduce((acc, w) => acc + w.length, 0) + letterIndex;
-	          
-	          return (
-			          <animated.span
-					          key={index}
-					          style={{
-						          ...springs[index],
-						          display: 'inline-block',
-						          willChange: 'transform, opacity',
-					          }}
-			          >
-				          {letter}
-			          </animated.span>
-	          );
-          })}
-							<span style={{
-								display: 'inline-block',
-								width: '0.3em'
-							}}>&nbsp;</span>
-        </span>
+						<animated.span
+								key={wordIndex}
+								style={{
+									...springs[wordIndex],
+									display: 'inline-block',
+									fontWeight: '700',
+									fontSize: 'clamp(48px, 5vw, 82px)'
+								}}
+						>
+							{word}&nbsp;
+						</animated.span>
 				))}
 			</p>
 	);

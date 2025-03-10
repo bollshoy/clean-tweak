@@ -42,9 +42,11 @@
   mask-image: linear-gradient(to bottom, rgb(0, 0, 0) 60%, rgba(0, 0, 0, 0) 100%);
   opacity: 0.7;
 }
-.clients__item img:hover {
-  transform: scale(1.1);
-  transition: var(--transition-speed);
+@media (hover: hover) {
+  .clients__item img:hover {
+    transform: scale(1.1);
+    transition: var(--transition-speed);
+  }
 }
 .clients__title-content {
   position: absolute;

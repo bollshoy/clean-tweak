@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from "react";
 import SplitText from "@/Animations/SplitText/SplitText.jsx";
 import backgroundVideo from "@/assets/video/gamingBg.mp4";
+import mouseScroll from '@/assets/video/mouseScrollAnimation.webm';
 import "./Start.css";
 
 const Start = ({loading}) => {
@@ -59,7 +60,9 @@ const Start = ({loading}) => {
 						</p>
 					</div>
 					<div className="mouse" onClick={scrollDown}>
-						<div className="roll"></div>
+						<video autoPlay loop muted playsInline className="mouse__video">
+							<source src={mouseScroll} type="video/webm" />
+						</video>
 					</div>
 				</section>
 			</>

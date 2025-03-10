@@ -34,15 +34,17 @@
   padding: 10px;
   gap: 5px;
 }
-.windows__download:hover {
-  background: var(--white);
-  transition: var(--transition-speed);
-}
-.windows__download:hover span {
-  color: var(--black);
-}
-.windows__download:hover img {
-  filter: invert(1);
+@media (hover: hover) {
+  .windows__download:hover {
+    background: var(--white);
+    transition: var(--transition-speed);
+  }
+  .windows__download:hover span {
+    color: var(--black);
+  }
+  .windows__download:hover img {
+    filter: invert(1);
+  }
 }
 .windows__download img {
   width: 100%;

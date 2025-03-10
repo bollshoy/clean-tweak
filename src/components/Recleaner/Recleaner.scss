@@ -82,7 +82,7 @@
     }
   }
 
-  .recleaner__open {
+  &__open {
     display: flex;
     align-items: center;
     background: var(--white);
@@ -90,16 +90,18 @@
     border-radius: var(--border-radius-large);
     transition: var(--transition-speed);
 
-    &:hover {
-      background: var(--first-color);
-      transition: var(--transition-speed);
+    @media (hover: hover) {
+      &:hover {
+        background: var(--first-color);
+        transition: var(--transition-speed);
 
-      span {
-        color: var(--white);
-      }
+        span {
+          color: var(--white);
+        }
 
-      img {
-        filter: invert(1);
+        img {
+          filter: invert(1);
+        }
       }
     }
 
@@ -159,16 +161,18 @@
         filter: invert(1);
       }
 
-      &:hover {
-        background: var(--first-color);
-        transition: var(--transition-speed);
+      @media (hover: hover) {
+        &:hover {
+          background: var(--first-color);
+          transition: var(--transition-speed);
 
-        span {
-          color: var(--white);
-        }
+          span {
+            color: var(--white);
+          }
 
-        img {
-          filter: invert(0);
+          img {
+            filter: invert(0);
+          }
         }
       }
     }
@@ -192,12 +196,14 @@
     border-radius: var(--border-radius-large);
     transition: var(--transition-speed);
 
-    &:hover {
-      background: var(--white);
-      transition: var(--transition-speed);
+    @media (hover: hover) {
+      &:hover {
+        background: var(--white);
+        transition: var(--transition-speed);
 
-      img {
-        filter: invert(1);
+        img {
+          filter: invert(1);
+        }
       }
     }
 
@@ -232,12 +238,14 @@
         border: 1px solid var(--black);
         transition: var(--transition-speed);
 
-        &:hover {
-          transition: var(--transition-speed);
-          background: var(--black);
+        @media (hover: hover) {
+          &:hover {
+            transition: var(--transition-speed);
+            background: var(--black);
 
-          img {
-            filter: invert(0);
+            img {
+              filter: invert(0);
+            }
           }
         }
       }
@@ -302,7 +310,6 @@
   }
 }
 
-/* Адаптив */
 @media screen and (max-width: 992px) {
   .recleaner__container {
     height: auto;
@@ -329,7 +336,6 @@
 
 @media screen and (max-width: 768px) {
   .recleaner__container {
-    max-width: 95%;
     height: auto;
     padding: 10px;
   }

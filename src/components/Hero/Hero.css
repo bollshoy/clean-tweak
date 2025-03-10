@@ -30,7 +30,7 @@
 }
 @media (max-width: 480px) {
   .hero {
-    padding-top: 20px;
+    padding-top: 0px;
   }
 }
 .hero__line {
@@ -92,15 +92,11 @@
   cursor: pointer;
   margin-bottom: 50px;
 }
-@media (hover: hover) {
+@media (min-width: 992px) {
   .hero__btn:hover {
     background: var(--first-color);
     color: var(--white);
   }
-}
-.hero__btn:hover {
-  background: var(--first-color);
-  color: var(--white);
 }
 
 .accordion {
