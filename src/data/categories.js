@@ -1,12 +1,11 @@
-import optimization from "@/assets/icons/optimization.png";
-import coding from "@/assets/icons/coding.png";
-import support from "@/assets/icons/support.png";
+import optimization from "@/assets/icons/optimization.webp";
+import coding from "@/assets/icons/coding.webp";
+import support from "@/assets/icons/support.webp";
 
 import basic from "@/assets/images/basic.webp";
 import ultimate from "@/assets/images/ultimate.webp";
 import systemSettings from "@/assets/images/categoriesSystemSettings.webp";
 import overclocking from "@/assets/images/overclocking.webp";
-import installWindows from "@/assets/images/installWindows.webp";
 
 import discordBot from "@/assets/images/discordBot.webp";
 import telegramBot from "@/assets/images/telegramBot.webp";
