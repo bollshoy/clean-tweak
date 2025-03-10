@@ -100,7 +100,8 @@ const Form = () => {
 													className="icon__link"
 													style={{cursor: "pointer"}}
 											>
-												<img src={item.src} alt="" className="icon__icon" loading="lazy"/>
+												<img src={item.src} alt="icon social"
+												     className="icon__icon" loading="lazy"/>
 												<span className="item__link">{item.title}</span>
 											</div>
 									) : (
@@ -110,7 +111,8 @@ const Form = () => {
 													rel="noopener noreferrer"
 													className="icon__link"
 											>
-												<img src={item.src} alt="" className="icon__icon" loading="lazy"/>
+												<img src={item.src} alt="icon social"
+												     className="icon__icon" loading="lazy"/>
 												<span className="item__link">{item.title}</span>
 											</a>
 									)}

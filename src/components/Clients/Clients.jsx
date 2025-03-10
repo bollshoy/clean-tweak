@@ -79,7 +79,7 @@ const Clients = () => {
 								>
 									<img
 											src={item.src}
-											alt={item.title}
+											alt="clients images"
 											loading="lazy"
 											className={`clients__img ${
 													item.title === "REDraGEN" ? "clients__img-redragen" : ""
@@ -90,7 +90,7 @@ const Clients = () => {
 										<div className="clients__title-content">
 											<img
 													src={item.icon}
-													alt={item.title}
+													alt="icon social media"
 													loading="lazy"
 													className="clients__item-icon"
 											/>

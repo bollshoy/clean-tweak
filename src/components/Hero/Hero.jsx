@@ -2,11 +2,12 @@ import React, {useState, useEffect, useRef, useCallback} from "react";
 import icon from "@/assets/icons/accordionIcon.webp";
 import close from "@/assets/icons/close.webp";
 import accordionItems from "@/data/accordion.js";
-import heroImg from "@/assets/images/logo.png";
+import logoCleanTweaking from "@/assets/images/logo.png";
 import {NavLink} from "react-router-dom";
 import gsap from "gsap";
 
 import "./Hero.css";
+import logo from "/logo.png";
 
 const Hero = () => {
 	const [openIndex, setOpenIndex] = useState(null);
@@ -80,7 +81,7 @@ const Hero = () => {
 			<section className="hero" id="hero">
 				<div className="hero__container container">
 					<div className="hero__img" ref={imgRef}>
-						<img src={heroImg} alt="heroImg" loading="lazy" />
+						<img src={logoCleanTweaking} alt="logo CleanTweaking" loading="lazy" />
 					</div>
 					<div className="hero__content">
 						<h2 className="hero__title">CleanTweaking</h2>
@@ -108,12 +109,12 @@ const Hero = () => {
 														onClick={() => toggleAccordion(index)}
 												>
 													<div className="accordion__title-content">
-														<img src={icon} alt="" className="accordion__icon"/>
+														<img src={icon} alt="accordion icon" className="accordion__icon"/>
 														<span>{item.title}</span>
 													</div>
 													<img
 															src={close}
-															alt=""
+															alt="close icon"
 															className={`accordion__icon-close ${
 																	openIndex === index ? "rotate" : ""
 															}`}

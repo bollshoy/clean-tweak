@@ -56,7 +56,7 @@ const Recleaner = () => {
                   </span>
 										<img
 												src={download}
-												alt="Download icon"
+												alt="download icon"
 												className="recleaner__btn--icon"
 												loading="lazy"
 										/>
@@ -65,7 +65,7 @@ const Recleaner = () => {
                     <span className="recleaner__open--item">
                       Читать FAQ
                     </span>
-										<img src={open} alt="" className="recleaner__open--icon" loading="lazy"/>
+										<img src={open} alt="open faq icon" className="recleaner__open--icon" loading="lazy"/>
 									</button>
 								</div>
 							</div>

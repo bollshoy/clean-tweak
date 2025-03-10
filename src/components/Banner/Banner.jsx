@@ -25,7 +25,7 @@ const Banner = () => {
 						</button>
 					</div>
 					<div className="banner__img">
-						<img src={bannerImg} alt="img" loading="lazy"/>
+						<img src={bannerImg} alt="banner" loading="lazy"/>
 					</div>
 				</div>
 			</section>

@@ -24,7 +24,7 @@ const Categories = ({ selectedCategory, handleCategoryChange }) => {
                 <button className="category__btn">
                   <img
                     src={category.src}
-                    alt={category.title}
+                    alt="category icon btn"
                     className="category__icon"
                     loading="lazy"
                   />

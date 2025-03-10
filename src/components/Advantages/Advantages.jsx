@@ -84,7 +84,7 @@ const Advantages = () => {
 									ref={(el) => (itemsRef.current[index] = el)}
 									style={{opacity: 0}}
 							>
-								<img src={item.src} alt={item.title} loading="lazy"
+								<img src={item.src} alt="icon advantages" loading="lazy"
 								     className="advantages__icon"/>
 								<span className="advantages__content-title">{item.title}</span>
 								<p className="advantages__text">{item.description}</p>
