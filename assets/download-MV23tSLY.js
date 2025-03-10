@@ -1,1 +1,0 @@
-import{r as a}from"./index-CkaHJAYz.js";const s=(o,t)=>a.useCallback(()=>{const n=new Date().getTime(),e=document.createElement("a");e.href=o,e.setAttribute("download",`${t}_${n}.exe`),document.body.appendChild(e),e.click(),e.remove()},[o,t]),c=""+new URL("download-QsznVm9R.png",import.meta.url).href;export{c as d,s as u};
