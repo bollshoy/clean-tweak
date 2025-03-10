@@ -48,7 +48,7 @@ const Header = () => {
           {icons.map(item => (
             <div className="icons__item" key={item.id}>
               <a href={item.href} className="header__link">
-                <img src={item.src} alt="" className="header__icon" />
+                <img src={item.src} alt="" className="header__icon" loading="lazy"/>
               </a>
             </div>
           ))}

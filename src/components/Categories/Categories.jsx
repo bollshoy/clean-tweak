@@ -26,6 +26,7 @@ const Categories = ({ selectedCategory, handleCategoryChange }) => {
                     src={category.src}
                     alt={category.title}
                     className="category__icon"
+                    loading="lazy"
                   />
                   {category.title}
                 </button>

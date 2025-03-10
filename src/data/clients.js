@@ -1,7 +1,7 @@
-import twitch from '@/assets/icons/twitch.png';
-import faceit from '@/assets/icons/faceit.png';
-import design from '@/assets/icons/design.png';
-import hltv from '@/assets/icons/hltv.png';
+import twitch from '@/assets/icons/twitch.webp';
+import faceit from '@/assets/icons/faceit.webp';
+import design from '@/assets/icons/design.webp';
+import hltv from '@/assets/icons/hltv.webp';
 
 import jmqa from '@/assets/images/users/jmqa.webp';
 import gridge from '@/assets/images/users/gridge.webp';

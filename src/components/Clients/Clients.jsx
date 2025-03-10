@@ -80,6 +80,7 @@ const Clients = () => {
 									<img
 											src={item.src}
 											alt={item.title}
+											loading="lazy"
 											className={`clients__img ${
 													item.title === "REDraGEN" ? "clients__img-redragen" : ""
 											}`}
@@ -90,6 +91,7 @@ const Clients = () => {
 											<img
 													src={item.icon}
 													alt={item.title}
+													loading="lazy"
 													className="clients__item-icon"
 											/>
 											<span className="clients__item-title">{item.title}</span>

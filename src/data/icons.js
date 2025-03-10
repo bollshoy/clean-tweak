@@ -1,6 +1,6 @@
-import vk from '@/assets/icons/vk.png';
-import discord from '@/assets/icons/discord.png';
-import telegram from '@/assets/icons/telegram.png';
+import vk from '@/assets/icons/vk.webp';
+import discord from '@/assets/icons/discord.webp';
+import telegram from '@/assets/icons/telegram.webp';
 
 export const icons = [
     {

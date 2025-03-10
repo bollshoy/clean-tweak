@@ -25,12 +25,12 @@ const Windows = () => {
 							className="windows__download windows__download--link"
 							onClick={downloadFile}
 					   >
-						<img src={download} alt="logo" className="windows__download--img"/>
+						<img src={download} alt="logo" className="windows__download--img" loading="lazy"/>
 						<span>Windows 11</span>
 					</button>
 					<div className="content__update">
 						<div className="content__title--content">
-							<img src={updLogo} alt="logo" className="content__title--img"/>
+							<img src={updLogo} alt="logo" className="content__title--img" loading="lazy"/>
 							<span className="content__title">Обновление</span>
 						</div>
 						<p className="content__text">
@@ -55,7 +55,7 @@ const Windows = () => {
 							</ol>
 						</div>
 						<div className="content__img">
-							<img src={update} alt="update" className="content__img"/>
+							<img src={update} alt="update" className="content__img" loading="lazy"/>
 						</div>
 					</div>
 				</div>

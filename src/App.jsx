@@ -1,39 +1,28 @@
-import React, { useState, useEffect, lazy, Suspense } from "react";
+import React, { lazy, Suspense } from "react";
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
+
+const Home = lazy(() => import("@/pages/Home.jsx"));
+const Tips = lazy(() => import("@/pages/Tips.jsx"));
+const Shop = lazy(() => import("@/pages/Shop.jsx"));
+
 import LoadingWindows from "@/components/LoadingWindow/LoadingWindows.jsx";
 import Header from "@/components/Header/Header.jsx";
 import Footer from "@/components/Footer/Footer.jsx";
 import "./styles/main.css";
 
-const Home = lazy(() => import("@/pages/Home.jsx"));
-const Tips = lazy(() => import("@/pages/Tips.jsx"));
-const Shop = lazy(() => import("@/pages/Shop.jsx"));
 const App = () => {
-  const [loading, setLoading] = useState(true);
-  const [fadeOut, setFadeOut] = useState(false);
-
-  useEffect(() => {
-    setTimeout(() => setFadeOut(true), 5000);
-    setTimeout(() => setLoading(false), 5000);
-  }, []);
-
   return (
-    <>
-      {loading && <LoadingWindows className={fadeOut ? "fade-out" : ""} />}
-      <div className={`app-content ${loading ? "hidden" : "fade-in"}`}>
-        <Router>
-          <Header />
-          <Suspense fallback={<div>Loading...</div>}>
-            <Routes>
-              <Route path="/" element={<Home loading={loading} />} />
-              <Route path="/tips" element={<Tips />} />
-              <Route path="/shop" element={<Shop />} />
-            </Routes>
-          </Suspense>
-          <Footer />
-        </Router>
-      </div>
-    </>
+      <Router>
+        <Header />
+        <Suspense fallback={<LoadingWindows />}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/tips" element={<Tips />} />
+            <Route path="/shop" element={<Shop />} />
+          </Routes>
+        </Suspense>
+        <Footer />
+      </Router>
   );
 };
 

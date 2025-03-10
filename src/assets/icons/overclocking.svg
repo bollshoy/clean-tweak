@@ -1,4 +1,1 @@
-<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-	<path d="M6 8V23.5H24.5" stroke="black" stroke-width="1.5"/>
-	<path d="M24.5 12.5L18 18L12 14L6 19.5" stroke="black" stroke-width="1.5"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none"><path stroke="#000" stroke-width="1.5" d="M6 8v15.5h18.5"/><path stroke="#000" stroke-width="1.5" d="M24.5 12.5 18 18l-6-4-6 5.5"/></svg>

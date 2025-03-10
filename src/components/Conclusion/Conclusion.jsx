@@ -21,7 +21,7 @@ const Conclusion = () => {
                     {icons.map((item) => (
                         <div key={item.id} className="about__item--link">
                             <a href={item.href} className="about__link">
-                                <img src={item.src} alt="" className="item__img" />
+                                <img src={item.src} alt="" className="item__img" loading="lazy"/>
                             </a>
                         </div>
                     ))}

@@ -1,9 +1,9 @@
-import React, {useCallback, useRef, useState} from "react";
+import React, {useState} from "react";
 import recleaner from "@/data/recleaner.js";
 import useDownload from "@/hooks/useDownload.jsx";
 import video from "@/assets/video/recleanerVideo.mp4";
-import download from "@/assets/icons/download.png";
-import open from "@/assets/icons/open.png";
+import download from "@/assets/icons/download.webp";
+import open from "@/assets/icons/open.webp";
 import {motion, AnimatePresence} from "framer-motion";
 import "./Recleaner.css";
 
@@ -58,13 +58,14 @@ const Recleaner = () => {
 												src={download}
 												alt="Download icon"
 												className="recleaner__btn--icon"
+												loading="lazy"
 										/>
 									</button>
 									<button className="recleaner__open" onClick={toggleModal}>
                     <span className="recleaner__open--item">
                       Читать FAQ
                     </span>
-										<img src={open} alt="" className="recleaner__open--icon"/>
+										<img src={open} alt="" className="recleaner__open--icon" loading="lazy"/>
 									</button>
 								</div>
 							</div>
@@ -81,6 +82,7 @@ const Recleaner = () => {
 														src={item.src}
 														alt=""
 														className="recleaner__item--img"
+														loading="lazy"
 												/>
 											</a>
 										</div>

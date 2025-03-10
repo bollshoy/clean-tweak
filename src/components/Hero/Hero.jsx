@@ -1,6 +1,6 @@
 import React, {useState, useEffect, useRef, useCallback} from "react";
-import icon from "@/assets/icons/accordionIcon.png";
-import close from "@/assets/icons/close.png";
+import icon from "@/assets/icons/accordionIcon.webp";
+import close from "@/assets/icons/close.webp";
 import accordionItems from "@/data/accordion.js";
 import heroImg from "@/assets/images/logo.png";
 import {NavLink} from "react-router-dom";
@@ -80,7 +80,7 @@ const Hero = () => {
 			<section className="hero" id="hero">
 				<div className="hero__container container">
 					<div className="hero__img" ref={imgRef}>
-						<img src={heroImg} alt="heroImg"/>
+						<img src={heroImg} alt="heroImg" loading="lazy" />
 					</div>
 					<div className="hero__content">
 						<h2 className="hero__title">CleanTweaking</h2>
