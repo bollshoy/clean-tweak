@@ -17,11 +17,11 @@ const Conclusion = () => {
                     вас
                     способ связи с нами.⬇️
                 </p>
-                <div className="conclusion__contact">
+                <div className="about__item-contact">
                     {icons.map((item) => (
-                        <div key={item.id} className="conclusion__item">
-                            <a href={item.href} className="conclusion__link">
-                                <img src={item.src} alt="" className="conclusion__img"/>
+                        <div key={item.id} className="about__item--link">
+                            <a href={item.href} className="about__link">
+                                <img src={item.src} alt="" className="item__img" />
                             </a>
                         </div>
                     ))}

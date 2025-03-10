@@ -13,8 +13,8 @@ const App = () => {
   const [fadeOut, setFadeOut] = useState(false);
 
   useEffect(() => {
-    setTimeout(() => setFadeOut(true), 700);
-    setTimeout(() => setLoading(false), 1200);
+    setTimeout(() => setFadeOut(true), 5000);
+    setTimeout(() => setLoading(false), 5000);
   }, []);
 
   return (

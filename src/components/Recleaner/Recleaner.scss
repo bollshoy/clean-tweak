@@ -5,8 +5,8 @@
   &__container {
     position: relative;
     width: 100%;
-    max-width: 80%;
-    height: 100vh;
+    max-width: 85%;
+    height: 70vh;
     overflow: hidden;
     border-radius: var(--border-radius-large);
     display: flex;
@@ -33,6 +33,7 @@
   }
 
   &__author {
+    margin-top: 20px;
     margin-bottom: 20px;
     backdrop-filter: blur(15px);
     background: rgba(255, 255, 255, 0.1);

@@ -14,17 +14,25 @@
     margin-bottom: 30px;
   }
 
-  &__text {
+  span.windows__text {
+    font-size: 22px;
+    margin-bottom: 20px;
     font-weight: 400;
+  }
+
+  &__text {
+    font-weight: 700;
     font-size: 20px;
     line-height: 28px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+    letter-spacing: .6px;
   }
 
   &__download {
     display: flex;
     align-items: center;
     border: 1px solid var(--white);
+    background: none;
     border-radius: var(--border-radius-large);
     transition: var(--transition-speed);
     padding: 10px;
@@ -71,9 +79,9 @@
 
   .content__title {
     margin-bottom: 30px;
-    font-weight: 500;
-    font-size: 32px;
-    line-height: 48px;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 52px;
     margin-top: 30px;
   }
 
@@ -91,6 +99,9 @@
       width: 100%;
       height: auto;
       border-radius: var(--border-radius-large);
+      box-shadow: 0 90px 110px rgba(0, 0, 0, .9);
+      -webkit-mask-image: linear-gradient(180deg, #000 60%, transparent);
+      mask-image: linear-gradient(180deg, #000 60%, transparent);
     }
   }
 

@@ -146,7 +146,7 @@ const Security = () => {
 						</h3>
 					</div>
 					<p className="security__text">
-						Мы настроем ваш компьютер, чтобы <br />
+						Мы настроим ваш компьютер, чтобы <br />
 						вы влюбились в игры заново!
 					</p>
 					<div className="security__content">

@@ -18,7 +18,7 @@ const Clients = () => {
 						}
 					});
 				},
-				{ threshold: 0.2 }
+				{threshold: 0.2}
 		);
 		
 		if (sectionRef.current) {
@@ -40,7 +40,7 @@ const Clients = () => {
 					
 					gsap.fromTo(
 							el,
-							{ opacity: 0, x: direction, scale: 0.8 },
+							{opacity: 0, x: direction, scale: 0.8},
 							{
 								opacity: 1,
 								x: 0,
@@ -66,8 +66,8 @@ const Clients = () => {
 			<section className="clients" ref={sectionRef}>
 				<div className="clients__container container">
 					<h4 className="clients__title">
-						Наши клиенты и люди <br/>
-						которые нам доверились:
+						Наши клиенты и <br/>
+						те, кто выбрал нас:
 					</h4>
 					<div className="clients__content">
 						{clients.map((item, index) => (

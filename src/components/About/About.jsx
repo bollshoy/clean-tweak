@@ -9,10 +9,8 @@ const About = () => {
       <section className="about">
         <div className="about__container container">
           <div className="about__title--content">
-            <span className="about__emoji">basic tips</span>
             <h2 className="about__title">
               👋Привет, тут ты найдешь полезные гайды
-              <br />
             </h2>
             <div className="about__item-contact">
               {icons.map((item) => (
