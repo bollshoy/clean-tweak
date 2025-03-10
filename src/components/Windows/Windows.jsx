@@ -1,6 +1,6 @@
 import React from 'react';
 import update from '@/assets/images/updateWindows.webp'
-import download from '@/assets/icons/download.png';
+import download from '@/assets/icons/download.webp';
 import updLogo from '@/assets/icons/updateLogo.svg';
 import './Windows.css';
 import useDownload from "@/hooks/useDownload.jsx";
