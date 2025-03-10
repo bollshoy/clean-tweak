@@ -1,4 +1,5 @@
 import React from 'react';
+import {LazyLoadImage} from "react-lazy-load-image-component";
 import icons from "@/data/icons.js";
 
 import './Conclusion.css'
@@ -21,7 +22,7 @@ const Conclusion = () => {
                     {icons.map((item) => (
                         <div key={item.id} className="about__item--link">
                             <a href={item.href} className="about__link">
-                                <img src={item.src} alt="icon social" className="item__img" loading="lazy"/>
+                                <LazyLoadImage src={item.src} alt="icon social l" className="item__img" loading="lazy"/>
                             </a>
                         </div>
                     ))}

@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import recleaner from "@/data/recleaner.js";
+import {LazyLoadImage} from "react-lazy-load-image-component";
 import useDownload from "@/hooks/useDownload.jsx";
 import video from "@/assets/video/recleanerVideo.mp4";
 import download from "@/assets/icons/download.webp";
@@ -54,7 +55,7 @@ const Recleaner = () => {
                   <span className="recleaner__btn--item">
                     {isLoading ? "Загрузка..." : "Скачать"}
                   </span>
-										<img
+										<LazyLoadImage
 												src={download}
 												alt="download icon"
 												className="recleaner__btn--icon"
@@ -65,7 +66,9 @@ const Recleaner = () => {
                     <span className="recleaner__open--item">
                       Читать FAQ
                     </span>
-										<img src={open} alt="open faq icon" className="recleaner__open--icon" loading="lazy"/>
+										<LazyLoadImage src={open} alt="open faq icon"
+										               className="recleaner__open--icon"
+										               loading="lazy"/>
 									</button>
 								</div>
 							</div>
@@ -78,7 +81,7 @@ const Recleaner = () => {
 													rel="noopener noreferrer"
 													className="recleaner__item--link"
 											>
-												<img
+												<LazyLoadImage
 														src={item.src}
 														alt=""
 														className="recleaner__item--img"

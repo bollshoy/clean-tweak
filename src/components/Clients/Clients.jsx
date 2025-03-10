@@ -1,4 +1,5 @@
 import React, {useEffect, useLayoutEffect, useRef, useState} from "react";
+import {LazyLoadImage} from "react-lazy-load-image-component";
 import clients from "@/data/clients.js";
 import gsap from "gsap";
 import "./Clients.css";
@@ -77,7 +78,7 @@ const Clients = () => {
 										ref={(el) => (itemsRef.current[index] = el)}
 										style={{opacity: 0}}
 								>
-									<img
+									<LazyLoadImage
 											src={item.src}
 											alt="clients images"
 											loading="lazy"
@@ -88,7 +89,7 @@ const Clients = () => {
 									<a href={item.href} target={"_blank"}
 									   className="clients__link">
 										<div className="clients__title-content">
-											<img
+											<LazyLoadImage
 													src={item.icon}
 													alt="icon social media"
 													loading="lazy"

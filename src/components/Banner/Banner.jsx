@@ -1,4 +1,5 @@
 import React, { useCallback } from "react";
+import {LazyLoadImage} from "react-lazy-load-image-component";
 import bannerImg from "@/assets/images/banner.webp";
 
 import "./Banner.css";
@@ -25,7 +26,7 @@ const Banner = () => {
 						</button>
 					</div>
 					<div className="banner__img">
-						<img src={bannerImg} alt="banner" loading="lazy"/>
+						<LazyLoadImage src={bannerImg} alt="banner" loading="lazy"/>
 					</div>
 				</div>
 			</section>

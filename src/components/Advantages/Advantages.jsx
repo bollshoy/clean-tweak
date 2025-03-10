@@ -1,5 +1,6 @@
 import React, {useEffect, useLayoutEffect, useRef, useState} from "react";
 import BlurText from "@/Animations/BlurText/BlurText";
+import {LazyLoadImage} from "react-lazy-load-image-component";
 import advantages from "@/data/advantages.js";
 import gsap from "gsap";
 import "./Advantages.css";
@@ -84,7 +85,7 @@ const Advantages = () => {
 									ref={(el) => (itemsRef.current[index] = el)}
 									style={{opacity: 0}}
 							>
-								<img src={item.src} alt="icon advantages" loading="lazy"
+								<LazyLoadImage src={item.src} alt="icon advantages" loading="lazy"
 								     className="advantages__icon"/>
 								<span className="advantages__content-title">{item.title}</span>
 								<p className="advantages__text">{item.description}</p>

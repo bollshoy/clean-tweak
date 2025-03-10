@@ -1,4 +1,5 @@
 import React from "react";
+import {LazyLoadImage} from "react-lazy-load-image-component";
 import categories from "@/data/categories.js";
 import "./Categories.css";
 
@@ -22,7 +23,7 @@ const Categories = ({ selectedCategory, handleCategoryChange }) => {
                 onClick={() => handleCategoryChange(category.title)}
               >
                 <button className="category__btn">
-                  <img
+                  <LazyLoadImage
                     src={category.src}
                     alt="category icon btn"
                     className="category__icon"

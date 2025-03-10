@@ -1,4 +1,5 @@
 import React from 'react';
+import {LazyLoadImage} from "react-lazy-load-image-component";
 import update from '@/assets/images/updateWindows.webp'
 import download from '@/assets/icons/download.webp';
 import updLogo from '@/assets/icons/updateLogo.svg';
@@ -24,13 +25,15 @@ const Windows = () => {
 					<button
 							className="windows__download windows__download--link"
 							onClick={downloadFile}
-					   >
-						<img src={download} alt="download icon" className="windows__download--img" loading="lazy"/>
+					>
+						<LazyLoadImage src={download} alt="download icon"
+						               className="windows__download--img" loading="lazy"/>
 						<span>Windows 11</span>
 					</button>
 					<div className="content__update">
 						<div className="content__title--content">
-							<img src={updLogo} alt="update icon" className="content__title--img" loading="lazy"/>
+							<LazyLoadImage src={updLogo} alt="update icon"
+							               className="content__title--img" loading="lazy"/>
 							<span className="content__title">Обновление</span>
 						</div>
 						<p className="content__text">
@@ -55,7 +58,8 @@ const Windows = () => {
 							</ol>
 						</div>
 						<div className="content__img">
-							<img src={update} alt="update" className="content__img" loading="lazy"/>
+							<LazyLoadImage src={update} alt="update" className="content__img"
+							               loading="lazy"/>
 						</div>
 					</div>
 				</div>
