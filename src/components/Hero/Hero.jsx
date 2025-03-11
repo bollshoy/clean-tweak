@@ -131,6 +131,7 @@ const Hero = () => {
 															maxHeight: openIndex === index ? "100px" : "0",
 															overflow: "hidden",
 															transition: "max-height 0.3s ease",
+															marginTop: openIndex === index ? "20px" : "0",
 														}}
 												>
 													<p className="accordion__text">{item.content}</p>

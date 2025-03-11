@@ -8,8 +8,8 @@
   margin-bottom: 80px;
 }
 .testimonial__title span {
-  font-weight: inherit;
-  font-size: inherit;
+  font-weight: 700;
+  font-size: clamp(48px, 5vw, 82px);
 }
 
 .testimonial__content-content {
@@ -55,7 +55,8 @@
 }
 
 @media screen and (max-width: 992px) {
-  .testimonial__container, .testimonial__content {
+  .testimonial__container,
+  .testimonial__content {
     display: flex;
     flex-direction: column;
     justify-content: center;

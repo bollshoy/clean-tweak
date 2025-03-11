@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useEffect, useRef, useState} from "react";
 import {NavLink, useNavigate} from "react-router-dom";
 
 import "./Navbar.css";
@@ -6,15 +6,30 @@ import "./Navbar.css";
 const Navbar = () => {
 	const [isOpen, setIsOpen] = useState(false);
 	const navigate = useNavigate();
+	const menuRef = useRef(null);
 	
 	const handleNavLinkClick = (event, sectionId) => {
 		event.preventDefault();
 		navigate(`/?scrollTo=${sectionId}`);
+		setIsOpen(false);
 	};
 	
 	const handleClick = () => {
 		setIsOpen(!isOpen);
 	}
+	
+	useEffect(() => {
+		const handleClickOutside = (e) => {
+			if(menuRef.current && !menuRef.current.contains(e.target)) {
+				setIsOpen(false);
+			}
+		};
+		
+		document.addEventListener("click", handleClickOutside);
+		return () => {
+			document.removeEventListener("click", handleClickOutside);
+		}
+	}, [])
 	
 	return (
 			<nav className="header__menu">
